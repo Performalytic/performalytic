@@ -31,9 +31,17 @@ Repo **Performalytic/.com** → Settings → Pages:
 
 ### 3. Limitations (no Cloudflare)
 
-- No custom HTTP response headers (CSP stays as `<meta>` tag)
-- No HSTS, no `X-Content-Type-Options` header enforcement
-- CDN provided by GitHub Pages only
+| Feature                    | Status |
+|----------------------------|--------|
+| CSP (meta tag)             | ✅     |
+| Referrer-Policy (meta tag) | ✅     |
+| HSTS                       | ❌     |
+| X-Content-Type-Options (HTTP header) | ❌ (meta works in some browsers but not enforced) |
+| X-Frame-Options            | ❌     |
+| Permissions-Policy (HTTP)  | ❌     |
+| Remove `Server` header     | ❌     |
+| Security Headers score     | ~D     |
+| Mozilla Observatory        | ~D     |
 
 ---
 
@@ -72,6 +80,9 @@ In GitHub repo **Performalytic/.com** → Settings → Pages:
 ### 5. SSL/TLS
 
 Cloudflare Dashboard → SSL/TLS → **Full (strict)**
+- Enforces HTTPS end-to-end
+- Enables TLS 1.2 and 1.3 only (disables older protocols)
+- This alone earns an **A** on SSL Labs; **A+** requires HSTS (see below)
 
 ### 6. Response Headers via Transform Rules
 
@@ -91,6 +102,65 @@ Permissions-Policy:               geolocation=(), microphone=(), camera=(), paym
 Content-Security-Policy:          default-src 'self'; script-src 'self' 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://performalytic.com data:; form-action https://performalytic.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 ```
 
-### 7. HSTS Preload (Optional)
+### 7. HSTS Preload
 
 After HSTS is live for a few days, submit to [hstspreload.org](https://hstspreload.org).
+SSL Labs score: **A+** once HSTS preload is approved.
+
+### 8. Remove Server Header (Optional Workaround)
+
+Cloudflare strips its own `Server: cloudflare` header on Free plan — you can't remove `cf-ray` but that's fine. No action needed.
+
+---
+
+## Additional Security Hardening (Applies to Both Paths)
+
+### Subresource Integrity (SRI)
+
+Add `integrity` attributes to external resources to prevent CDN compromise.
+
+For Google Fonts stylesheet: fetch the current hash and add `integrity="sha384-..." crossorigin="anonymous"`.
+
+If you add any third-party JS (analytics, etc.), always include SRI.
+
+### Email Obfuscation
+
+The contact email in the HTML uses machine-readable `mailto:` — acceptable for a contact form, but to further reduce spam:
+
+- Use Cloudflare's **Email Address Obfuscation** (Cloudflare dashboard → Scrape Shield → Email Address Obfuscation) — automatically enabled for proxied traffic.
+
+### Cookie-less Origin
+
+No cookies, no tracking scripts, no `Set-Cookie` headers — this is ideal for both security and performance. Maintain this unless analytics are required.
+
+If analytics are added later, prefer:
+- Cloudflare Web Analytics (privacy-first, no cookies)
+- Plausible / Fathom / Umami (GDPR-compliant, cookie-less)
+- Avoid Google Analytics (requires cookie consent banner)
+
+### Remove Server-Side Fingerprints
+
+GitHub Pages does not expose a `Server` header beyond `server: GitHub.com`. This is acceptable. No `X-Powered-By`, no framework fingerprints.
+
+### Logout / Session (N/A)
+
+Static site — no login, no sessions. This eliminates entire attack classes (session fixation, CSRF, XSS sessions).
+
+### Form Security
+
+Already implemented: `form-action https://performalytic.com` in CSP prevents form-jacking. Form handler (server-side) should additionally validate `Content-Type` and origin.
+
+---
+
+## Scoring Targets
+
+Once Option B + hardening is complete:
+
+| Tool                 | Target Score |
+|----------------------|--------------|
+| securityheaders.com  | **A+**       |
+| SSL Labs             | **A+**       |
+| Mozilla Observatory  | **A+** ~130  |
+| Google PageSpeed     | **90+**      |
+| GTmetrix             | **A**        |
+| Core Web Vitals      | **Pass**     |
