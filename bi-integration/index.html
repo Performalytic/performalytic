@@ -190,12 +190,12 @@ section{padding:100px 0}
 .value-tag:hover{border-color:#2563eb;color:#2563eb}
 
 /* Steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:32px}
-.step{text-align:center;padding:28px 16px;position:relative}
-.step:not(:last-child)::after{content:'';position:absolute;top:24px;right:-12px;width:24px;height:2px;background:#2563eb;opacity:0.3;pointer-events:none}
-.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;margin:0 auto 16px}
-.step h5{font-size:1rem;font-weight:700;margin-bottom:6px;color:#0f172a}
-.step p{font-size:0.85rem;color:#475569}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+.step{text-align:center;padding:36px 24px 32px;background:#fff;border-radius:16px;border:1px solid #e2e8f0;transition:all 0.3s;position:relative}
+.step:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06);border-color:#2563eb}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;margin:0 auto 20px;box-shadow:0 4px 14px rgba(37,99,235,0.25)}
+.step h5{font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#0f172a}
+.step p{font-size:0.88rem;color:#64748b;line-height:1.6;max-width:240px;margin:0 auto}
 
 /* Locations */
 .locations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:40px}
@@ -220,7 +220,7 @@ section{padding:100px 0}
 .cta-contact-item a{color:#60a5fa;text-decoration:none;font-weight:500}
 .cta-contact-item a:hover{text-decoration:underline}
 .cta-form-title{color:#e2e8f0;font-size:1.1rem;font-weight:700;margin-bottom:24px}
-.cta-steps-mt{margin-top:36px}
+.cta-steps-mt{margin-top:36px;font-size:1.15rem;font-weight:700;color:#0f172a}
 .cta-locations-mt{margin-top:80px}
 
 /* Form */
@@ -266,7 +266,8 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .form-row{grid-template-columns:1fr}
 .team-card{flex-direction:column}
 section{padding:60px 0}
-.step:not(:last-child)::after{display:none}
+.steps{grid-template-columns:1fr;gap:16px}
+.step{padding:28px 20px 24px}
 }
 @media(max-width:480px){
 .footer-grid{grid-template-columns:1fr}
