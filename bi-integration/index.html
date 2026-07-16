@@ -229,6 +229,7 @@ section{padding:100px 0}
 .cta-contact-item a:hover{text-decoration:underline}
 .cta-form-title{color:#e2e8f0;font-size:1.1rem;font-weight:700;margin-bottom:24px}
 .cta-steps-mt{margin-top:36px;font-size:1.15rem;font-weight:700;color:#0f172a}
+.form-success{text-align:center;padding:56px 24px;animation:fadeScaleIn .5s ease-out}.form-success-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;margin:0 auto 24px;line-height:1;box-shadow:0 8px 32px rgba(37,99,235,.3);animation:iconPopIn .4s .2s ease-out both}.form-success h4{font-size:1.3rem;font-weight:700;margin-bottom:12px;color:#e2e8f0}.form-success p{font-size:.95rem;color:#94a3b8;line-height:1.7;margin:0;max-width:360px;margin-left:auto;margin-right:auto}
 .cta-locations-mt{margin-top:80px}
 
 /* Form */
@@ -261,6 +262,7 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom a{color:#94a3b8;text-decoration:none}
 .footer-bottom a:hover{color:#cbd5e1}
 .footer-bottom-links{display:flex;gap:24px}
+@keyframes fadeScaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}@keyframes iconPopIn{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
 
 @media(max-width:768px){
 .nav-links,.nav-cta{display:none}
@@ -639,19 +641,20 @@ var fm=document.querySelector('form');if(fm){fm.addEventListener('submit',functi
 e.preventDefault();
 var cc=document.getElementById('consent');if(cc&&!cc.checked){cc.focus();return}
 var f=e.target;
-var fd=new FormData();
-fd.append('entry.1212400286',(f.querySelector('[name=fname],[name=firstName]')||{}).value||'');
-fd.append('entry.1103128983',(f.querySelector('[name=lname],[name=lastName]')||{}).value||'');
-fd.append('entry.1876215073',(f.querySelector('[name=company]')||{}).value||'');
-fd.append('entry.768690435',(f.querySelector('[name=email]')||{}).value||'');
-fd.append('entry.1258356185',(f.querySelector('[name=phone]')||{}).value||'');
-fd.append('entry.185973758',(f.querySelector('[name=service]')||{}).value||'');
-fd.append('entry.207541556',(f.querySelector('[name=message]')||{}).value||'');
-fd.append('fvv','1');
-fd.append('draftResponse','[,,&quot;-6742157261410978690&quot;]');
-fd.append('pageHistory','0');
-fetch('https://docs.google.com/forms/d/e/1FAIpQLSeBNXijGL8QmOTltX27X9RsMdxXtzGsFZOcy5INLIAPdRAaag/formResponse',{method:'POST',mode:'no-cors',body:fd});
-f.reset();
+var ff=document.createElement('form');ff.method='POST';ff.action='https://docs.google.com/forms/d/e/1FAIpQLSeBNXijGL8QmOTltX27X9RsMdxXtzGsFZOcy5INLIAPdRAaag/formResponse';ff.target='gfi';ff.style.display='none';
+var gi=document.createElement('iframe');gi.name='gfi';gi.style.display='none';
+function ga(n,v){var i=document.createElement('input');i.name=n;i.value=v;ff.appendChild(i)}
+ga('entry.1212400286',(f.querySelector('[name=fname],[name=firstName]')||{}).value||'');
+ga('entry.1103128983',(f.querySelector('[name=lname],[name=lastName]')||{}).value||'');
+ga('entry.1876215073',(f.querySelector('[name=company]')||{}).value||'');
+ga('entry.768690435',(f.querySelector('[name=email]')||{}).value||'');
+ga('entry.1258356185',(f.querySelector('[name=phone]')||{}).value||'');
+ga('entry.185973758',(f.querySelector('[name=service]')||{}).value||'');
+ga('entry.207541556',(f.querySelector('[name=message]')||{}).value||'');
+ga('fvv','1');ga('draftResponse','[,,"-6742157261410978690"]');ga('pageHistory','0');
+document.body.appendChild(gi);document.body.appendChild(ff);ff.submit();
+setTimeout(function(){document.body.removeChild(ff);document.body.removeChild(gi)},5000);
+f.innerHTML='<div class="form-success"><div class="form-success-icon">\u2713</div><h4>Thank You!</h4><p>Your message has been received. We\'ll get back to you within 1 business day.</p></div>';
 })}})();
 if(typeof gtag==='function'){
 document.querySelectorAll('a[href^="http"]:not([href*="performalytic.com"])').forEach(function(el){
