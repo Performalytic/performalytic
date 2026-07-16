@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 <meta name="author" content="Performalytic" />
 <meta name="format-detection" content="telephone=no, address=no" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 
 <title>Privacy Policy – Performalytic</title>
 <link rel="canonical" href="https://performalytic.com/privacy-policy/" />
@@ -38,6 +38,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="icon" href="/assets/images/fav-1-e1651044714367.png" sizes="any" />
 <link rel="apple-touch-icon" href="/assets/images/fav-1-e1651044714367.png" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" nonce="P3rf0rm4lyt1c"></script>
+<script nonce="P3rf0rm4lyt1c">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+</script>
 
 <script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
 "@context":"https://schema.org",
@@ -340,8 +347,34 @@ if(mt)mt.addEventListener('click',tm);
 if(mm){var q=mm.querySelectorAll('a');for(var i=0;i<q.length;i++)q[i].addEventListener('click',cm)}
 var tk=false;window.addEventListener('scroll',function(){if(!tk){window.requestAnimationFrame(function(){cm();tk=false});tk=true}},{passive:true});
 var fm=document.querySelector('form');if(fm){fm.addEventListener('submit',function(e){
-var cc=document.getElementById('consent');if(cc&&!cc.checked){e.preventDefault();cc.focus()}
+e.preventDefault();
+var cc=document.getElementById('consent');if(cc&&!cc.checked){cc.focus();return}
+var f=e.target;
+var fd=new FormData();
+fd.append('entry.1212400286',(f.querySelector('[name=fname],[name=firstName]')||{}).value||'');
+fd.append('entry.1103128983',(f.querySelector('[name=lname],[name=lastName]')||{}).value||'');
+fd.append('entry.1876215073',(f.querySelector('[name=company]')||{}).value||'');
+fd.append('entry.768690435',(f.querySelector('[name=email]')||{}).value||'');
+fd.append('entry.1258356185',(f.querySelector('[name=phone]')||{}).value||'');
+fd.append('entry.185973758',(f.querySelector('[name=service]')||{}).value||'');
+fd.append('entry.207541556',(f.querySelector('[name=message]')||{}).value||'');
+fd.append('fvv','1');
+fd.append('draftResponse','[,,&quot;-6742157261410978690&quot;]');
+fd.append('pageHistory','0');
+fetch('https://docs.google.com/forms/d/e/1FAIpQLSeBNXijGL8QmOTltX27X9RsMdxXtzGsFZOcy5INLIAPdRAaag/formResponse',{method:'POST',mode:'no-cors',body:fd});
+f.reset();
 })}})();
+if(typeof gtag==='function'){
+document.querySelectorAll('a[href^="http"]:not([href*="performalytic.com"])').forEach(function(el){
+el.addEventListener('click',function(){gtag('event','click',{event_category:'outbound',event_label:this.href})});
+});
+document.querySelectorAll('.btn-primary,.nav-cta,.submit-btn').forEach(function(el){
+el.addEventListener('click',function(){gtag('event','click',{event_category:'cta',event_label:this.textContent.trim()||'cta_click'})});
+});
+var gf=document.querySelector('form');if(gf){gf.addEventListener('submit',function(){gtag('event','form_submit',{event_category:'engagement',event_label:this.id||'contact_form'})})};
+var p=document.querySelectorAll('.cta-contact-item a[href^="tel"]');if(p.length){p[0].addEventListener('click',function(){gtag('event','click',{event_category:'contact',event_label:'phone'})})};
+var e=document.querySelectorAll('.cta-contact-item a[href^="mailto"]');if(e.length){e[0].addEventListener('click',function(){gtag('event','click',{event_category:'contact',event_label:'email'})})};
+}
 </script>
 
 </body>
