@@ -1048,7 +1048,22 @@ if(mt)mt.addEventListener('click',tm);
 if(mm){var q=mm.querySelectorAll('a');for(var i=0;i<q.length;i++)q[i].addEventListener('click',cm)}
 var tk=false;window.addEventListener('scroll',function(){if(!tk){window.requestAnimationFrame(function(){cm();tk=false});tk=true}},{passive:true});
 var fm=document.querySelector('form');if(fm){fm.addEventListener('submit',function(e){
-var cc=document.getElementById('consent');if(cc&&!cc.checked){e.preventDefault();cc.focus()}
+e.preventDefault();
+var cc=document.getElementById('consent');if(cc&&!cc.checked){cc.focus();return}
+var f=e.target;
+var fd=new FormData();
+fd.append('entry.1212400286',(f.querySelector('[name=fname],[name=firstName]')||{}).value||'');
+fd.append('entry.1103128983',(f.querySelector('[name=lname],[name=lastName]')||{}).value||'');
+fd.append('entry.1876215073',(f.querySelector('[name=company]')||{}).value||'');
+fd.append('entry.768690435',(f.querySelector('[name=email]')||{}).value||'');
+fd.append('entry.1258356185',(f.querySelector('[name=phone]')||{}).value||'');
+fd.append('entry.185973758',(f.querySelector('[name=service]')||{}).value||'');
+fd.append('entry.207541556',(f.querySelector('[name=message]')||{}).value||'');
+fd.append('fvv','1');
+fd.append('draftResponse','[,,&quot;-6742157261410978690&quot;]');
+fd.append('pageHistory','0');
+fetch('https://docs.google.com/forms/d/e/1FAIpQLSeBNXijGL8QmOTltX27X9RsMdxXtzGsFZOcy5INLIAPdRAaag/formResponse',{method:'POST',mode:'no-cors',body:fd});
+f.reset();
 })}})();
 if(typeof gtag==='function'){
 document.querySelectorAll('a[href^="http"]:not([href*="performalytic.com"])').forEach(function(el){
