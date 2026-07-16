@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://performalytic.com/sitemap.xml
