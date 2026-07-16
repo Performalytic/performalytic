@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Performalytic – Digital Strategy, Data Analytics &amp; DevOps" />
-<meta property="og:description" content="We turn your data into a competitive advantage. Digital strategy, advanced analytics, AI, and DevOps solutions for enterprises ready to grow." />
+<meta property="og:description" content="We manage your DATA so you can manage your business. Digital strategy, advanced analytics, AI, and DevOps solutions for enterprises ready to grow." />
 <meta property="og:url" content="https://performalytic.com/" />
 <meta property="og:site_name" content="Performalytic" />
 <meta property="og:image" content="/assets/images/GettyImages-618762080-1.jpg" />
@@ -30,7 +30,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Performalytic – Digital Strategy, Data Analytics &amp; DevOps" />
-<meta name="twitter:description" content="We turn your data into a competitive advantage. Digital strategy, advanced analytics, AI, and DevOps solutions for enterprises ready to grow." />
+<meta name="twitter:description" content="We manage your DATA so you can manage your business. Digital strategy, advanced analytics, AI, and DevOps solutions for enterprises ready to grow." />
 <meta name="twitter:image" content="/assets/images/GettyImages-618762080-1.jpg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
@@ -270,6 +270,82 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom a:hover{color:#cbd5e1}
 .footer-bottom-links{display:flex;gap:24px}
 
+/* Solutions grid */
+.solutions{background:#fff}
+.solutions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.solution-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:32px;transition:all 0.3s}
+.solution-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.06);border-color:#2563eb}
+.solution-card h3{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:10px}
+.solution-card p{font-size:0.88rem;color:#475569;line-height:1.7;margin-bottom:16px}
+.solution-card a{color:#2563eb;text-decoration:none;font-weight:600;font-size:0.85rem;display:inline-flex;align-items:center;gap:4px}
+.solution-card a:hover{gap:8px}
+
+/* Tech expertise */
+.tech-expertise{background:#f8fafc}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:48px}
+.tech-item{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 24px;transition:all 0.3s;text-align:center}
+.tech-item:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.05);border-color:#2563eb}
+.tech-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.2rem;font-weight:700}
+.tech-item h4{font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:8px}
+.tech-item p{font-size:0.82rem;color:#475569;line-height:1.6}
+
+/* Industries */
+.industries{background:#fff}
+.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-top:48px}
+.industry-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;cursor:pointer}
+.industry-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.industry-card:hover img{transform:scale(1.08)}
+.industry-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,0.85) 0%,rgba(15,23,42,0.2) 60%);display:flex;align-items:flex-end;padding:20px}
+.industry-overlay h4{color:#fff;font-size:0.9rem;font-weight:700;line-height:1.3}
+
+/* Vendors */
+.vendors{background:#f8fafc}
+.vendors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;margin-top:48px}
+.vendor-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;transition:all 0.3s}
+.vendor-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.06);border-color:#2563eb}
+.vendor-card h3{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:8px}
+.vendor-card>p{font-size:0.88rem;color:#475569;line-height:1.7;margin-bottom:16px}
+.vendor-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.vendor-tag{background:#f1f5f9;padding:4px 10px;border-radius:6px;font-size:0.75rem;color:#475569;font-weight:500}
+.vendor-logo{height:32px;width:auto;margin-bottom:16px;display:block;object-fit:contain}
+.vendor-card .btn-small{color:#2563eb;text-decoration:none;font-size:0.85rem;font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.vendor-card .btn-small:hover{gap:8px}
+
+/* Process */
+.process{background:#fff;overflow:hidden}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px}
+.process-step{background:#f8fafc;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all 0.3s}
+.process-step:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.06)}
+.process-step img{width:100%;height:200px;object-fit:cover;display:block}
+.process-body{padding:28px}
+.process-body .step-num{width:36px;height:36px;font-size:0.9rem;margin:0 0 14px}
+.process-body h4{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:8px}
+.process-body p{font-size:0.88rem;color:#475569;line-height:1.7}
+
+/* Trust */
+.trust{background:#0f172a;color:#fff}
+.trust .section-title{color:#fff}
+.trust .section-subtitle{color:#cbd5e1}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px}
+.trust-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:32px 24px;text-align:center;transition:all 0.3s}
+.trust-item:hover{background:rgba(255,255,255,0.07);border-color:#2563eb}
+.trust-icon{width:52px;height:52px;border-radius:50%;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem}
+.trust-item h4{font-size:1rem;font-weight:700;color:#e2e8f0;margin-bottom:8px}
+.trust-item p{font-size:0.85rem;color:#94a3b8;line-height:1.6}
+
+/* Partners */
+.partners{background:#f8fafc}
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:24px;align-items:center;margin-top:48px}
+.partners-grid img{width:100%;max-width:120px;height:auto;margin:0 auto;opacity:0.6;transition:all 0.3s;filter:grayscale(1);display:block}
+.partners-grid img:hover{opacity:1;filter:grayscale(0)}
+
+/* What we do section refinements */
+.whatwedo-card{position:relative;overflow:hidden}
+.whatwedo-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.whatwedo-icon img{width:36px;height:36px;object-fit:contain}
+.whatwedo-card h3{font-size:1.1rem;font-weight:700;margin-bottom:10px;color:#0f172a}
+.whatwedo-card p{font-size:0.88rem;color:#475569;line-height:1.7;margin-bottom:14px}
+
 @media(max-width:768px){
 .nav-links,.nav-cta{display:none}
 .menu-toggle{display:flex}
@@ -283,10 +359,14 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .team-card{flex-direction:column}
 section{padding:60px 0}
 .step:not(:last-child)::after{display:none}
+.industries-grid{grid-template-columns:repeat(2,1fr)}
+.process-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
 .footer-grid{grid-template-columns:1fr}
 .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+.industries-grid{grid-template-columns:repeat(2,1fr)}
+.partners-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -299,10 +379,10 @@ section{padding:60px 0}
       <img src="/assets/images/performalytic-logo.png" alt="Performalytic" width="411" height="78" fetchpriority="high" />
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#services">What We Do</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="/about/">About</a></li>
       <li><a href="#contact" class="nav-cta">Schedule Consultation</a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -311,10 +391,10 @@ section{padding:60px 0}
   </div>
 </nav>
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-  <a href="#services">Services</a>
-  <a href="#about">About</a>
-  <a href="#team">Team</a>
-  <a href="#contact">Contact</a>
+  <a href="#services">What We Do</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#industries">Industries</a>
+  <a href="/about/">About</a>
   <a href="#contact" class="nav-cta">Schedule Consultation</a>
 </nav>
 </header>
@@ -323,10 +403,10 @@ section{padding:60px 0}
 <section class="hero" id="home" aria-label="Hero banner">
   <div class="container">
     <div class="hero-badge" role="text" aria-label="Trusted by 500 plus enterprises worldwide">&#9670; Trusted by 500+ enterprises worldwide</div>
-    <h1>Turn your data into a <span>competitive advantage</span></h1>
-    <p>We partner with organizations to architect data strategies, deploy advanced analytics, and build the digital infrastructure that powers smarter decisions, faster growth, and lasting results.</p>
+    <h1>We manage your <span>DATA</span>, so you can manage your business</h1>
+    <p>Take charge of your business continuity with innovative DATA solutions</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Start Your Free Consultation &rarr;</a>
+      <a href="#contact" class="btn-primary">Schedule a Free Consultation &rarr;</a>
       <a href="#services" class="btn-secondary">Explore Our Services</a>
     </div>
     <div class="hero-stats" role="list" aria-label="Key metrics">
@@ -338,38 +418,168 @@ section{padding:60px 0}
   </div>
 </section>
 
-<section class="services" id="services" aria-label="Services">
+<section class="services" id="services" aria-label="What we do">
   <div class="container">
     <div class="text-center">
       <span class="section-label">What We Do</span>
-      <h2 class="section-title">End-to-end data &amp; digital solutions</h2>
-      <p class="section-subtitle mx-auto">From strategy to execution, we help organizations harness the full power of their data — across on-premise, cloud, and hybrid environments.</p>
+      <h2 class="section-title">Simplifying DATA for a complex world</h2>
+      <p class="section-subtitle mx-auto">We offer years of industry expertise and pre-built solutions for on-premise and cloud environments, enabling faster deployment and measurable results.</p>
     </div>
     <div class="services-grid" role="list">
-      <article class="service-card" role="listitem">
-        <div class="service-icon icon-blue" aria-hidden="true">ES</div>
+      <article class="service-card whatwedo-card" role="listitem">
+        <div class="whatwedo-icon icon-blue"><img src="/assets/images/icon-digital-strategy.png" alt="" width="36" height="36" loading="lazy" /></div>
+        <h3>Digital Strategy &amp; Architecture</h3>
+        <p>Prepare more effectively for supplier calls using actionable insights generated from our analytics. Our strategic approach ensures your digital infrastructure aligns with your business goals.</p>
+        <a href="/enterprise-solution-development/">Learn more &rarr;</a>
+      </article>
+      <article class="service-card whatwedo-card" role="listitem">
+        <div class="whatwedo-icon icon-purple"><img src="/assets/images/icon-ai-cloud.png" alt="" width="36" height="36" loading="lazy" /></div>
+        <h3>AI, Cloud &amp; Analytics</h3>
+        <p>Performalytic delivers essential capabilities to power confident, data-driven business decisions. Leverage AI and cloud technologies to unlock insights and drive innovation.</p>
+        <a href="/advanced-analytics-ai/">Learn more &rarr;</a>
+      </article>
+      <article class="service-card whatwedo-card" role="listitem">
+        <div class="whatwedo-icon icon-green"><img src="/assets/images/icon-enterprise-solution.png" alt="" width="36" height="36" loading="lazy" /></div>
         <h3>Enterprise Solution Development</h3>
-        <p>Design and build scalable enterprise applications tailored to your business. Our engineers modernize legacy systems, develop cloud-native platforms, and deliver solutions that grow with you.</p>
-        <a href="/enterprise-solution-development/">Explore this service &rarr;</a>
+        <p>We craft tailored, high-quality software solutions that are scalable, cost-effective, and built for your business success. From legacy modernization to cloud-native platforms.</p>
+        <a href="/enterprise-solution-development/">Learn more &rarr;</a>
       </article>
-      <article class="service-card" role="listitem">
-        <div class="service-icon icon-purple" aria-hidden="true">AI</div>
-        <h3>Advanced Analytics &amp; AI</h3>
-        <p>Apply machine learning, predictive modeling, and AI-driven automation to uncover hidden patterns, forecast outcomes, and create measurable business impact from your data.</p>
-        <a href="/advanced-analytics-ai/">Explore this service &rarr;</a>
+      <article class="service-card whatwedo-card" role="listitem">
+        <div class="whatwedo-icon icon-red"><img src="/assets/images/icon-bi-integration.png" alt="" width="36" height="36" loading="lazy" /></div>
+        <h3>Business Intelligence &amp; Integration</h3>
+        <p>Performalytic empowers organizations to become analytics-driven, monetizing data through our expertise in process, people, and technology. Unify your data for real-time visibility.</p>
+        <a href="/bi-integration/">Learn more &rarr;</a>
       </article>
-      <article class="service-card" role="listitem">
-        <div class="service-icon icon-green" aria-hidden="true">BI</div>
-        <h3>Business Intelligence Integration</h3>
-        <p>Unify data from across your organization into powerful BI dashboards and reports. We connect your systems so you get real-time visibility and actionable insights when it matters most.</p>
-        <a href="/bi-integration/">Explore this service &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="solutions" aria-label="Solutions">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">How We Do</span>
+      <h2 class="section-title">Solutions</h2>
+      <p class="section-subtitle mx-auto">We deliver a comprehensive suite of data management and analytics solutions designed to address your most complex business challenges.</p>
+    </div>
+    <div class="solutions-grid" role="list">
+      <article class="solution-card" role="listitem">
+        <h3>AI Powered MDM &amp; Entity Resolution</h3>
+        <p>Build a unified, trusted source of truth through intelligent entity resolution, automated matching and merging, and centralized master data management.</p>
+        <a href="/enterprise-solution-development/">Learn more &rarr;</a>
       </article>
-      <article class="service-card" role="listitem">
-        <div class="service-icon icon-red" aria-hidden="true">AD</div>
-        <h3>App Development &amp; System Integration</h3>
-        <p>Connect and optimize your technology ecosystem. We build custom applications, integrate disparate systems, and streamline workflows so your entire organization operates as one.</p>
-        <a href="/application-development-and-system-integration/">Explore this service &rarr;</a>
+      <article class="solution-card" role="listitem">
+        <h3>Automated Data Reconciliation</h3>
+        <p>Ensure consistent alignment between source systems and analytics databases by continuously validating, reconciling, and maintaining accurate data across all platforms.</p>
+        <a href="/bi-integration/">Learn more &rarr;</a>
       </article>
+      <article class="solution-card" role="listitem">
+        <h3>Data Quality &amp; Observability</h3>
+        <p>Achieve end-to-end visibility to continuously monitor data quality and ensure complete observability across all stages of your data pipelines.</p>
+        <a href="/advanced-analytics-ai/">Learn more &rarr;</a>
+      </article>
+      <article class="solution-card" role="listitem">
+        <h3>CI/CD Pipeline Automation</h3>
+        <p>Streamline incremental database object changes through automated continuous integration and deployment pipelines for faster, reliable, and controlled releases.</p>
+        <a href="/application-development-and-system-integration/">Learn more &rarr;</a>
+      </article>
+      <article class="solution-card" role="listitem">
+        <h3>Schema Compare &amp; Version Control</h3>
+        <p>Compare and version-control all database objects, including tables, views, functions, procedures, indexes, and other critical components across environments.</p>
+        <a href="/application-development-and-system-integration/">Learn more &rarr;</a>
+      </article>
+      <article class="solution-card" role="listitem">
+        <h3>Entity Relationship Modeling</h3>
+        <p>Maintain accurate relationships between core business entities such as Customers, Products, and Revenue to ensure consistent data understanding and analytics.</p>
+        <a href="/enterprise-solution-development/">Learn more &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tech-expertise" id="tech" aria-label="Tech expertise">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Tech Expertise</span>
+      <h2 class="section-title">Technology that powers your transformation</h2>
+      <p class="section-subtitle mx-auto">Coherent Solutions maximizes BI benefits by turning data into actionable insights with the right tools and expertise. We build flexible, scalable, and cost-efficient data infrastructure.</p>
+    </div>
+    <div class="tech-grid" role="list">
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-blue">HL</div>
+        <h4>High Load Systems</h4>
+        <p>Building robust high-load architectures and scalable applications powered by the most efficient technologies including Scala, Java, Python, NodeJS, and others.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-purple">BI</div>
+        <h4>Business Intelligence</h4>
+        <p>Developing secure, scalable, and manageable solutions using a wide stack of Business Intelligence technologies and tools.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-green">DS</div>
+        <h4>Data Science</h4>
+        <p>Creating complex analytics systems to support competitive intelligence with modern methods of data collection, analysis and processing.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-red">DW</div>
+        <h4>Data Warehousing</h4>
+        <p>Make decisions that improve business results with standardized data, historical activities analysis, and easily accessible information.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-blue">BD</div>
+        <h4>Big Data</h4>
+        <p>Harness the power of big data analytics to place smart bets on new business opportunities and intelligently utilize your data assets.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-purple">ML</div>
+        <h4>Machine Learning &amp; AI</h4>
+        <p>Utilizing machine learning, artificial intelligence, and neural networks in the development of self-taught enterprise solutions.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-green">BC</div>
+        <h4>Blockchain</h4>
+        <p>Complex blockchain expertise including blockchain application development, consulting and operation support for blockchain-enabled solutions.</p>
+      </div>
+      <div class="tech-item" role="listitem">
+        <div class="tech-icon icon-red">VZ</div>
+        <h4>Visualization</h4>
+        <p>Transform thousands of data points into clear, actionable visual insights that enable stakeholders to make informed decisions quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="industries" aria-label="Industries">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Solving DATA challenges in every industry, every day</h2>
+      <p class="section-subtitle mx-auto">Our expertise spans across regulated industries, delivering data-driven solutions that address unique sector challenges.</p>
+    </div>
+    <div class="industries-grid" role="list">
+      <a class="industry-card" role="listitem" href="/enterprise-solution-development/">
+        <img src="/assets/images/industry-manufacturing.jpg" alt="Industry &amp; Manufacturing" loading="lazy" />
+        <div class="industry-overlay"><h4>Industry &amp; Manufacturing</h4></div>
+      </a>
+      <a class="industry-card" role="listitem" href="/bi-integration/">
+        <img src="/assets/images/industry-transportation.jpg" alt="Transportation &amp; Logistics" loading="lazy" />
+        <div class="industry-overlay"><h4>Transportation &amp; Logistics</h4></div>
+      </a>
+      <a class="industry-card" role="listitem" href="/advanced-analytics-ai/">
+        <img src="/assets/images/industry-healthcare.jpg" alt="Healthcare" loading="lazy" />
+        <div class="industry-overlay"><h4>Healthcare</h4></div>
+      </a>
+      <a class="industry-card" role="listitem" href="/enterprise-solution-development/">
+        <img src="/assets/images/industry-banks-insurance.jpg" alt="Banks &amp; Insurance" loading="lazy" />
+        <div class="industry-overlay"><h4>Banks &amp; Insurance</h4></div>
+      </a>
+      <a class="industry-card" role="listitem" href="/advanced-analytics-ai/">
+        <img src="/assets/images/industry-financial.jpg" alt="Financial Services" loading="lazy" />
+        <div class="industry-overlay"><h4>Financial Services</h4></div>
+      </a>
+      <a class="industry-card" role="listitem" href="/enterprise-solution-development/">
+        <img src="/assets/images/industry-nonprofit.jpg" alt="Non-Profit" loading="lazy" />
+        <div class="industry-overlay"><h4>Non-Profit</h4></div>
+      </a>
     </div>
   </div>
 </section>
@@ -399,6 +609,145 @@ section{padding:60px 0}
       <h3>We believe in better together</h3>
       <p>Meaningful work can be both impactful and enjoyable. At Performalytic, we approach every engagement with energy, creativity, and purpose — solving complex challenges while making the journey rewarding for everyone involved. When you enjoy the work, better outcomes naturally follow.</p>
       <a href="#contact" class="btn-primary">Start a conversation &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="vendors" id="vendors" aria-label="IT vendors and partners">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">What We Use</span>
+      <h2 class="section-title">Bringing the best IT vendors to you</h2>
+      <p class="section-subtitle mx-auto">Working only with the best to ensure the quality of our services, and to bring state of the art technology to those who need it.</p>
+    </div>
+    <div class="vendors-grid" role="list">
+      <article class="vendor-card" role="listitem">
+        <img src="/assets/images/vendor-azure.png" alt="Microsoft Azure" class="vendor-logo" loading="lazy" />
+        <h3>BI Operations Support</h3>
+        <p>Performalytic BI experts deliver SLA-driven system support by automating monitoring across system, job, and package levels, while proactively resolving defects and performance issues.</p>
+        <div class="vendor-tags">
+          <span class="vendor-tag">Amazon Web Services (AWS)</span>
+          <span class="vendor-tag">Microsoft Azure</span>
+          <span class="vendor-tag">RackSpace</span>
+          <span class="vendor-tag">OVH</span>
+          <span class="vendor-tag">Digital Ocean</span>
+          <span class="vendor-tag">Bluehost</span>
+        </div>
+        <a href="/contact/" class="btn-small">View more &rarr;</a>
+      </article>
+      <article class="vendor-card" role="listitem">
+        <img src="/assets/images/vendor-m365.png" alt="Microsoft 365" class="vendor-logo" loading="lazy" />
+        <h3>Spot Consulting</h3>
+        <p>We design and implement targeted technical solutions based on customer requirements, including functional testing, issue resolution, and hands-on support throughout UAT phases.</p>
+        <div class="vendor-tags">
+          <span class="vendor-tag">Exchange Online</span>
+          <span class="vendor-tag">SharePoint Online</span>
+          <span class="vendor-tag">Defender for 365</span>
+          <span class="vendor-tag">Autopilot</span>
+          <span class="vendor-tag">Office Apps</span>
+          <span class="vendor-tag">Windows 365</span>
+        </div>
+        <a href="/contact/" class="btn-small">View more &rarr;</a>
+      </article>
+      <article class="vendor-card" role="listitem">
+        <img src="/assets/images/vendor-azure.png" alt="Amazon Web Services" class="vendor-logo" loading="lazy" />
+        <h3>Master Data Management Solutions</h3>
+        <p>Master Data Management establishes consistent definitions for critical business entities by integrating multiple internal systems, enabling a trusted single source of truth.</p>
+        <div class="vendor-tags">
+          <span class="vendor-tag">Amazon Web Services (AWS)</span>
+          <span class="vendor-tag">Microsoft Azure</span>
+          <span class="vendor-tag">Google Cloud Platform (GCP)</span>
+          <span class="vendor-tag">Oracle Cloud</span>
+          <span class="vendor-tag">IBM Cloud (Kyndryl)</span>
+          <span class="vendor-tag">Linode (Akamai)</span>
+        </div>
+        <a href="/contact/" class="btn-small">View more &rarr;</a>
+      </article>
+      <article class="vendor-card" role="listitem">
+        <img src="/assets/images/vendor-vmware.png" alt="VMware" class="vendor-logo" loading="lazy" />
+        <h3>BI Solution Audit</h3>
+        <p>Assess your existing BI environment to evaluate scalability, performance, architecture, and governance, ensuring alignment with industry best practices and modern standards.</p>
+        <div class="vendor-tags">
+          <span class="vendor-tag">Cisco</span>
+          <span class="vendor-tag">Sophos</span>
+          <span class="vendor-tag">WatchGuard</span>
+          <span class="vendor-tag">Extreme Networks</span>
+          <span class="vendor-tag">Dell Technologies</span>
+          <span class="vendor-tag">VMware</span>
+          <span class="vendor-tag">Veeam</span>
+          <span class="vendor-tag">Acronis</span>
+          <span class="vendor-tag">Zerto</span>
+        </div>
+        <a href="/contact/" class="btn-small">View more &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process" aria-label="Our process">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">How We Deliver</span>
+      <h2 class="section-title">A proven approach to data transformation</h2>
+      <p class="section-subtitle mx-auto">From business analysis to lifecycle management, our structured methodology ensures consistent, high-quality outcomes at every stage.</p>
+    </div>
+    <div class="process-grid" role="list">
+      <article class="process-step" role="listitem">
+        <img src="/assets/images/process-business-analysis.jpg" alt="Business analysis" loading="lazy" />
+        <div class="process-body">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h4>Stage 1: Business Analysis</h4>
+          <p>We establish business needs, analyze data sources, and get requirements for the end-user reports. Our engineers create software architecture, estimate time frames, and design the BI system.</p>
+        </div>
+      </article>
+      <article class="process-step" role="listitem">
+        <img src="/assets/images/process-development.jpg" alt="Development" loading="lazy" />
+        <div class="process-body">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h4>Stage 2: Development</h4>
+          <p>Our engineers develop BI solutions, validate results after deployment, and optimize software performance. We build solutions using a flexible architecture that facilitates lifecycle management and maintenance.</p>
+        </div>
+      </article>
+      <article class="process-step" role="listitem">
+        <img src="/assets/images/process-support.jpg" alt="Lifecycle management and support" loading="lazy" />
+        <div class="process-body">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h4>Stage 3: Lifecycle Management &amp; Support</h4>
+          <p>Performalytic experts test big data at different stages and then support and maintain deployed solutions. The flexible architecture allows future improvements without compromising existing processes.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="trust" aria-label="Why trust us">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The most trusted minds in information technology</h2>
+      <p class="section-subtitle mx-auto">Our team brings together deep expertise, hands-on experience, and a commitment to delivering results that matter.</p>
+    </div>
+    <div class="trust-grid" role="list">
+      <div class="trust-item" role="listitem">
+        <div class="trust-icon">&#9733;</div>
+        <h4>Deep Business Intelligence Expertise</h4>
+        <p>Performalytic certified BI specialists have over ten years of experience in BI development and consulting, delivering enterprise-grade solutions.</p>
+      </div>
+      <div class="trust-item" role="listitem">
+        <div class="trust-icon">&#9881;</div>
+        <h4>Hands-on Industry Experience</h4>
+        <p>With over 15 years of experience, Performalytic has delivered insightful BI solutions for various industries, understanding unique sector challenges.</p>
+      </div>
+      <div class="trust-item" role="listitem">
+        <div class="trust-icon">&#9889;</div>
+        <h4>Technical Proficiency</h4>
+        <p>Our teams offer broad expertise with a variety of BI tools and technologies including the Microsoft BI tech stack and modern data platforms.</p>
+      </div>
+      <div class="trust-item" role="listitem">
+        <div class="trust-icon">&#128200;</div>
+        <h4>Insights for Strategic Decisions</h4>
+        <p>Our data analysts translate BI reports into informative insights for senior executives and business stakeholders, driving informed decision-making.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -446,9 +795,9 @@ section{padding:60px 0}
 <section class="cta-section" id="contact" aria-label="Contact us">
   <div class="container">
     <div class="text-center">
-      <span class="section-label cta-label">Let's Talk</span>
-      <h2 class="section-title">Ready to unlock the full potential of your data?</h2>
-      <p class="section-subtitle mx-auto">Whether you're starting from scratch or scaling an existing data practice — we'll help you build a strategy that delivers real, measurable results.</p>
+      <span class="section-label cta-label">Contact Us</span>
+      <h2 class="section-title">Partner with us for comprehensive DATA solutions</h2>
+      <p class="section-subtitle mx-auto">We're happy to answer any questions you may have and help you determine which of our services best fit your needs.</p>
     </div>
     <div class="cta-grid">
       <div class="cta-info">
@@ -561,6 +910,26 @@ section{padding:60px 0}
     </div>
   </div>
 </section>
+<section class="partners" id="partners" aria-label="Partners and recognition">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Partners</span>
+      <h2 class="section-title">Recognized by the best</h2>
+      <p class="section-subtitle mx-auto">Endorsed by clients and partners for excellence in data-driven solutions.</p>
+    </div>
+    <div class="partners-grid" role="list">
+      <img src="/assets/images/partner-1.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-2.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-3.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-4.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-5.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-6.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-7.png" alt="Partner" loading="lazy" role="listitem" />
+      <img src="/assets/images/partner-8.png" alt="Partner" loading="lazy" role="listitem" />
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
