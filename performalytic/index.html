@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performalytic – Digital Strategy, Data Analytics & DevOps</title>
+  <meta name="description" content="We manage your DATA, so you can manage your business. Digital Strategy, Data Analytics & DevOps solutions for modern enterprises." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://performalytic.com/wp-content/uploads/2026/01/fav-1-e1651044714367.png" sizes="any" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.6; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 1.25rem; color: #1a1a2e; letter-spacing: -0.5px; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #4a4a5a; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #2563eb; }
+    .nav-cta { background: #2563eb; color: #fff !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background 0.2s; }
+    .nav-cta:hover { background: #1d4ed8 !important; }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: #1a1a2e; border-radius: 2px; transition: 0.3s; }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: #fff; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); flex-direction: column; gap: 16px; z-index: 999; }
+    .mobile-menu a { text-decoration: none; color: #1a1a2e; font-size: 1rem; font-weight: 500; padding: 8px 0; }
+    .mobile-menu .nav-cta { text-align: center; padding: 12px; }
+
+    /* Hero */
+    .hero { padding: 160px 0 100px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); color: #fff; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%); pointer-events: none; }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; color: #93c5fd; margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; max-width: 800px; }
+    .hero h1 span { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 600px; margin-bottom: 36px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #fff; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; border: none; cursor: pointer; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,99,235,0.3); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #e2e8f0; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.2s; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
+    .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 32px; margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .hero-stat h3 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .hero-stat h3 span { color: #60a5fa; }
+    .hero-stat p { font-size: 0.85rem; color: #64748b; margin: 0; }
+
+    /* Section common */
+    section { padding: 100px 0; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; background: rgba(37,99,235,0.08); padding: 6px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: #2563eb; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .section-title { font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; color: #0f172a; }
+    .section-subtitle { font-size: 1.1rem; color: #64748b; max-width: 600px; line-height: 1.7; margin-bottom: 48px; }
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+
+    /* Services */
+    .services { background: #f8fafc; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .service-card { background: #fff; border-radius: 16px; padding: 32px; border: 1px solid #e2e8f0; transition: all 0.3s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: #2563eb; }
+    .service-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700; }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: #0f172a; }
+    .service-card p { font-size: 0.9rem; color: #64748b; line-height: 1.7; margin-bottom: 16px; }
+    .service-card a { color: #2563eb; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; }
+    .service-card a:hover { gap: 10px; }
+
+    /* About / Impact */
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; margin-top: 48px; }
+    .impact-item { padding: 32px; border-radius: 16px; background: #f8fafc; border: 1px solid #e2e8f0; }
+    .impact-item h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: #0f172a; }
+    .impact-item p { font-size: 0.9rem; color: #64748b; line-height: 1.7; }
+
+    /* Team */
+    .team { background: #f8fafc; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 48px; }
+    .team-card { background: #fff; border-radius: 16px; padding: 32px; border: 1px solid #e2e8f0; display: flex; gap: 24px; align-items: flex-start; }
+    .team-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: #e2e8f0; }
+    .team-card h4 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+    .team-card .role { font-size: 0.85rem; color: #2563eb; font-weight: 600; margin-bottom: 10px; }
+    .team-card p { font-size: 0.85rem; color: #64748b; line-height: 1.7; }
+
+    /* Values */
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 32px; }
+    .value-tag { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: center; font-weight: 600; font-size: 0.9rem; color: #0f172a; }
+
+    /* Process steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 40px; }
+    .step { text-align: center; padding: 32px 20px; position: relative; }
+    .step-num { width: 48px; height: 48px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 16px; }
+    .step h5 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+    .step p { font-size: 0.85rem; color: #64748b; }
+
+    /* Locations */
+    .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
+    .location-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px; }
+    .location-card .flag { font-size: 2rem; margin-bottom: 12px; }
+    .location-card h4 { font-weight: 700; margin-bottom: 4px; color: #0f172a; }
+    .location-card .city { color: #2563eb; font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; }
+    .location-card p { font-size: 0.85rem; color: #64748b; line-height: 1.6; }
+
+    /* Contact / CTA */
+    .cta-section { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
+    .cta-section .section-title { color: #fff; }
+    .cta-section .section-subtitle { color: #94a3b8; }
+    .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 48px; }
+    .cta-info h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #e2e8f0; }
+    .cta-info p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 24px; line-height: 1.7; }
+    .cta-contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: #cbd5e1; }
+    .cta-contact-item a { color: #60a5fa; text-decoration: none; }
+    .cta-contact-item a:hover { text-decoration: underline; }
+    .cta-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; list-style: none; margin-bottom: 32px; }
+    .cta-benefits li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #94a3b8; }
+
+    /* Form */
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #e2e8f0; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-size: 0.9rem; font-family: inherit; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #2563eb; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #64748b; }
+    .form-group select option { color: #1a1a2e; background: #fff; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .checkbox-group { display: flex; align-items: flex-start; gap: 10px; font-size: 0.8rem; color: #94a3b8; margin-bottom: 16px; }
+    .checkbox-group input { margin-top: 3px; accent-color: #2563eb; }
+    .checkbox-group a { color: #60a5fa; }
+
+    /* Footer */
+    footer { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.06); padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-brand img { height: 32px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.85rem; color: #64748b; line-height: 1.7; max-width: 300px; }
+    .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+    .footer-social a { width: 40px; height: 40px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #94a3b8; text-decoration: none; transition: all 0.2s; font-size: 1.1rem; }
+    .footer-social a:hover { border-color: #2563eb; color: #2563eb; }
+    .footer-col h5 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #e2e8f0; margin-bottom: 20px; }
+    .footer-col a { display: block; font-size: 0.85rem; color: #64748b; text-decoration: none; padding: 4px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: #e2e8f0; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.8rem; color: #475569; }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a { color: #475569; text-decoration: none; }
+    .footer-bottom-links a:hover { color: #94a3b8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .menu-toggle { display: flex; }
+      .mobile-menu.active { display: flex; }
+      .hero { padding: 120px 0 60px; }
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; padding-top: 32px; }
+      .cta-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      .team-card { flex-direction: column; }
+      section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <img src="https://performalytic.com/wp-content/uploads/2026/01/performalytic-logo.png" alt="Performalytic" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Schedule Consultation</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('active')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="#services" onclick="this.closest('.mobile-menu').classList.remove('active')">Services</a>
+  <a href="#about" onclick="this.closest('.mobile-menu').classList.remove('active')">About</a>
+  <a href="#team" onclick="this.closest('.mobile-menu').classList.remove('active')">Team</a>
+  <a href="#contact" onclick="this.closest('.mobile-menu').classList.remove('active')">Contact</a>
+  <a href="#contact" class="nav-cta" onclick="this.closest('.mobile-menu').classList.remove('active')">Schedule Consultation</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-badge">&#9670; Data-Driven Growth for Your Business</div>
+    <h1>We manage your <span>DATA</span>, so you can manage your business.</h1>
+    <p>Digital Strategy, Data Analytics & DevOps solutions that empower organizations to become analytics-driven, monetize data, and accelerate business continuity.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Schedule Free Consultation &rarr;</a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><h3>800<span>+</span></h3><p>Team Members</p></div>
+      <div class="hero-stat"><h3>10<span>+</span></h3><p>Years Experience</p></div>
+      <div class="hero-stat"><h3>500<span>+</span></h3><p>Clients Served</p></div>
+      <div class="hero-stat"><h3>3</h3><p>Global Offices</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Simplifying DATA for a complex world</h2>
+      <p class="section-subtitle mx-auto">We offer years of industry expertise and pre-built solutions for on-premise and cloud environments, enabling faster deployment.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background:#eff6ff;color:#2563eb;">ES</div>
+        <h3>Enterprise Solution Development</h3>
+        <p>Custom enterprise systems and applications powered by cutting-edge technology. We build scalable solutions that align with business goals and drive digital transformation.</p>
+        <a href="https://performalytic.com/enterprise-solution-development/">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#f5f3ff;color:#7c3aed;">AI</div>
+        <h3>Advanced Analytics & AI</h3>
+        <p>Apply AI and data science to transform business operations. From predictive analytics to machine learning, we help you unlock deeper value from your data assets.</p>
+        <a href="https://performalytic.com/advanced-analytics-ai/">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#ecfdf5;color:#059669;">BI</div>
+        <h3>BI Integration</h3>
+        <p>Integrate enterprise data with modern BI platforms to enable real-time reporting, actionable insights, and data-driven decision-making across your organization.</p>
+        <a href="https://performalytic.com/bi-integration/">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#fef2f2;color:#dc2626;">AD</div>
+        <h3>Application Development & System Integration</h3>
+        <p>End-to-end application development and seamless system integration. We connect platforms, modernize architectures, and deliver scalable digital solutions.</p>
+        <a href="https://performalytic.com/application-development-and-system-integration/">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About / Impact -->
+<section id="about">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">Dedicated to delivering excellence</h2>
+      <p class="section-subtitle mx-auto">We are passionate about data and committed to unlocking its potential to help you grow your business, reduce costs, and gain a competitive advantage.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <h4>Decision Making</h4>
+        <p>The better the data accuracy, the more confidence users will have in the outputs they produce, lowering risk in outcomes and increasing efficiency. When outputs are reliable, guesswork in decision making is mitigated.</p>
+      </div>
+      <div class="impact-item">
+        <h4>Productivity</h4>
+        <p>High-quality, trusted data enables teams to work more efficiently. Rather than spending time validating and correcting data issues, employees can focus on core responsibilities and deliver greater impact.</p>
+      </div>
+      <div class="impact-item">
+        <h4>Compliance</h4>
+        <p>In regulated industries, maintaining accurate data can be the difference between compliance and significant fines. Compliance continues to be an ongoing focus as new regulations evolve worldwide.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;padding:40px;background:#f8fafc;border-radius:16px;border:1px solid #e2e8f0;">
+      <h3 style="font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:8px;">Better together</h3>
+      <p style="color:#64748b;max-width:600px;margin:0 auto 24px;line-height:1.7;">We believe meaningful work can be both impactful and enjoyable. At Performalytic, we value our partnerships and approach every engagement with energy, creativity, and purpose.</p>
+      <a href="#contact" class="btn-primary">Get in touch &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Leadership</div>
+      <h2 class="section-title">A team built on experience</h2>
+      <p class="section-subtitle mx-auto">Performalytic brings together top-tier technical talent and service-focused professionals. With a workforce of over 800 across the United States, we are scaling with purpose.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://performalytic.com/wp-content/uploads/2026/01/Nihar-Rout.png" alt="Nihar Rout" class="team-avatar" loading="lazy" />
+        <div>
+          <h4>Nihar Rout</h4>
+          <div class="role">Managing Partner & Advisor</div>
+          <p>Nihar brings years of digital strategy, analytics implementation and leadership experience from Accenture, Ecolab, and General Electric. He holds an MBA from Northwestern's Kellogg School of Management.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://performalytic.com/wp-content/uploads/2026/01/Abani-Pattanayak.png" alt="Abani Pattanayak" class="team-avatar" loading="lazy" />
+        <div>
+          <h4>Abani Pattanayak</h4>
+          <div class="role">Partner & Advisor</div>
+          <p>Thought leader and advisor in SAP intelligent technology and solutions. Expert in SAP Cloud Platform, advanced analytics, and digital transformation. Speaker at SAP TechEd, Sapphire & S-KOM.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <h3 style="font-size:1.3rem;font-weight:700;color:#0f172a;margin-bottom:12px;">Our Values</h3>
+      <div class="values-grid" style="max-width:600px;margin:0 auto;">
+        <div class="value-tag">Client-oriented</div>
+        <div class="value-tag">Results-driven</div>
+        <div class="value-tag">Independent</div>
+        <div class="value-tag">Problem-solving</div>
+        <div class="value-tag">Competent</div>
+        <div class="value-tag">Transparent</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Contact -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label" style="background:rgba(37,99,235,0.15);color:#93c5fd;">Contact Us</div>
+      <h2 class="section-title">Partner with Us for Comprehensive DATA</h2>
+      <p class="section-subtitle mx-auto">We're happy to answer any questions and help you determine which of our services best fit your needs.</p>
+    </div>
+    <div class="cta-grid">
+      <div class="cta-info">
+        <h4>Get in touch</h4>
+        <p>We'd love to hear from you. Reach out and our team will respond promptly.</p>
+        <div class="cta-contact-item">&#128222; <a href="tel:18003568933">1-800-356-8933</a></div>
+        <div class="cta-contact-item">&#9993; <a href="mailto:support@performalytic.com">support@performalytic.com</a></div>
+        <h4 style="margin-top:32px;">What happens next?</h4>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h5>Schedule a call</h5>
+            <p>At your convenience</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h5>Discovery meeting</h5>
+            <p>We discuss your needs</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h5>Proposal</h5>
+            <p>We prepare a solution</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#e2e8f0;font-size:1.1rem;font-weight:700;margin-bottom:20px;">Schedule a Free Consultation</h4>
+        <form action="https://performalytic.com/contact/" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company" placeholder="Acme Inc." />
+          </div>
+          <div class="form-group">
+            <label for="email">Company email</label>
+            <input type="email" id="email" name="email" placeholder="john@acme.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
+          </div>
+          <div class="form-group">
+            <label for="service">How Can We Help You?</label>
+            <select id="service" name="service">
+              <option value="">Select Option</option>
+              <option value="Enterprise Solution Development">Enterprise Solution Development</option>
+              <option value="Advanced Analytics AI">Advanced Analytics AI</option>
+              <option value="BI Integration">BI Integration</option>
+              <option value="Application Development">Application Development & System Integration</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">I agree to the Privacy Policy and give my permission to process my personal data for the purposes specified.</label>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message &rarr;</button>
+        </form>
+      </div>
+    </div>
+    <!-- Locations -->
+    <div style="margin-top:80px;">
+      <div class="text-center">
+        <div class="section-label" style="background:rgba(37,99,235,0.15);color:#93c5fd;">Our Offices</div>
+        <h2 class="section-title">Global Presence</h2>
+        <p class="section-subtitle mx-auto">We have offices throughout the East Coast, Midwest, and South — plus global reach to support your business anywhere.</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+          <div class="flag">&#127482;&#127480;</div>
+          <h4 style="color:#e2e8f0;">Chicago</h4>
+          <div class="city" style="color:#60a5fa;">United States</div>
+          <p style="color:#94a3b8;">111 W. Jackson Blvd, Suite 1700<br/>Chicago, IL 60604</p>
+        </div>
+        <div class="location-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+          <div class="flag">&#127482;&#127480;</div>
+          <h4 style="color:#e2e8f0;">New York</h4>
+          <div class="city" style="color:#60a5fa;">United States</div>
+          <p style="color:#94a3b8;">Seventh Ave, 20th Floor<br/>New York, NY 10018</p>
+        </div>
+        <div class="location-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+          <div class="flag">&#127470;&#127475;</div>
+          <h4 style="color:#e2e8f0;">Bhubaneswar</h4>
+          <div class="city" style="color:#60a5fa;">India</div>
+          <p style="color:#94a3b8;">Patia, Bhubaneswar<br/>Odisha – 751024, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://performalytic.com/wp-content/uploads/2023/03/Performalytic-Footer-Logo.png" alt="Performalytic" style="height:32px;" />
+        <p>We manage your DATA, so you can manage your business. Digital Strategy, Data Analytics & DevOps solutions for modern enterprises.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <a href="https://performalytic.com/enterprise-solution-development/">Enterprise Solution Development</a>
+        <a href="https://performalytic.com/advanced-analytics-ai/">Advanced Analytics & AI</a>
+        <a href="https://performalytic.com/bi-integration/">BI Integration</a>
+        <a href="https://performalytic.com/application-development-and-system-integration/">Application Development</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="https://performalytic.com/about/">About Us</a>
+        <a href="https://performalytic.com/careers/">Careers</a>
+        <a href="https://performalytic.com/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Platform Partners</h5>
+        <a href="#">AWS</a>
+        <a href="#">Google Cloud</a>
+        <a href="#">Microsoft</a>
+        <a href="#">Salesforce</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Performalytic. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="https://performalytic.com/terms-conditions/">Terms &amp; Conditions</a>
+        <a href="https://performalytic.com/privacy-policy/">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.querySelector('.mobile-menu').classList.remove('active'));
+  });
+  // Close mobile menu on scroll
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        document.querySelector('.mobile-menu').classList.remove('active');
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
+
+</body>
+</html>
