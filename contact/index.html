@@ -177,6 +177,7 @@ section{padding:100px 0}
 /* Locations */
 .contact-locations{padding:100px 0}.contact-locations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px}.contact-location-card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:36px 32px;transition:all .3s ease;position:relative;overflow:hidden}.contact-location-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#2563eb,#7c3aed);border-radius:20px 20px 0 0;opacity:0;transition:opacity .3s}.contact-location-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.08);border-color:#2563eb}.contact-location-card:hover::before{opacity:1}.contact-location-card .flag{font-size:2.4rem;margin-bottom:16px;display:block}.contact-location-card h3{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px}.contact-location-card h4{font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:8px}.contact-location-card p{font-size:.9rem;color:#64748b;line-height:1.7;margin:0}.contact-location-card .dir-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:#2563eb;text-decoration:none;font-size:.85rem;font-weight:600;transition:gap .2s}.contact-location-card .dir-link:hover{gap:10px;color:#1d4ed8}
 
+.location-tag{color:#2563eb;font-weight:600;font-size:.85rem;margin-bottom:6px}
 /* CTA section */
 .cta-section{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff}
 .cta-section .section-title{color:#fff}
@@ -344,7 +345,7 @@ section{padding:60px 0}
         <span class="flag" aria-hidden="true">&#127470;&#127475;</span>
         <h3>India</h3>
         <h4>Bhubaneswar</h4>
-        <p style="color:#2563eb;font-weight:600;font-size:.85rem;margin-bottom:6px">Global Delivery Center</p>
+        <p class="location-tag">Global Delivery Center</p>
         <p>Patia, Bhubaneswar<br/>Odisha – 751024, India</p>
         <a href="https://maps.app.goo.gl/jNPZEqZE1WF93Cj6A" class="dir-link" target="_blank" rel="noopener noreferrer">Get directions &rarr;</a>
       </address>
@@ -352,12 +353,12 @@ section{padding:60px 0}
   </div>
 </section>
 
-<section class="cta-section" id="form" aria-label="Contact us" style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff">
+<section class="cta-section" id="form" aria-label="Contact us">
   <div class="container">
     <div class="text-center">
-      <span class="section-label" style="background:rgba(37,99,235,0.15);color:#93c5fd">Contact us</span>
-      <h2 class="section-title" style="color:#fff">Partner with Us for Comprehensive Data Solutions</h2>
-      <p class="section-subtitle mx-auto" style="color:#cbd5e1">We're happy to answer any questions you may have and help you determine which of our services best fit your needs.</p>
+      <span class="section-label cta-label">Contact us</span>
+      <h2 class="section-title">Partner with Us for Comprehensive Data Solutions</h2>
+      <p class="section-subtitle mx-auto">We're happy to answer any questions you may have and help you determine which of our services best fit your needs.</p>
     </div>
     <div class="cta-grid">
       <div class="cta-info">
@@ -371,19 +372,19 @@ section{padding:60px 0}
           <svg class="cta-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <a href="mailto:support@performalytic.com" aria-label="Email us at support at performalytic dot com">support@performalytic.com</a>
         </div>
-        <h5 style="font-size:1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px;margin-top:36px">Your benefits:</h5>
-        <table style="border-collapse:collapse;width:auto">
+        <h5 class="cta-benefits-title">Your benefits:</h5>
+        <table class="cta-benefits-table">
           <tr>
-            <td style="padding:4px 24px 4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Client-oriented</span></div></td>
-            <td style="padding:4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Results-driven</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Client-oriented</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Results-driven</span></div></td>
           </tr>
           <tr>
-            <td style="padding:4px 24px 4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Independent</span></div></td>
-            <td style="padding:4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Problem-solving</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Independent</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Problem-solving</span></div></td>
           </tr>
           <tr>
-            <td style="padding:4px 24px 4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Competent</span></div></td>
-            <td style="padding:4px 0"><div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span style="color:#cbd5e1;font-size:0.9rem">Transparent</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Competent</span></div></td>
+            <td><div class="cta-benefit-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Transparent</span></div></td>
           </tr>
         </table>
         <h4 class="cta-steps-mt">What happens next?</h4>

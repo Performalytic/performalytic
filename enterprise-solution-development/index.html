@@ -276,6 +276,11 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom-links{display:flex;gap:24px}
 @keyframes fadeScaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}@keyframes iconPopIn{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
 
+/* Utility classes for inline style replacement */
+.intro-container{max-width:800px;margin:0 auto 48px}
+.subtitle-mb0{margin-bottom:0}
+.services-grid-mt0{margin-top:0}
+.bg-white{background:#fff}
 @media(max-width:768px){
 .nav-links,.nav-cta{display:none}
 .menu-toggle{display:flex}
@@ -376,11 +381,11 @@ section{padding:60px 0}
 
 <section id="solutions" aria-label="Enterprise solutions">
   <div class="container">
-    <div class="text-center" style="max-width:800px;margin:0 auto 48px">
+    <div class="text-center intro-container">
       <span class="section-label">Advanced Analytics, Data Science &amp; Business Intelligence</span>
-      <p class="section-subtitle mx-auto" style="margin-bottom:0">Enterprise development is a collaborative environment where IT works to build applications that align with the internal business team as well as customers. The agile system of apps is highly driven by a better understanding of users' challenges and addressing those requirements with a solution. Not only this, but the teams also anticipate customers' future needs and embrace technological advancements — making it vital for enterprises to evolve at a rapid pace in the dynamically changing digital landscape.</p>
+      <p class="section-subtitle mx-auto subtitle-mb0">Enterprise development is a collaborative environment where IT works to build applications that align with the internal business team as well as customers. The agile system of apps is highly driven by a better understanding of users' challenges and addressing those requirements with a solution. Not only this, but the teams also anticipate customers' future needs and embrace technological advancements — making it vital for enterprises to evolve at a rapid pace in the dynamically changing digital landscape.</p>
     </div>
-    <div class="services-grid" role="list" style="margin-top:0">
+    <div class="services-grid services-grid-mt0" role="list">
       <article class="service-card" role="listitem">
         <div class="service-icon icon-blue" aria-hidden="true">EM</div>
         <h3>Enterprise Mobility Solutions</h3>
@@ -409,7 +414,7 @@ section{padding:60px 0}
   </div>
 </section>
 
-<section class="services" id="capabilities" aria-label="Turning digital capability into business advantage" style="background:#fff">
+<section class="services bg-white" id="capabilities" aria-label="Turning digital capability into business advantage">
   <div class="container">
     <div class="text-center">
       <span class="section-label">Our Capabilities</span>
