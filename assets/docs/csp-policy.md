@@ -44,11 +44,13 @@ img-src 'self'
 connect-src 'self'
     https://www.google-analytics.com
     https://analytics.google.com
+    https://docs.google.com
     https://*.tawk.to
     wss://*.tawk.to;
 frame-src 'self'
-    https://docs.google.com
     https://*.tawk.to;
+form-action 'self'
+    https://docs.google.com;
 base-uri 'self';
 object-src 'none';
 upgrade-insecure-requests
@@ -81,8 +83,7 @@ img-src 'self'
 connect-src 'self'
     https://www.google-analytics.com
     https://analytics.google.com;
-frame-src 'self'
-    https://docs.google.com;
+frame-src 'self';
 base-uri 'self';
 object-src 'none';
 upgrade-insecure-requests
@@ -124,10 +125,11 @@ upgrade-insecure-requests
 | `img-src` | `data:` | Inline images |
 | `connect-src` | `https://www.google-analytics.com` | GA4 data collection |
 | `connect-src` | `https://analytics.google.com` | GA4 data collection |
+| `connect-src` | `https://docs.google.com` | Contact form submission (fetch to Google Forms) |
 | `connect-src` | `https://*.tawk.to` | Tawk.to API calls |
 | `connect-src` | `wss://*.tawk.to` | Tawk.to WebSocket (live chat) |
-| `frame-src` | `https://docs.google.com` | Google Forms iframe |
 | `frame-src` | `https://*.tawk.to` | Tawk.to iframe |
+| `form-action` | `https://docs.google.com` | Contact form posts directly to Google Forms (no-JS fallback) |
 
 ## Notes
 
