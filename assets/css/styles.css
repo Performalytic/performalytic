@@ -640,13 +640,7 @@ section {
   font-size: 0.9rem;
 }
 
-/* Reduced bottom padding for about section */
-.about-section-compact {
-  padding-bottom: 0 !important;
-}
-.about-section-compact .about-cta {
-  margin-bottom: 0;
-}
+
 
 /* Blog CTA section (dark gradient) */
 .blog-cta {
