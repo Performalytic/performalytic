@@ -145,44 +145,10 @@
   }
 
   /* ============================================
-     Mobile Menu Enhancement
-  ============================================ */
-  function initMobileMenu() {
-    var mt = document.getElementById('menuToggle');
-    var mm = document.getElementById('mobileMenu');
-    if (!mt || !mm) return;
-
-    mt.addEventListener('click', function(e) {
-      var active = mm.classList.toggle('active');
-      mt.setAttribute('aria-expanded', active ? 'true' : 'false');
-      e.stopPropagation();
-    });
-
-    mm.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        mm.classList.remove('active');
-        mt.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close on scroll
-    var tickingMenu = false;
-    window.addEventListener('scroll', function() {
-      if (!tickingMenu) {
-        window.requestAnimationFrame(function() {
-          if (mm.classList.contains('active')) {
-            mm.classList.remove('active');
-            mt.setAttribute('aria-expanded', 'false');
-          }
-          tickingMenu = false;
-        });
-        tickingMenu = true;
-      }
-    }, { passive: true });
-  }
-
-  /* ============================================
      Nav Dropdown Touch Support
+     (Mobile menu toggle is handled by each page's
+     inline script — do not bind it here too, or
+     each tap toggles the menu twice.)
   ============================================ */
   function initDropdownTouch() {
     if (!('ontouchstart' in window)) return;
@@ -271,7 +237,6 @@
     initLazyImages();
     initCounters();
     initSmoothAnchors();
-    initMobileMenu();
     initDropdownTouch();
     initHeroParallax();
     initNavScroll();
