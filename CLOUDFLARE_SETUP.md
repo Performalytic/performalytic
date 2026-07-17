@@ -1,24 +1,24 @@
 # DNS & Deployment Setup for performalytic.com
 
-Domain registered at **Google Domains**. Two paths:
+Domain registered at **Squarespace Domains** (legacy Google Domains migrated to Squarespace). Two paths:
 
 ---
 
-## Option A: GitHub Pages Only (via Google Domains DNS)
+## Option A: GitHub Pages Only (via Squarespace DNS)
 
-Skip Cloudflare. Point Google Domains directly to GitHub Pages.
+Skip Cloudflare. Point Squarespace DNS directly to GitHub Pages.
 
-### 1. Google Domains DNS Records
+### 1. Squarespace DNS Records
 
-In [domains.google.com](https://domains.google.com) → performalytic.com → DNS → **Manage custom records**:
+In [account.squarespace.com/domains](https://account.squarespace.com/domains) → performalytic.com → **DNS Settings** → **Add Record**:
 
-| Type | Name  | Data                                     |
-|------|-------|------------------------------------------|
-| A    | `@`   | `185.199.108.153`                        |
-| A    | `@`   | `185.199.109.153`                        |
-| A    | `@`   | `185.199.110.153`                        |
-| A    | `@`   | `185.199.111.153`                        |
-| CNAME | `www` | `performalytic.github.io`               |
+| Type | Host/Name | Data                                     |
+|------|-----------|------------------------------------------|
+| A    | `@`       | `185.199.108.153`                        |
+| A    | `@`       | `185.199.109.153`                        |
+| A    | `@`       | `185.199.110.153`                        |
+| A    | `@`       | `185.199.111.153`                        |
+| CNAME | `www`    | `performalytic.github.io`                |
 
 Delete any existing A, AAAA, or CNAME records for the root/www.
 
@@ -47,7 +47,7 @@ Repo **Performalytic/.com** → Settings → Pages:
 
 ## Option B: Cloudflare in Front (Recommended)
 
-Add Cloudflare between Google Domains and GitHub Pages for full header control, CDN, DDoS protection, and SSL management.
+Add Cloudflare between Squarespace and GitHub Pages for full header control, CDN, DDoS protection, and SSL management.
 
 ### 1. Add Site to Cloudflare
 
@@ -56,11 +56,11 @@ Add Cloudflare between Google Domains and GitHub Pages for full header control, 
 - Select **Free** plan
 - Cloudflare will scan existing DNS records
 
-### 2. Update Nameservers in Google Domains
+### 2. Update Nameservers in Squarespace
 
 Cloudflare will show two nameservers (e.g. `arch.ns.cloudflare.com`, `zara.ns.cloudflare.com`).
 
-In [domains.google.com](https://domains.google.com) → performalytic.com → **DNS** → **Nameservers** → **Use custom name servers** → enter Cloudflare's nameservers.
+In [account.squarespace.com/domains](https://account.squarespace.com/domains) → performalytic.com → **DNS Settings** → **Nameservers** → **Use custom name servers** → enter Cloudflare's nameservers.
 
 ### 3. DNS Records in Cloudflare
 
