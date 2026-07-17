@@ -607,6 +607,14 @@ section {
   100% { background-position: 200% 0; }
 }
 
+/* Reduced bottom padding for about section */
+.about-section-compact {
+  padding-bottom: 0 !important;
+}
+.about-section-compact .about-cta {
+  margin-bottom: 0;
+}
+
 /* Blog CTA section (dark gradient) */
 .blog-cta {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
