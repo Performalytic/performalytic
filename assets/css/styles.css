@@ -607,6 +607,39 @@ section {
   100% { background-position: 200% 0; }
 }
 
+/* Benefits table */
+.cta-benefits-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 16px;
+  margin-top: 36px;
+}
+.cta-benefits-table {
+  border-collapse: collapse;
+  width: auto;
+}
+.cta-benefits-table td {
+  padding: 4px 24px 4px 0;
+}
+.cta-benefits-table td + td {
+  padding: 4px 0;
+}
+.cta-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cta-benefit-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.cta-benefit-item span {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
 /* Reduced bottom padding for about section */
 .about-section-compact {
   padding-bottom: 0 !important;
