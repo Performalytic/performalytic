@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="Performalytic" />
+<meta name="format-detection" content="telephone=no, address=no" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+
+<title>DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More | Performalytic</title>
+<meta name="keywords" content="DevOps best practices, data DevOps, CI/CD data pipelines, data automation, infrastructure as code, data engineering, performalytic" />
+<meta name="description" content="Learn how to apply DevOps principles to data pipelines and analytics workflows. From CI/CD automation to infrastructure as code, streamline your data operations." />
+<link rel="canonical" href="https://performalytic.com/blog/devops-best-practices/" />
+<link rel="alternate" hreflang="en" href="https://performalytic.com/blog/devops-best-practices/" />
+<link rel="alternate" hreflang="x-default" href="https://performalytic.com/blog/devops-best-practices/" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More | Performalytic" />
+<meta property="og:description" content="Learn how to apply DevOps principles to data pipelines and analytics workflows. From CI/CD automation to infrastructure as code." />
+<meta property="og:url" content="https://performalytic.com/blog/devops-best-practices/" />
+<meta property="og:site_name" content="Performalytic" />
+<meta property="og:image" content="/assets/images/process-support.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="DevOps best practices for data teams" />
+<meta property="article:published_time" content="2026-05-10T10:00:00+00:00" />
+<meta property="article:modified_time" content="2026-07-17T10:00:00+00:00" />
+<meta property="article:author" content="Performalytic" />
+<meta property="article:section" content="DevOps" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More | Performalytic" />
+<meta name="twitter:description" content="Learn how to apply DevOps principles to data pipelines and analytics workflows." />
+<meta name="twitter:image" content="/assets/images/process-support.jpg" />
+
+<link rel="dns-prefetch" href="//performalytic.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="/assets/images/fav-1-e1651044714367.png" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/images/fav-1-e1651044714367.png" />
+<link rel="stylesheet" href="/assets/css/styles.css" nonce="P3rf0rm4lyt1c" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV09CSCD2C" nonce="P3rf0rm4lyt1c"></script>
+<script nonce="P3rf0rm4lyt1c">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV09CSCD2C');
+</script>
+
+<script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Performalytic",
+  "url":"https://performalytic.com/",
+  "logo":"/assets/images/performalytic-logo.png",
+  "image":"/assets/images/GettyImages-618762080-1.jpg"
+},{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[{
+    "@type":"ListItem","position":1,"name":"Home","item":"https://performalytic.com/"
+  },{
+    "@type":"ListItem","position":2,"name":"Blog","item":"https://performalytic.com/blog/"
+  },{
+    "@type":"ListItem","position":3,"name":"DevOps Best Practices","item":"https://performalytic.com/blog/devops-best-practices/"
+  }]
+},{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"DevOps Best Practices for Data Teams: CI/CD, Automation & More",
+  "description":"Learn how to apply DevOps principles to data pipelines and analytics workflows. From CI/CD automation to infrastructure as code.",
+  "image":"/assets/images/process-support.jpg",
+  "author":{"@type":"Organization","name":"Performalytic"},
+  "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
+  "datePublished":"2026-05-10T10:00:00+00:00",
+  "dateModified":"2026-07-17T10:00:00+00:00",
+  "mainEntityOfPage":"https://performalytic.com/blog/devops-best-practices/"
+}]</script>
+
+<style nonce="P3rf0rm4lyt1c">
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1e293b;background:#fff;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+img{max-width:100%;height:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.25rem;color:#0f172a;letter-spacing:-0.5px}
+.nav-logo img{height:36px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{text-decoration:none;color:#475569;font-size:0.9rem;font-weight:500;padding:8px 0;display:inline-flex;align-items:center;gap:4px;cursor:pointer}
+.nav-links>li>a:hover{color:#2563eb}
+.nav-links>li>a .arrow{font-size:0.6rem;transition:transform 0.2s}
+.nav-links>li:hover>a .arrow{transform:rotate(180deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:220px;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,0.1);border:1px solid #e2e8f0;padding:8px;z-index:100}
+.nav-links>li:hover .nav-dropdown{display:block}
+.nav-dropdown a{display:block;padding:10px 16px;color:#475569;text-decoration:none;font-size:0.85rem;font-weight:500;border-radius:8px}
+.nav-dropdown a:hover{background:#f8fafc;color:#2563eb}
+.nav-cta{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff!important;padding:10px 32px;border-radius:100px;font-weight:600;font-size:0.88rem;transition:all 0.25s}
+.nav-cta:hover{background:linear-gradient(135deg,#1d4ed8,#6d28d9)!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.35)}
+.menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.menu-toggle span{display:block;width:24px;height:2px;background:#0f172a;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,0.1);flex-direction:column;gap:8px;z-index:999;max-height:calc(100vh - 72px);overflow-y:auto}
+.mobile-menu.active{display:flex}
+.mobile-menu .mm-group{margin-bottom:12px}
+.mobile-menu .mm-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#94a3b8;padding:8px 0 4px}
+.mobile-menu a{text-decoration:none;color:#0f172a;font-size:0.95rem;font-weight:500;padding:10px 0;border-bottom:1px solid #f1f5f9;display:block}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px;display:block}
+section{padding:100px 0}
+.section-label{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,0.08);padding:6px 14px;border-radius:100px;font-size:0.8rem;font-weight:600;color:#2563eb;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,99,235,0.3)}
+footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-logo{height:32px;display:block;margin-bottom:16px}
+.footer-brand p{font-size:0.85rem;color:#94a3b8;line-height:1.7;max-width:320px}
+.footer-social{display:flex;gap:12px;margin-top:24px}
+.footer-social a{width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#cbd5e1;text-decoration:none;font-size:0.9rem;font-weight:700}
+.footer-social a:hover{border-color:#2563eb;color:#2563eb;background:rgba(37,99,235,0.1)}
+.footer-col h5{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#e2e8f0;margin-bottom:20px}
+.footer-col a{display:block;font-size:0.85rem;color:#94a3b8;text-decoration:none;padding:5px 0}
+.footer-col a:hover{color:#e2e8f0}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);font-size:0.82rem;color:#94a3b8}
+.footer-bottom a{color:#94a3b8;text-decoration:none}
+.footer-bottom-links{display:flex;gap:24px}
+@media(max-width:768px){
+.nav-links,.nav-cta{display:none}
+.menu-toggle{display:flex}
+.mobile-menu.active{display:flex}
+.footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+section{padding:60px 0}
+}
+@media(max-width:480px){
+.footer-grid{grid-template-columns:1fr}
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo" aria-label="Performalytic home">
+      <img src="/assets/images/performalytic-logo.png" alt="Performalytic" width="411" height="78" fetchpriority="high" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="#" aria-haspopup="true">Our Services <span class="arrow">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+          <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+          <a href="/bi-integration/">BI Integration</a>
+          <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" aria-haspopup="true">Company <span class="arrow">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/careers/">Careers</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" aria-haspopup="true">Resources <span class="arrow">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Schedule a Consultation</a>
+        </div>
+      </li>
+      <li><a href="/contact/" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <div class="mm-group">
+    <div class="mm-label">Our Services</div>
+    <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+    <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+    <a href="/bi-integration/">BI Integration</a>
+    <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Company</div>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/careers/">Careers</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Resources</div>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Schedule a Consultation</a>
+  </div>
+  <a href="/contact/" class="nav-cta">Contact Us</a>
+</nav>
+</header>
+
+<main>
+<article>
+<section class="post-hero" aria-label="Article header">
+  <div class="container hero-content">
+    <div class="post-meta">
+      <span class="post-meta-category">DevOps</span>
+      <span>&#128197; May 10, 2026</span>
+      <span>&#128196; 7 min read</span>
+    </div>
+    <h1>DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More</h1>
+    <p style="color:#cbd5e1;font-size:1.15rem;max-width:700px;line-height:1.7;margin-top:16px">Learn how to apply DevOps principles to data pipelines and analytics workflows — from CI/CD automation to infrastructure as code.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container post-content">
+    <p>Data teams have traditionally operated differently from software engineering teams. While developers embraced CI/CD, version control, and automated testing years ago, many data teams continued to manage pipelines manually, deploy changes infrequently, and struggle with reproducibility.</p>
+
+    <p>That's changing rapidly. The adoption of DevOps practices — often called DataOps or MLOps when applied to data — is helping data teams deliver more reliable, scalable, and maintainable data products. Here are the best practices every data team should adopt.</p>
+
+    <h2>1. Version Control Everything</h2>
+    <p>Just as software engineers version their code, data teams should version everything: SQL scripts, dbt models, data pipeline configurations, infrastructure definitions, and even documentation. Git-based version control enables:</p>
+    <ul>
+      <li><strong>Collaboration:</strong> Multiple team members can work on the same codebase simultaneously</li>
+      <li><strong>Auditability:</strong> Every change is tracked with a clear history of who changed what and why</li>
+      <li><strong>Rollbacks:</strong> If a change introduces issues, reverting is straightforward</li>
+      <li><strong>Code review:</strong> Peer reviews catch errors before they reach production</li>
+    </ul>
+
+    <h2>2. Implement CI/CD for Data Pipelines</h2>
+    <p>Continuous Integration and Continuous Deployment (CI/CD) isn't just for application code. Data pipelines benefit enormously from automated testing and deployment:</p>
+    <ul>
+      <li><strong>Automated testing:</strong> Validate data quality, schema changes, and transformation logic before deployment</li>
+      <li><strong>Environment parity:</strong> Promote changes through dev, staging, and production with confidence</li>
+      <li><strong>Faster iterations:</strong> Deploy data pipeline changes multiple times per day instead of weekly or monthly</li>
+    </ul>
+    <p>At Performalytic, we help organizations implement <a href="/application-development-and-system-integration/">CI/CD pipeline automation</a> for their data infrastructure, enabling faster, more reliable releases.</p>
+
+    <h2>3. Infrastructure as Code (IaC)</h2>
+    <p>Manual infrastructure setup is error-prone and hard to reproduce. Infrastructure as Code tools like Terraform, Pulumi, and AWS CloudFormation allow data teams to define their infrastructure in declarative configuration files:</p>
+    <ul>
+      <li>Define data warehouses, storage buckets, compute clusters, and networking in code</li>
+      <li>Spin up identical environments for development, testing, and production</li>
+      <li>Track infrastructure changes in version control alongside pipeline code</li>
+      <li>Automate scaling and disaster recovery</li>
+    </ul>
+
+    <h2>4. Automated Data Quality Testing</h2>
+    <p>Data quality testing should be automated and integrated into the pipeline, not performed as a manual afterthought. Implement testing at multiple levels:</p>
+    <ul>
+      <li><strong>Schema tests:</strong> Validate that columns exist, have correct data types, and meet nullability requirements</li>
+      <li><strong>Freshness tests:</strong> Ensure data arrives within expected time windows</li>
+      <li><strong>Distribution tests:</strong> Monitor for unexpected changes in data distributions</li>
+      <li><strong>Referential integrity:</strong> Validate relationships between tables</li>
+      <li><strong>Custom business rules:</strong> Enforce domain-specific data quality requirements</li>
+    </ul>
+
+
+    <h2>5. Monitoring &amp; Observability</h2>
+    <p>Data pipelines can fail silently. Without proper monitoring, data quality issues can propagate through downstream systems before anyone notices. Implement comprehensive observability:</p>
+    <ul>
+      <li>Track pipeline run status, duration, and failure rates</li>
+      <li>Monitor data volume and schema evolution over time</li>
+      <li>Set up alerts for data quality violations and pipeline failures</li>
+      <li>Create dashboards showing end-to-end pipeline health</li>
+    </ul>
+
+    <h2>6. Containerization &amp; Environment Consistency</h2>
+    <p>Docker containers ensure that data pipelines run consistently across development, testing, and production environments. Containerization eliminates the "it works on my machine" problem and makes deployments more predictable. For larger workloads, Kubernetes provides orchestration for containerized data applications.</p>
+
+    <blockquote>
+      "The goal of DataOps is not just automation — it's delivering value from data faster, with higher quality, and lower risk."
+    </blockquote>
+
+    <h2>7. Collaboration &amp; Documentation</h2>
+    <p>DevOps is as much about culture as it is about technology. Data teams should adopt collaborative practices that break down silos:</p>
+    <ul>
+      <li>Use data catalogs to document datasets, definitions, and lineage</li>
+      <li>Hold regular stand-ups and retrospectives for data team workflows</li>
+      <li>Embed data engineers within product teams when possible</li>
+      <li>Create runbooks for common operational procedures</li>
+    </ul>
+
+    <h2>Getting Started with Data DevOps</h2>
+    <p>Transforming your data operations doesn't happen overnight. Start with these practical steps:</p>
+    <ol>
+      <li><strong>Audit your current state:</strong> Identify manual processes and pain points in your data workflows</li>
+      <li><strong>Pick one pipeline:</strong> Apply DevOps practices to a single critical pipeline as a pilot</li>
+      <li><strong>Automate incrementally:</strong> Start with version control, then add testing, then CI/CD</li>
+      <li><strong>Measure success:</strong> Track deployment frequency, lead time for changes, and time to recover</li>
+    </ol>
+    <p>Our <a href="/application-development-and-system-integration/">application development and system integration</a> experts can help you design and implement a modern DevOps practice for your data infrastructure. Whether you're just starting your journey or looking to optimize existing processes, we bring deep expertise across the full technology stack.</p>
+  </div>
+
+  <div class="container">
+    <div class="post-footer-nav">
+      <a href="/blog/ai-business-intelligence/">
+        <span class="nav-label">&larr; Previous Article</span>
+        <span class="nav-title">How AI is Transforming Business Intelligence</span>
+      </a>
+      <a href="/blog/data-driven-decision-making/" class="next">
+        <span class="nav-label">Next Article &rarr;</span>
+        <span class="nav-title">The Ultimate Guide to Data-Driven Decision Making</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8fafc">
+  <div class="container text-center">
+    <span class="section-label">Modernize Your Data Operations</span>
+    <h2 class="section-title" style="font-size:clamp(2rem,3.5vw,2.75rem);font-weight:800;margin-bottom:16px;color:#0f172a">Ready to bring DevOps to your data team?</h2>
+    <p style="font-size:1.1rem;color:#475569;max-width:640px;line-height:1.7;margin:0 auto 32px">Our experts can help you implement CI/CD pipelines, infrastructure as code, and automated testing for your data infrastructure.</p>
+    <a href="/contact/" class="btn-primary">Schedule a Free Consultation &rarr;</a>
+  </div>
+</section>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/"><img src="/assets/images/Performalytic-Footer-Logo.png" alt="Performalytic" class="footer-brand-logo" width="397" height="69" loading="lazy" /></a>
+        <p>We help enterprises turn data into a competitive advantage. From strategy and analytics to AI and application development.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/performalytic/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+        <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+        <a href="/bi-integration/">BI Integration</a>
+        <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/about/">About Us</a>
+        <a href="/careers/">Careers</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Partners</h5>
+        <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS</a>
+        <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">Google Cloud</a>
+        <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Azure</a>
+        <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Performalytic. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="/terms-conditions/">Terms &amp; Conditions</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script nonce="P3rf0rm4lyt1c">
+(function(){'use strict';
+var mm=document.getElementById('mobileMenu'),mt=document.getElementById('menuToggle');
+function cm(){if(mm)mm.classList.remove('active');if(mt)mt.setAttribute('aria-expanded','false')}
+function tm(e){if(mm){var a=mm.classList.toggle('active');if(mt)mt.setAttribute('aria-expanded',a+'')}e.stopPropagation()}
+if(mt)mt.addEventListener('click',tm);
+if(mm){var q=mm.querySelectorAll('a');for(var i=0;i<q.length;i++)q[i].addEventListener('click',cm)}
+var tk=false;window.addEventListener('scroll',function(){if(!tk){window.requestAnimationFrame(function(){cm();tk=false});tk=true}},{passive:true});
+if(typeof gtag==='function'){
+document.querySelectorAll('a[href^="http"]:not([href*="performalytic.com"])').forEach(function(el){
+el.addEventListener('click',function(){gtag('event','click',{event_category:'outbound',event_label:this.href})});
+});
+document.querySelectorAll('.btn-primary,.nav-cta,.submit-btn').forEach(function(el){
+el.addEventListener('click',function(){gtag('event','click',{event_category:'cta',event_label:this.textContent.trim()||'cta_click'})});
+});
+}
+})();
+</script>
+<script src="/assets/js/main.js" nonce="P3rf0rm4lyt1c" defer></script>
+</body>
+</html>
