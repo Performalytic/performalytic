@@ -99,7 +99,7 @@ Permissions-Policy:               geolocation=(), microphone=(), camera=(), paym
 
 **Rule 2 — Content-Security-Policy** (apply to all requests — after this is live, **remove** `<meta http-equiv="Content-Security-Policy">` from `index.html`)
 ```
-Content-Security-Policy:          default-src 'self'; script-src 'self' 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://performalytic.com data:; form-action https://performalytic.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+Content-Security-Policy:          default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://embed.tawk.to 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://embed.tawk.to; font-src 'self' https://fonts.gstatic.com https://embed.tawk.to data:; img-src 'self' https://www.google-analytics.com https://*.tawk.to https://cdn.jsdelivr.net data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.tawk.to wss://*.tawk.to; frame-src 'self' https://docs.google.com https://*.tawk.to; form-action https://performalytic.com https://docs.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 ```
 
 ### 7. HSTS Preload
