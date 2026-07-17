@@ -180,34 +180,44 @@ section{padding:25px 0}
 
 /* Impact */
 .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:48px}
-.impact-item{padding:36px;border-radius:16px;background:#f8fafc;border:1px solid #e2e8f0}
-.impact-item h4{font-size:1.1rem;font-weight:700;margin-bottom:12px;color:#0f172a}
+.impact-item{padding:40px 36px;border-radius:20px;background:#fff;border:1px solid #e2e8f0;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.impact-item::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#2563eb,#7c3aed);opacity:0;transition:opacity 0.3s}
+.impact-item:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.08);border-color:#2563eb}
+.impact-item:hover::before{opacity:1}
+.impact-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:20px;font-weight:700}
+.impact-item h4{font-size:1.15rem;font-weight:700;margin-bottom:12px;color:#0f172a}
 .impact-item p{font-size:0.9rem;color:#475569;line-height:1.7}
-.about-cta{text-align:center;margin-top:48px;padding:48px;background:linear-gradient(135deg,#f8fafc,#eff6ff);border-radius:16px;border:1px solid #e2e8f0}
+.about-cta{text-align:center;margin-top:56px;padding:56px 48px;background:linear-gradient(135deg,#f8fafc,#eff6ff);border-radius:20px;border:1px solid #e2e8f0;transition:all 0.3s}
+.about-cta:hover{border-color:#2563eb}
 .about-cta h3{font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:12px}
 .about-cta p{color:#475569;max-width:600px;margin:0 auto 28px;line-height:1.8}
 
 /* Story */
 .story-content{max-width:800px;margin:0 auto}
 .story-content p{font-size:1.05rem;color:#475569;line-height:1.8;margin-bottom:20px}
-.story-mission{text-align:center;margin:48px 0;padding:48px;background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:16px;color:#fff}
+.story-mission{text-align:center;margin:48px 0;padding:56px 48px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);border-radius:20px;color:#fff;position:relative;overflow:hidden}
+.story-mission::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(circle,rgba(37,99,235,0.12) 0%,transparent 70%);pointer-events:none}
 .story-mission h3{font-size:1.5rem;font-weight:800;margin-bottom:16px}
-.story-mission p{font-size:1.1rem;color:#cbd5e1;max-width:700px;margin:0 auto;line-height:1.7}
+.story-mission p{font-size:1.1rem;color:#cbd5e1;max-width:700px;margin:0 auto;line-height:1.7;position:relative;z-index:1}
 
 /* Team */
 .team{background:#f8fafc}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:32px;margin-top:48px}
-.team-card{background:#fff;border-radius:16px;padding:36px;border:1px solid #e2e8f0;display:flex;gap:24px;align-items:flex-start}
-.team-avatar{width:90px;height:90px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#e2e8f0}
-.team-card h4{font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:2px}
-.team-card .role{font-size:0.85rem;color:#2563eb;font-weight:600;margin-bottom:12px}
-.team-card p{font-size:0.88rem;color:#475569;line-height:1.7}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:32px;margin-top:48px}
+.team-card{background:#fff;border-radius:20px;padding:40px 36px;border:1px solid #e2e8f0;display:flex;gap:24px;align-items:flex-start;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);position:relative}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.08);border-color:#2563eb}
+.team-avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#e2e8f0;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.team-card h4{font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:2px}
+.team-card .role{font-size:0.85rem;color:#2563eb;font-weight:600;margin-bottom:14px;display:inline-flex;align-items:center;gap:6px}
+.team-card .role::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:#2563eb}
+.team-card p{font-size:0.88rem;color:#475569;line-height:1.8}
+.team-linkedin{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:#2563eb;text-decoration:none;font-size:0.85rem;font-weight:600;transition:gap 0.2s}
+.team-linkedin:hover{gap:10px;text-decoration:underline}
 .values-section{text-align:center;margin-top:56px}
 .values-section h3{font-size:1.3rem;font-weight:700;color:#0f172a;margin-bottom:8px}
 .values-section>p{color:#475569;margin-bottom:24px}
 .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:640px;margin:0 auto}
-.value-tag{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px 16px;text-align:center;font-weight:600;font-size:0.9rem;color:#0f172a;transition:all 0.2s}
-.value-tag:hover{border-color:#2563eb;color:#2563eb}
+.value-tag{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px 16px;text-align:center;font-weight:600;font-size:0.9rem;color:#0f172a;transition:all 0.3s;position:relative;overflow:hidden;cursor:default}
+.value-tag:hover{color:#fff;border-color:transparent;background:linear-gradient(135deg,#2563eb,#7c3aed);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.2)}
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
@@ -400,14 +410,17 @@ section{padding:60px 0}
     </div>
     <div class="impact-grid" role="list">
       <article class="impact-item" role="listitem">
+        <div class="impact-icon icon-blue">&#9670;</div>
         <h4>Decision Making</h4>
         <p>The better the data accuracy, the more confidence users will have in the outputs they produce, lowering risk in the outcomes and increasing efficiency. When outputs are reliable, guesswork and risk in decision making can be mitigated.</p>
       </article>
       <article class="impact-item" role="listitem">
+        <div class="impact-icon icon-green">&#9650;</div>
         <h4>Productivity</h4>
         <p>High-quality, trusted data enables teams to work more efficiently and confidently. Rather than spending valuable time identifying, validating, and correcting data issues, employees can focus on their core responsibilities and deliver greater impact to the business overall.</p>
       </article>
       <article class="impact-item" role="listitem">
+        <div class="impact-icon icon-purple">&#9632;</div>
         <h4>Compliance</h4>
         <p>In industries where regulations govern trade with certain customers, especially in finance, maintaining accurate data can be the difference between compliance and millions of dollars in fines. Compliance continues to be an ongoing focus as new regulations evolve in regions around the world.</p>
       </article>
@@ -435,19 +448,21 @@ section{padding:60px 0}
     </div>
     <div class="team-grid" role="list">
       <article class="team-card" role="listitem">
-        <img src="/assets/images/Nihar-Rout.png" alt="Nihar Rout, Managing Partner &amp; Advisor at Performalytic" class="team-avatar" width="90" height="90" loading="lazy" decoding="async" />
+        <img src="/assets/images/Nihar-Rout.png" alt="Nihar Rout, Managing Partner &amp; Advisor at Performalytic" class="team-avatar" width="100" height="100" loading="lazy" decoding="async" />
         <div>
           <h4>Nihar Rout</h4>
           <p class="role">Managing Partner &amp; Advisor</p>
           <p>Nihar is passionate about creating innovative digital solutions for big problems that can have a fundamental impact on how companies operate. He brings years of digital strategy, analytics implementation and leadership experience from multiple industries, including Accenture, Ecolab and General Electric, among others. Additionally, he has consulted for Fortune 500 companies worldwide. Nihar earned a bachelor's in mechanical engineering in India and later received his M.B.A. with a focus on innovation and entrepreneurship from Northwestern's Kellogg School of Management.</p>
+          <a href="https://www.linkedin.com/company/performalytic/" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="Nihar Rout on LinkedIn">in View LinkedIn &rarr;</a>
         </div>
       </article>
       <article class="team-card" role="listitem">
-        <img src="/assets/images/Abani-Pattanayak.png" alt="Abani Pattanayak, Partner &amp; Advisor at Performalytic" class="team-avatar" width="90" height="90" loading="lazy" decoding="async" />
+        <img src="/assets/images/Abani-Pattanayak.png" alt="Abani Pattanayak, Partner &amp; Advisor at Performalytic" class="team-avatar" width="100" height="100" loading="lazy" decoding="async" />
         <div>
           <h4>Abani Pattanayak</h4>
           <p class="role">Partner &amp; Advisor</p>
           <p>Thought leader, trusted adviser, innovation coach, and author in SAP intelligent technology and solutions. Business leader with relentless optimism, technical and financial acumen who believes in building a bright future and a better world together. With a vision to innovate businesses, he works with leaders in multiple organizations to help drive digital transformation. Expert in SAP Cloud Platform, SAP intelligent technology, and advanced analytics. Speaker at SAP TechEd, Sapphire &amp; S-KOM. A distinction of SAP Catalyst, SAP Executive Data Chef, and SAP HANA Distinguished Engineer.</p>
+          <a href="https://www.linkedin.com/company/performalytic/" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="Abani Pattanayak on LinkedIn">in View LinkedIn &rarr;</a>
         </div>
       </article>
     </div>
