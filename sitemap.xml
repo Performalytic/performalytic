@@ -61,11 +61,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/partners/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://performalytic.com/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
