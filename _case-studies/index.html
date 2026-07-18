@@ -173,11 +173,6 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
   .nav-links,.nav-cta{display:none}
   .menu-toggle{display:flex}
   .mobile-menu.active{display:flex}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-}
-@media(max-width:480px){
-  .footer-grid{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
 }
 
 /* Hero */
@@ -259,6 +254,13 @@ footer{background:#0f172a;color:#94a3b8;padding:64px 0 32px}
 .footer-bottom a{color:#94a3b8;text-decoration:none}
 .footer-bottom a:hover{color:#cbd5e1}
 .footer-bottom-links{display:flex;gap:24px}
+@media(max-width:768px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
 </style>
 </head>
 <body>
