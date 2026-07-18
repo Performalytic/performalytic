@@ -66,6 +66,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://performalytic.com/blog/choose-right-analytics-platform/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/signs-data-infrastructure-holding-back/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/real-cost-of-bad-data/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://performalytic.com/privacy-policy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
