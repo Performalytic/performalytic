@@ -131,23 +131,22 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .nav-links>li>a:hover{color:#2563eb}
 .nav-links>li>a .arrow{display:inline-block;font-size:0.6rem;transition:transform 0.2s;margin-left:2px}
 .nav-links>li:hover>a .arrow{transform:rotate(180deg)}
-.nav-links>li:hover>.dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
-.dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(4px);background:#fff;border-radius:12px;padding:8px;box-shadow:0 20px 60px rgba(0,0,0,0.12);min-width:260px;opacity:0;visibility:hidden;pointer-events:none;transition:all 0.2s;border:1px solid #f1f5f9}
-.dropdown a{display:block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-size:0.88rem;font-weight:500;transition:all 0.15s}
-.dropdown a:hover{background:#f8fafc;color:#2563eb}
-.dropdown .dd-label{padding:6px 16px 4px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.8px;color:#94a3b8;font-weight:600}
-.dropdown .dd-divider{height:1px;background:#f1f5f9;margin:4px 8px}
+.nav-links>li:hover .nav-dropdown{display:block}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:8px;min-width:220px;box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.nav-dropdown a{display:block;padding:10px 16px;border-radius:8px;font-size:0.875rem;color:#475569;transition:background 0.2s,color 0.2s}
+.nav-dropdown a:hover{background:#f1f5f9;color:#2563eb}
 .nav-cta{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff!important;padding:10px 32px;border-radius:100px;font-weight:600;font-size:0.88rem;letter-spacing:0.01em;transition:all 0.25s}
 .nav-cta:hover{background:linear-gradient(135deg,#1d4ed8,#6d28d9)!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.35)}
 .nav-cta:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
 .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .menu-toggle span{display:block;width:24px;height:2px;background:#0f172a;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
-.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,0.1);flex-direction:column;gap:4px;z-index:999;max-height:calc(100vh - 72px);overflow-y:auto}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,0.1);flex-direction:column;gap:8px;z-index:999;max-height:calc(100vh - 72px);overflow-y:auto}
 .mobile-menu.active{display:flex}
-.mobile-menu .mm-label{padding:12px 0 4px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.8px;color:#94a3b8;font-weight:600}
-.mobile-menu a{text-decoration:none;color:#0f172a;font-size:0.95rem;font-weight:500;padding:10px 0;border-bottom:1px solid #f8fafc}
+.mobile-menu .mm-group{margin-bottom:12px}
+.mobile-menu .mm-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#94a3b8;padding:8px 0 4px}
+.mobile-menu a{text-decoration:none;color:#0f172a;font-size:0.95rem;font-weight:500;padding:10px 0;border-bottom:1px solid #f1f5f9;display:block}
 .mobile-menu a:last-child{border-bottom:none}
-.mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px}
+.mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px;display:block}
 
 /* Hero */
 .hero{padding:160px 0 100px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);color:#fff;position:relative;overflow:hidden}
@@ -330,39 +329,38 @@ section{padding:60px 0}
       <img src="/assets/images/performalytic-logo-blue-2.png" alt="Performalytic" width="411" height="78" fetchpriority="high" />
     </a>
     <ul class="nav-links" role="list">
+      <li><a href="/">Home</a></li>
       <li>
-        <a href="#">Our Services <span class="arrow">&#9662;</span></a>
-        <div class="dropdown">
-          <div class="dd-label">Services</div>
-          <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
-          <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
-          <a href="/bi-integration/">BI Integration</a>
-          <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+        <a href="#" aria-haspopup="true">Our Services <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/enterprise-solution-development/" role="menuitem">Enterprise Solution Development</a>
+          <a href="/advanced-analytics-ai/" role="menuitem">Advanced Analytics &amp; AI</a>
+          <a href="/bi-integration/" role="menuitem">BI Integration</a>
+          <a href="/application-development-and-system-integration/" role="menuitem">Application Development &amp; Integration</a>
         </div>
       </li>
       <li>
-        <a href="#">Company <span class="arrow">&#9662;</span></a>
-        <div class="dropdown">
-          <div class="dd-label">Company</div>
-          <a href="/about/">About Us</a>
-          <a href="/careers/">Careers</a>
-          <a href="/industries/">Industries</a>
-          <a href="/contact/">Contact</a>
+        <a href="#" aria-haspopup="true">Company <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/about/" role="menuitem">About</a>
+          <a href="/contact/" role="menuitem">Contact</a>
+          <a href="/careers/" role="menuitem">Careers</a>
+          <a href="/industries/" role="menuitem">Industries</a>
         </div>
       </li>
       <li>
-        <a href="#">Resources <span class="arrow">&#9662;</span></a>
-        <div class="dropdown">
-          <div class="dd-label">Resources</div>
-          <a href="/products/">Products</a>
-          <a href="/technologies/">Technologies</a>
-          <a href="/case-studies/">Case Studies</a>
-          <a href="/testimonials/">Testimonials</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/blog/">Blog</a>
+        <a href="#" aria-haspopup="true">Resources <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/products/" role="menuitem">Products</a>
+          <a href="/technologies/" role="menuitem">Technologies</a>
+          <a href="/case-studies/" role="menuitem">Case Studies</a>
+          <a href="/testimonials/" role="menuitem">Testimonials</a>
+          <a href="/faq/" role="menuitem">FAQ</a>
+          <a href="/blog/" role="menuitem">Blog</a>
+          <a href="/contact/" role="menuitem">Schedule a Consultation</a>
         </div>
       </li>
-      <li><a href="/contact/" class="nav-cta">Schedule Consultation</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact Us</a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -370,24 +368,31 @@ section{padding:60px 0}
   </div>
 </nav>
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-  <div class="mm-label">Services</div>
-  <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
-  <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
-  <a href="/bi-integration/">BI Integration</a>
-  <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
-  <div class="mm-label">Company</div>
-  <a href="/about/">About Us</a>
-  <a href="/careers/">Careers</a>
-  <a href="/industries/">Industries</a>
-  <a href="/contact/">Contact</a>
-  <div class="mm-label">Resources</div>
-  <a href="/products/">Products</a>
-  <a href="/technologies/">Technologies</a>
-  <a href="/case-studies/">Case Studies</a>
-  <a href="/testimonials/">Testimonials</a>
-  <a href="/faq/">FAQ</a>
-  <a href="/blog/">Blog</a>
-  <a href="/contact/" class="nav-cta">Schedule Consultation</a>
+  <a href="/">Home</a>
+  <div class="mm-group">
+    <div class="mm-label">Our Services</div>
+    <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+    <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+    <a href="/bi-integration/">BI Integration</a>
+    <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Company</div>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/careers/">Careers</a>
+    <a href="/industries/">Industries</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Resources</div>
+    <a href="/products/">Products</a>
+    <a href="/technologies/">Technologies</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/testimonials/">Testimonials</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <a href="/contact/" class="nav-cta">Contact Us</a>
 </nav>
 </header>
 
