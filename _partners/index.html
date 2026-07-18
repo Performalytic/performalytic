@@ -119,14 +119,15 @@ a{color:inherit;text-decoration:none}
 .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .menu-toggle span{display:block;width:24px;height:2px;background:#1e293b;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
 .mobile-menu{display:none;position:fixed;top:73px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 24px;z-index:999}
-.mobile-menu a{display:block;padding:12px 0;color:#475569;font-size:0.95rem;border-bottom:1px solid #f1f5f9}
+.mobile-menu a{display:block;padding:12px 0;color:#475569;font-size:0.95rem;border-bottom:1px solid #f1f5f9;text-decoration:none;transition:color 0.2s}
+.mobile-menu a:hover{color:#2563eb}
 .mobile-menu a:last-child{border-bottom:none}
 .mm-group{margin-bottom:8px}
 .mm-label{font-size:0.75rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.05em;padding:8px 0 4px}
 @media(max-width:768px){
   .nav-links,.nav-cta{display:none}
   .menu-toggle{display:flex}
-  .mobile-menu.open{display:block}
+  .mobile-menu.active{display:flex}
 }
 
 /* Hero */
@@ -203,7 +204,7 @@ a{color:inherit;text-decoration:none}
 <body>
 
 <header>
-<nav class="nav" role="navigation" aria-label="Main navigation">
+<nav aria-label="Main navigation">
   <div class="container">
     <a href="/" class="nav-logo" aria-label="Performalytic home">
       <img src="/assets/images/performalytic-logo-blue-2.png" alt="Performalytic" width="411" height="78" fetchpriority="high" />
@@ -599,7 +600,7 @@ document.getElementById('menuToggle')?.addEventListener('click',function(){
   const menu=document.getElementById('mobileMenu');
   const expanded=this.getAttribute('aria-expanded')==='true';
   this.setAttribute('aria-expanded',String(!expanded));
-  menu.classList.toggle('open');
+  menu.classList.toggle('active');
   document.body.style.overflow=expanded?'':'hidden';
 });
 </script>
