@@ -145,10 +145,6 @@ a{color:inherit;text-decoration:none}
 .partner-tier{padding:80px 0}
 .partner-tier:nth-child(even){background:#f8fafc}
 .tier-header{text-align:center;margin-bottom:48px}
-.tier-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:24px;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
-.tier-badge-gold{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#78350f}
-.tier-badge-silver{background:linear-gradient(135deg,#cbd5e1,#94a3b8);color:#334155}
-.tier-badge-ally{background:linear-gradient(135deg,#60a5fa,#3b82f6);color:#fff}
 .tier-header h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0f172a;line-height:1.2}
 .tier-header>p{color:#64748b;margin-top:8px;max-width:560px;margin-left:auto;margin-right:auto}
 
@@ -159,10 +155,6 @@ a{color:inherit;text-decoration:none}
 .partner-card-top{display:flex;align-items:center;gap:16px;margin-bottom:20px}
 .partner-logo{width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;color:#fff;flex-shrink:0;letter-spacing:-0.02em}
 .partner-card-info h3{font-size:1.25rem;font-weight:700;color:#0f172a;margin-bottom:4px}
-.partner-card-info .partner-tier-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 10px;border-radius:20px;display:inline-block}
-.partner-tier-label.gold{background:#fef3c7;color:#92400e}
-.partner-tier-label.silver{background:#f1f5f9;color:#475569}
-.partner-tier-label.ally{background:#eff6ff;color:#2563eb}
 .partner-card>p{color:#64748b;font-size:0.95rem;line-height:1.7;margin-bottom:20px}
 .partner-capabilities{list-style:none;border-top:1px solid #f1f5f9;padding-top:16px}
 .partner-capabilities li{display:flex;align-items:flex-start;gap:10px;padding:6px 0;color:#334155;font-size:0.9rem}
@@ -295,12 +287,11 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<section class="partner-tier" aria-label="Gold Partners">
+<section class="partner-tier" aria-label="Technology Partners">
   <div class="container">
     <div class="tier-header">
-      <div class="tier-badge tier-badge-gold">Gold Partners</div>
-      <h2>Premier Technology Alliances</h2>
-      <p>Deep integrations and certified expertise with the platforms that power modern enterprises.</p>
+      <h2>Our Technology Partners</h2>
+      <p>Strategic alliances with the world's leading technology providers.</p>
     </div>
     <div class="partners-grid">
 
@@ -309,7 +300,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#0078d4,#00a4ef)">MS</div>
           <div class="partner-card-info">
             <h3>Microsoft</h3>
-            <span class="partner-tier-label gold">Gold Partner</span>
           </div>
         </div>
         <p>Performalytic is a certified Microsoft Solutions Partner, delivering Azure-native data solutions, Power BI integrations, and enterprise application development across the Microsoft cloud ecosystem.</p>
@@ -325,7 +315,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#0070f2,#004b8d)">SA</div>
           <div class="partner-card-info">
             <h3>SAP</h3>
-            <span class="partner-tier-label gold">Gold Partner</span>
           </div>
         </div>
         <p>As an SAP certified services partner, we specialize in SAP data integration, S/4HANA migrations, and building real-time reconciliation pipelines between SAP and analytics platforms.</p>
@@ -341,7 +330,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#ff3621,#ff6b35)">DB</div>
           <div class="partner-card-info">
             <h3>Databricks</h3>
-            <span class="partner-tier-label gold">Gold Partner</span>
           </div>
         </div>
         <p>Performalytic is a Databricks partner, building lakehouse architectures, ML pipelines, and unified analytics solutions that help enterprises unlock the full potential of their data.</p>
@@ -356,10 +344,9 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<section class="partner-tier" aria-label="Silver Partners">
+<section class="partner-tier" aria-label="Cloud & Data Platform Partners">
   <div class="container">
     <div class="tier-header">
-      <div class="tier-badge tier-badge-silver">Silver Partners</div>
       <h2>Cloud &amp; Data Platform Partners</h2>
       <p>Certified expertise across leading cloud infrastructure and modern data platforms.</p>
     </div>
@@ -370,7 +357,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#29b5e8,#0070f2)">SF</div>
           <div class="partner-card-info">
             <h3>Snowflake</h3>
-            <span class="partner-tier-label silver">Silver Partner</span>
           </div>
         </div>
         <p>We build and optimize Snowflake data architectures, enabling organizations to consolidate data, run near-real-time analytics, and reduce warehouse costs with expert tuning.</p>
@@ -386,7 +372,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#ff9900,#ffb84d)">AW</div>
           <div class="partner-card-info">
             <h3>Amazon Web Services</h3>
-            <span class="partner-tier-label silver">Silver Partner</span>
           </div>
         </div>
         <p>As an AWS partner, we design and deploy cloud-native data solutions on AWS, including S3-based data lakes, Redshift warehouses, and Lambda-driven real-time pipelines.</p>
@@ -402,7 +387,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#4285f4,#34a853)">GC</div>
           <div class="partner-card-info">
             <h3>Google Cloud</h3>
-            <span class="partner-tier-label silver">Silver Partner</span>
           </div>
         </div>
         <p>We deliver Google Cloud data and AI solutions, from BigQuery analytics to Vertex AI deployments, helping enterprises harness the full power of the GCP data ecosystem.</p>
@@ -418,7 +402,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#00a1e0,#157eff)">SF</div>
           <div class="partner-card-info">
             <h3>Salesforce</h3>
-            <span class="partner-tier-label silver">Silver Partner</span>
           </div>
         </div>
         <p>Our Salesforce partnership enables seamless CRM data integration, ensuring customer data flows reliably between Salesforce and enterprise analytics platforms.</p>
@@ -433,10 +416,9 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<section class="partner-tier" aria-label="Technology Allies">
+<section class="partner-tier" aria-label="Open-Source & DevOps Partners">
   <div class="container">
     <div class="tier-header">
-      <div class="tier-badge tier-badge-ally">Technology Allies</div>
       <h2>Open-Source &amp; DevOps Partners</h2>
       <p>Deep expertise with the tools that power modern data and cloud-native infrastructure.</p>
     </div>
@@ -447,7 +429,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#2496ed,#1d63a8)">DK</div>
           <div class="partner-card-info">
             <h3>Docker</h3>
-            <span class="partner-tier-label ally">Ally</span>
           </div>
         </div>
         <p>We build containerized data applications and CI/CD pipelines using Docker, enabling portable, reproducible environments across development and production.</p>
@@ -462,7 +443,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#326ce5,#1a4bc7)">K8</div>
           <div class="partner-card-info">
             <h3>Kubernetes</h3>
-            <span class="partner-tier-label ally">Ally</span>
           </div>
         </div>
         <p>Our team deploys and manages Kubernetes clusters for scalable data workloads, ensuring high availability and automated scaling for enterprise data services.</p>
@@ -477,7 +457,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#7b42bc,#5b32a0)">TF</div>
           <div class="partner-card-info">
             <h3>Terraform</h3>
-            <span class="partner-tier-label ally">Ally</span>
           </div>
         </div>
         <p>We use Terraform to automate infrastructure provisioning, enabling repeatable, version-controlled cloud environments for data platforms and analytics solutions.</p>
@@ -492,7 +471,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#ff694b,#e05535)">db</div>
           <div class="partner-card-info">
             <h3>dbt</h3>
-            <span class="partner-tier-label ally">Ally</span>
           </div>
         </div>
         <p>We build analytics engineering workflows with dbt, enabling version-controlled data transformations, testing, and documentation across modern data stacks.</p>
@@ -507,7 +485,6 @@ a{color:inherit;text-decoration:none}
           <div class="partner-logo" style="background:linear-gradient(135deg,#019cee,#0178d0)">AF</div>
           <div class="partner-card-info">
             <h3>Apache Airflow</h3>
-            <span class="partner-tier-label ally">Ally</span>
           </div>
         </div>
         <p>We orchestrate complex data workflows with Apache Airflow, building reliable DAGs that schedule, monitor, and manage data pipelines at enterprise scale.</p>
