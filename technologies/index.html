@@ -10,14 +10,12 @@
 <meta name="author" content="Performalytic" />
 <meta name="format-detection" content="telephone=no, address=no" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://embed.tawk.to 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://embed.tawk.to; font-src 'self' https://fonts.gstatic.com https://embed.tawk.to data:; img-src 'self' https://www.google-analytics.com https://*.tawk.to https://cdn.jsdelivr.net data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.tawk.to wss://*.tawk.to; frame-src 'self' https://docs.google.com https://*.tawk.to; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
-
 <title>Technologies - Performalytic | Our Technology Approach</title>
 <link rel="canonical" href="https://performalytic.com/technologies/" />
 <meta name="keywords" content="technology approach, data analytics, cloud platforms, data platforms, BI tools, data engineering, AI ML, DevOps, performalytic" />
 <meta name="description" content="Explore Performalytic's technology approach - we work with the latest platforms, tools, and frameworks across cloud, data, analytics, AI, and DevOps." />
 <link rel="alternate" hreflang="en" href="https://performalytic.com/technologies/" />
 <link rel="alternate" hreflang="x-default" href="https://performalytic.com/technologies/" />
-
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Technologies - Performalytic | Our Technology Approach" />
@@ -29,12 +27,10 @@
 <meta property="og:image:height" content="950" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:alt" content="Performalytic Technology Stack" />
-
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Technologies - Performalytic | Our Technology Approach" />
 <meta name="twitter:description" content="We work with the latest platforms, tools, and frameworks across cloud, data, analytics, AI, and DevOps." />
 <meta name="twitter:image" content="https://performalytic.com/assets/images/GettyImages-618762080-1.jpg" />
-
 <link rel="dns-prefetch" href="//performalytic.com" />
 <link rel="preconnect" href="https://embed.tawk.to" />
 <link rel="dns-prefetch" href="https://embed.tawk.to" />
@@ -51,7 +47,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-FV09CSCD2C');
 </script>
-
 <script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
 "@context":"https://schema.org",
 "@type":"Organization",
@@ -94,15 +89,14 @@ name:"Technologies",
 item:"https://performalytic.com/technologies/"
 }]
 }]</script>
-
 <style nonce="P3rf0rm4lyt1c">
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1e293b;line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* Nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06)}
 nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.25rem;color:#0f172a;letter-spacing:-0.5px}
@@ -134,41 +128,68 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
   .mobile-menu.active{display:flex}
 }
 
-/* Hero */
-.tech-hero{padding:160px 0 80px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);text-align:center;color:#fff}
+.tech-hero{position:relative;padding:160px 0 96px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);text-align:center;color:#fff;overflow:hidden}
+.tech-hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(37,99,235,0.08) 0%,transparent 50%),radial-gradient(circle at 70% 50%,rgba(124,58,237,0.06) 0%,transparent 50%);pointer-events:none}
+.tech-hero .container{position:relative;z-index:1}
+.tech-hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:6px 16px;border-radius:100px;font-size:0.78rem;font-weight:500;color:#94a3b8;margin-bottom:24px;backdrop-filter:blur(4px)}
 .tech-hero h1{font-size:clamp(2rem,5vw,3.25rem);font-weight:800;line-height:1.15;margin-bottom:16px}
 .tech-hero h1 .gradient-text{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .tech-hero p{font-size:1.125rem;color:#94a3b8;max-width:640px;margin:0 auto;line-height:1.7}
+.tech-hero-stats{display:flex;justify-content:center;gap:48px;margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.06)}
+.tech-hero-stat{text-align:center}
+.tech-hero-stat-num{font-size:1.5rem;font-weight:800;color:#fff}
+.tech-hero-stat-label{font-size:0.82rem;color:#94a3b8;margin-top:2px}
 
-/* Categories */
-.tech-categories{padding:80px 0}
-.category-section{margin-bottom:64px}
-.category-header{display:flex;align-items:center;gap:16px;margin-bottom:32px}
-.category-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.category-icon svg{width:24px;height:24px}
-.category-icon.blue{background:#eff6ff;color:#2563eb}
-.category-icon.purple{background:#f5f3ff;color:#7c3aed}
-.category-icon.green{background:#ecfdf5;color:#059669}
-.category-icon.red{background:#fef2f2;color:#dc2626}
-.category-icon.cyan{background:#ecfeff;color:#0891b2}
-.category-icon.amber{background:#fffbeb;color:#d97706}
-.category-icon.pink{background:#fdf2f8;color:#db2777}
-.category-icon.indigo{background:#eef2ff;color:#4f46e5}
-.category-icon.teal{background:#f0fdfa;color:#0d9488}
-.category-icon.orange{background:#fff7ed;color:#ea580c}
-.category-header h2{font-size:1.5rem;font-weight:800;color:#0f172a}
-.category-header p{font-size:0.9rem;color:#64748b;margin-top:4px}
+.tech-sections{padding:80px 0}
+.tech-section{margin-bottom:48px}
+.tech-section-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid #e2e8f0}
+.tech-section-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tech-section-icon svg{width:22px;height:22px}
+.tech-section-icon.blue{background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#2563eb}
+.tech-section-icon.purple{background:linear-gradient(135deg,#f5f3ff,#ede9fe);color:#7c3aed}
+.tech-section-icon.green{background:linear-gradient(135deg,#ecfdf5,#d1fae5);color:#059669}
+.tech-section-icon.red{background:linear-gradient(135deg,#fef2f2,#fecaca);color:#dc2626}
+.tech-section-icon.amber{background:linear-gradient(135deg,#fffbeb,#fef3c7);color:#d97706}
+.tech-section-icon.cyan{background:linear-gradient(135deg,#ecfeff,#cffafe);color:#0891b2}
+.tech-section-icon.pink{background:linear-gradient(135deg,#fdf2f8,#fce7f3);color:#db2777}
+.tech-section-icon.indigo{background:linear-gradient(135deg,#eef2ff,#e0e7ff);color:#4f46e5}
+.tech-section-icon.teal{background:linear-gradient(135deg,#f0fdfa,#ccfbf1);color:#0d9488}
+.tech-section-icon.orange{background:linear-gradient(135deg,#fff7ed,#fed7aa);color:#ea580c}
+.tech-section-header h2{font-size:1.35rem;font-weight:800;color:#0f172a;letter-spacing:-0.3px}
+.tech-section-desc{font-size:0.88rem;color:#64748b;margin-top:2px}
 
-/* Tech Grid */
-.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.tech-item{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;transition:all 0.2s;cursor:default}
-.tech-item:hover{border-color:#2563eb;box-shadow:0 4px 20px rgba(37,99,235,0.08);transform:translateY(-2px)}
-.tech-item-name{font-size:1rem;font-weight:700;color:#0f172a;line-height:1.3}
-.tech-item-desc{font-size:0.875rem;color:#64748b;line-height:1.5;margin-top:6px}
-.tech-tools{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-.tech-tools span{font-size:0.7rem;background:#f1f5f9;color:#475569;padding:4px 10px;border-radius:100px;font-weight:500}
+.tech-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tech-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:28px;transition:all 0.25s;cursor:default;position:relative;overflow:hidden}
+.tech-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity 0.25s}
+.tech-card:hover::before{opacity:1}
+.tech-card.blue::before{background:linear-gradient(90deg,#2563eb,#60a5fa)}
+.tech-card.purple::before{background:linear-gradient(90deg,#7c3aed,#a78bfa)}
+.tech-card.green::before{background:linear-gradient(90deg,#059669,#34d399)}
+.tech-card.red::before{background:linear-gradient(90deg,#dc2626,#f87171)}
+.tech-card.amber::before{background:linear-gradient(90deg,#d97706,#fbbf24)}
+.tech-card.cyan::before{background:linear-gradient(90deg,#0891b2,#22d3ee)}
+.tech-card.pink::before{background:linear-gradient(90deg,#db2777,#f472b6)}
+.tech-card.indigo::before{background:linear-gradient(90deg,#4f46e5,#818cf8)}
+.tech-card.teal::before{background:linear-gradient(90deg,#0d9488,#2dd4bf)}
+.tech-card.orange::before{background:linear-gradient(90deg,#ea580c,#fb923c)}
+.tech-card:hover{border-color:transparent;box-shadow:0 8px 30px rgba(0,0,0,0.08);transform:translateY(-3px)}
+.tech-card-name{font-size:1rem;font-weight:700;color:#0f172a;line-height:1.3}
+.tech-card-desc{font-size:0.875rem;color:#64748b;line-height:1.6;margin-top:8px}
+.tech-card-tools{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.tech-card-tools span{font-size:0.72rem;font-weight:500;padding:5px 12px;border-radius:100px;transition:all 0.15s}
+.tech-card-tools span.tool-blue{background:#eff6ff;color:#1d4ed8}
+.tech-card-tools span.tool-purple{background:#f5f3ff;color:#6d28d9}
+.tech-card-tools span.tool-green{background:#ecfdf5;color:#047857}
+.tech-card-tools span.tool-red{background:#fef2f2;color:#b91c1c}
+.tech-card-tools span.tool-amber{background:#fffbeb;color:#b45309}
+.tech-card-tools span.tool-cyan{background:#ecfeff;color:#0e7490}
+.tech-card-tools span.tool-pink{background:#fdf2f8;color:#be185d}
+.tech-card-tools span.tool-indigo{background:#eef2ff;color:#4338ca}
+.tech-card-tools span.tool-teal{background:#f0fdfa;color:#0f766e}
+.tech-card-tools span.tool-orange{background:#fff7ed;color:#c2410c}
+.tech-card-tools span.tool-slate{background:#f1f5f9;color:#475569}
+.tech-card-tools span:hover{transform:translateY(-1px);filter:brightness(0.95)}
 
-/* CTA */
 .cta-section{padding:80px 0;background:#f8fafc;text-align:center}
 .cta-section h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#0f172a;margin-bottom:12px}
 .cta-section p{color:#64748b;max-width:560px;margin:0 auto 32px}
@@ -178,7 +199,6 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#475569;padding:14px 28px;border-radius:10px;font-weight:600;font-size:0.95rem;transition:background 0.2s,transform 0.2s;border:1px solid #e2e8f0;cursor:pointer}
 .btn-secondary:hover{background:#f1f5f9;transform:translateY(-1px)}
 
-/* Footer */
 footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56px 0 24px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .footer-brand-logo{height:64px;max-width:160px;display:block;margin-bottom:16px}
@@ -196,12 +216,13 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom-links{display:flex;gap:24px}
 
 @media(max-width:768px){
-  .tech-grid{grid-template-columns:1fr;gap:12px}
-  .tech-item{padding:20px}
-  .category-header{flex-direction:column;align-items:flex-start;gap:12px}
+  .tech-card-grid{grid-template-columns:1fr 1fr}
+  .tech-hero-stats{flex-direction:column;gap:24px;align-items:center}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:480px){
+  .tech-card-grid{grid-template-columns:1fr}
+  .tech-section-header{flex-direction:column;align-items:flex-start;gap:12px}
   .footer-grid{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;gap:12px;text-align:center}
 }
@@ -284,173 +305,242 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 
 <section class="tech-hero">
   <div class="container">
+    <div class="tech-hero-badge">&#9670; 800+ experts &middot; 500+ enterprise clients</div>
     <h1>Our <span class="gradient-text">Technology Approach</span></h1>
     <p>We don't believe in being tied to specific tools. Our team continuously learns and adapts to the latest technologies, ensuring you always get the best solution for your unique challenges.</p>
+    <div class="tech-hero-stats">
+      <div class="tech-hero-stat">
+        <div class="tech-hero-stat-num">10</div>
+        <div class="tech-hero-stat-label">Technology Domains</div>
+      </div>
+      <div class="tech-hero-stat">
+        <div class="tech-hero-stat-num">50+</div>
+        <div class="tech-hero-stat-label">Platforms &amp; Tools</div>
+      </div>
+      <div class="tech-hero-stat">
+        <div class="tech-hero-stat-num">100%</div>
+        <div class="tech-hero-stat-label">Vendor-Agnostic</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="tech-categories">
+<section class="tech-sections">
   <div class="container">
 
-    <!-- Cloud Platforms -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon blue" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-        </div>
-        <div>
-          <h2>Cloud Platforms</h2>
-          <p>We architect solutions across all major cloud providers</p>
-        </div>
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div><h2>Cloud Platforms</h2><div class="tech-section-desc">We architect solutions across all major cloud providers</div></div>
       </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Multi-Cloud Strategy</div><div class="tech-item-desc">AWS, Azure, GCP, and more - we pick the right cloud for your needs</div><div class="tech-tools"><span>AWS</span><span>Azure</span><span>GCP</span><span>Oracle</span><span>IBM Cloud</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Cloud Migration</div><div class="tech-item-desc">Seamless transition to modern cloud infrastructure</div><div class="tech-tools"><span>Lift & Shift</span><span>Re-Platform</span><span>Cloud-Native</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Cloud-Native Development</div><div class="tech-item-desc">Building scalable, resilient applications from the ground up</div><div class="tech-tools"><span>Microservices</span><span>Serverless</span><span>Containers</span></div></div></div>
-      </div>
-    </div>
-
-    <!-- Data Platforms -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon purple" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <div class="tech-card-grid">
+        <div class="tech-card blue">
+          <div class="tech-card-name">Multi-Cloud Strategy</div>
+          <div class="tech-card-desc">AWS, Azure, GCP, and more - we pick the right cloud for your needs</div>
+          <div class="tech-card-tools"><span class="tool-orange">AWS</span><span class="tool-blue">Azure</span><span class="tool-blue">GCP</span><span class="tool-red">Oracle</span><span class="tool-indigo">IBM Cloud</span></div>
         </div>
-        <div>
-          <h2>Data Platforms &amp; Warehousing</h2>
-          <p>Modern data architecture for analytics and enterprise warehousing</p>
+        <div class="tech-card blue">
+          <div class="tech-card-name">Cloud Migration</div>
+          <div class="tech-card-desc">Seamless transition to modern cloud infrastructure</div>
+          <div class="tech-card-tools"><span class="tool-slate">Lift &amp; Shift</span><span class="tool-slate">Re-Platform</span><span class="tool-slate">Cloud-Native</span></div>
         </div>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Data Lakehouse Architecture</div><div class="tech-item-desc">Combining the best of data lakes and warehouses</div><div class="tech-tools"><span>Databricks</span><span>Snowflake</span><span>Delta Lake</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Cloud Data Warehousing</div><div class="tech-item-desc">Scalable, high-performance analytics at your fingertips</div><div class="tech-tools"><span>Snowflake</span><span>BigQuery</span><span>Redshift</span><span>Synapse</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Real-Time Data Processing</div><div class="tech-item-desc">Streaming architectures for instant insights</div><div class="tech-tools"><span>Kafka</span><span>Spark Streaming</span><span>Flink</span></div></div></div>
+        <div class="tech-card blue">
+          <div class="tech-card-name">Cloud-Native Development</div>
+          <div class="tech-card-desc">Building scalable, resilient applications from the ground up</div>
+          <div class="tech-card-tools"><span class="tool-cyan">Microservices</span><span class="tool-teal">Serverless</span><span class="tool-blue">Containers</span></div>
+        </div>
       </div>
     </div>
 
-    <!-- BI & Visualization -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon green" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-        </div>
-        <div>
-          <h2>BI &amp; Visualization</h2>
-          <p>Turning raw data into actionable business insights</p>
-        </div>
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div><h2>Data Platforms &amp; Warehousing</h2><div class="tech-section-desc">Modern data architecture for analytics and enterprise warehousing</div></div>
       </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Dashboard Design</div><div class="tech-item-desc">Interactive, executive-ready visualizations that drive decisions</div><div class="tech-tools"><span>Power BI</span><span>Tableau</span><span>Looker</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Self-Service Analytics</div><div class="tech-item-desc">Empowering every team to explore data independently</div><div class="tech-tools"><span>ThoughtSpot</span><span>Power BI</span><span>Qlik</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Embedded Analytics</div><div class="tech-item-desc">Analytics directly within your business applications</div><div class="tech-tools"><span>Superset</span><span>Metabase</span><span>Redash</span></div></div></div>
-      </div>
-    </div>
-
-    <!-- Data Engineering -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon red" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <div class="tech-card-grid">
+        <div class="tech-card purple">
+          <div class="tech-card-name">Data Lakehouse Architecture</div>
+          <div class="tech-card-desc">Combining the best of data lakes and warehouses</div>
+          <div class="tech-card-tools"><span class="tool-purple">Databricks</span><span class="tool-blue">Snowflake</span><span class="tool-cyan">Delta Lake</span></div>
         </div>
-        <div>
-          <h2>Data Engineering</h2>
-          <p>Building robust data pipelines and transformation workflows</p>
+        <div class="tech-card purple">
+          <div class="tech-card-name">Cloud Data Warehousing</div>
+          <div class="tech-card-desc">Scalable, high-performance analytics at your fingertips</div>
+          <div class="tech-card-tools"><span class="tool-blue">Snowflake</span><span class="tool-blue">BigQuery</span><span class="tool-orange">Redshift</span><span class="tool-indigo">Synapse</span></div>
         </div>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">ETL/ELT Pipelines</div><div class="tech-item-desc">Automated, reliable data movement across your ecosystem</div><div class="tech-tools"><span>dbt</span><span>Airbyte</span><span>Fivetran</span><span>Spark</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Data Quality & Governance</div><div class="tech-item-desc">Ensuring accuracy, consistency, and compliance</div><div class="tech-tools"><span>Great Expectations</span><span>Monte Carlo</span><span>Atlan</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Workflow Orchestration</div><div class="tech-item-desc">Automating complex data workflows end-to-end</div><div class="tech-tools"><span>Airflow</span><span>Prefect</span><span>Dagster</span><span>Luigi</span></div></div></div>
+        <div class="tech-card purple">
+          <div class="tech-card-name">Real-Time Data Processing</div>
+          <div class="tech-card-desc">Streaming architectures for instant insights</div>
+          <div class="tech-card-tools"><span class="tool-orange">Kafka</span><span class="tool-red">Spark Streaming</span><span class="tool-blue">Flink</span></div>
+        </div>
       </div>
     </div>
 
-    <!-- AI & Machine Learning -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon amber" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
-        <div>
-          <h2>AI &amp; Machine Learning</h2>
-          <p>Leveraging the latest in artificial intelligence and ML</p>
-        </div>
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+        <div><h2>BI &amp; Visualization</h2><div class="tech-section-desc">Turning raw data into actionable business insights</div></div>
       </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Generative AI Integration</div><div class="tech-item-desc">Custom LLMs, RAG systems, and AI copilots</div><div class="tech-tools"><span>OpenAI</span><span>Anthropic</span><span>Google Gemini</span><span>Llama</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Predictive Analytics</div><div class="tech-item-desc">ML models that forecast trends and outcomes</div><div class="tech-tools"><span>Scikit-learn</span><span>XGBoost</span><span>Prophet</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">MLOps & Model Lifecycle</div><div class="tech-item-desc">Production-grade ML deployment and monitoring</div><div class="tech-tools"><span>MLflow</span><span>Kubeflow</span><span>Weights & Biases</span></div></div></div>
-      </div>
-    </div>
-
-    <!-- Programming & Development -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon cyan" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <div class="tech-card-grid">
+        <div class="tech-card green">
+          <div class="tech-card-name">Dashboard Design</div>
+          <div class="tech-card-desc">Interactive, executive-ready visualizations that drive decisions</div>
+          <div class="tech-card-tools"><span class="tool-amber">Power BI</span><span class="tool-blue">Tableau</span><span class="tool-green">Looker</span></div>
         </div>
-        <div>
-          <h2>Programming &amp; Development</h2>
-          <p>Full-stack development with modern languages and frameworks</p>
+        <div class="tech-card green">
+          <div class="tech-card-name">Self-Service Analytics</div>
+          <div class="tech-card-desc">Empowering every team to explore data independently</div>
+          <div class="tech-card-tools"><span class="tool-purple">ThoughtSpot</span><span class="tool-amber">Power BI</span><span class="tool-blue">Qlik</span></div>
         </div>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Backend Development</div><div class="tech-item-desc">Enterprise-grade server-side applications and APIs</div><div class="tech-tools"><span>Python</span><span>Java</span><span>Go</span><span>Node.js</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Frontend & Full-Stack</div><div class="tech-item-desc">Modern web applications with responsive UIs</div><div class="tech-tools"><span>React</span><span>Angular</span><span>Vue</span><span>Next.js</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">API Design & Integration</div><div class="tech-item-desc">RESTful, GraphQL, and event-driven architectures</div><div class="tech-tools"><span>REST</span><span>GraphQL</span><span>gRPC</span><span>Kafka</span></div></div></div>
+        <div class="tech-card green">
+          <div class="tech-card-name">Embedded Analytics</div>
+          <div class="tech-card-desc">Analytics directly within your business applications</div>
+          <div class="tech-card-tools"><span class="tool-blue">Superset</span><span class="tool-teal">Metabase</span><span class="tool-red">Redash</span></div>
+        </div>
       </div>
     </div>
 
-    <!-- DevOps & Infrastructure -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon indigo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <div>
-          <h2>DevOps &amp; Infrastructure</h2>
-          <p>Modern DevOps practices for rapid, reliable delivery</p>
-        </div>
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div><h2>Data Engineering</h2><div class="tech-section-desc">Building robust data pipelines and transformation workflows</div></div>
       </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">CI/CD Automation</div><div class="tech-item-desc">Streamlined deployment pipelines from code to production</div><div class="tech-tools"><span>GitHub Actions</span><span>GitLab CI</span><span>Jenkins</span><span>Azure DevOps</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Containerization & Orchestration</div><div class="tech-item-desc">Scalable, portable workloads with Docker and Kubernetes</div><div class="tech-tools"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Istio</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Infrastructure as Code</div><div class="tech-item-desc">Repeatable, version-controlled infrastructure provisioning</div><div class="tech-tools"><span>Terraform</span><span>Pulumi</span><span>CloudFormation</span><span>Ansible</span></div></div></div>
-      </div>
-    </div>
-
-    <!-- Security & Networking -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon pink" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="tech-card-grid">
+        <div class="tech-card red">
+          <div class="tech-card-name">ETL/ELT Pipelines</div>
+          <div class="tech-card-desc">Automated, reliable data movement across your ecosystem</div>
+          <div class="tech-card-tools"><span class="tool-cyan">dbt</span><span class="tool-purple">Airbyte</span><span class="tool-teal">Fivetran</span><span class="tool-orange">Spark</span></div>
         </div>
-        <div>
-          <h2>Security &amp; Networking</h2>
-          <p>Enterprise-grade security and network infrastructure</p>
+        <div class="tech-card red">
+          <div class="tech-card-name">Data Quality &amp; Governance</div>
+          <div class="tech-card-desc">Ensuring accuracy, consistency, and compliance</div>
+          <div class="tech-card-tools"><span class="tool-green">Great Expectations</span><span class="tool-blue">Monte Carlo</span><span class="tool-indigo">Atlan</span></div>
         </div>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">Zero Trust Architecture</div><div class="tech-item-desc">Modern security models for distributed teams</div><div class="tech-tools"><span>Okta</span><span>CrowdStrike</span><span>Zscaler</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Network Design</div><div class="tech-item-desc">Secure, scalable infrastructure from edge to cloud</div><div class="tech-tools"><span>Cisco</span><span>Fortinet</span><span>Palo Alto</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Compliance & Governance</div><div class="tech-item-desc">SOC2, HIPAA, GDPR, and industry-specific standards</div><div class="tech-tools"><span>Vanta</span><span>Drata</span><span>OneTrust</span></div></div></div>
+        <div class="tech-card red">
+          <div class="tech-card-name">Workflow Orchestration</div>
+          <div class="tech-card-desc">Automating complex data workflows end-to-end</div>
+          <div class="tech-card-tools"><span class="tool-blue">Airflow</span><span class="tool-teal">Prefect</span><span class="tool-purple">Dagster</span><span class="tool-red">Luigi</span></div>
+        </div>
       </div>
     </div>
 
-    <!-- Enterprise Platforms -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon teal" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div><h2>AI &amp; Machine Learning</h2><div class="tech-section-desc">Leveraging the latest in artificial intelligence and ML</div></div>
+      </div>
+      <div class="tech-card-grid">
+        <div class="tech-card amber">
+          <div class="tech-card-name">Generative AI Integration</div>
+          <div class="tech-card-desc">Custom LLMs, RAG systems, and AI copilots</div>
+          <div class="tech-card-tools"><span class="tool-green">OpenAI</span><span class="tool-purple">Anthropic</span><span class="tool-blue">Google Gemini</span><span class="tool-orange">Llama</span></div>
         </div>
-        <div>
-          <h2>Enterprise Platforms</h2>
-          <p>Deep expertise across major enterprise ecosystems</p>
+        <div class="tech-card amber">
+          <div class="tech-card-name">Predictive Analytics</div>
+          <div class="tech-card-desc">ML models that forecast trends and outcomes</div>
+          <div class="tech-card-tools"><span class="tool-blue">Scikit-learn</span><span class="tool-green">XGBoost</span><span class="tool-purple">Prophet</span></div>
+        </div>
+        <div class="tech-card amber">
+          <div class="tech-card-name">MLOps &amp; Model Lifecycle</div>
+          <div class="tech-card-desc">Production-grade ML deployment and monitoring</div>
+          <div class="tech-card-tools"><span class="tool-red">MLflow</span><span class="tool-blue">Kubeflow</span><span class="tool-pink">Weights &amp; Biases</span></div>
         </div>
       </div>
-      <div class="tech-grid">
-        <div class="tech-item"><div><div class="tech-item-name">SAP Ecosystem</div><div class="tech-item-desc">Analytics, data warehousing, and cloud transformations</div><div class="tech-tools"><span>SAP HANA</span><span>SAP BW/4HANA</span><span>SAP Datasphere</span><span>SAC</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">CRM & ERP Integration</div><div class="tech-item-desc">Connecting enterprise systems for a unified view</div><div class="tech-tools"><span>Salesforce</span><span>Microsoft Dynamics</span><span>HubSpot</span></div></div></div>
-        <div class="tech-item"><div><div class="tech-item-name">Custom Enterprise Apps</div><div class="tech-item-desc">Tailored solutions for complex business processes</div><div class="tech-tools"><span>Low-Code</span><span>Custom APIs</span><span>Workflow Automation</span></div></div></div>
+    </div>
+
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div><h2>Programming &amp; Development</h2><div class="tech-section-desc">Full-stack development with modern languages and frameworks</div></div>
+      </div>
+      <div class="tech-card-grid">
+        <div class="tech-card cyan">
+          <div class="tech-card-name">Backend Development</div>
+          <div class="tech-card-desc">Enterprise-grade server-side applications and APIs</div>
+          <div class="tech-card-tools"><span class="tool-blue">Python</span><span class="tool-orange">Java</span><span class="tool-cyan">Go</span><span class="tool-green">Node.js</span></div>
+        </div>
+        <div class="tech-card cyan">
+          <div class="tech-card-name">Frontend &amp; Full-Stack</div>
+          <div class="tech-card-desc">Modern web applications with responsive UIs</div>
+          <div class="tech-card-tools"><span class="tool-blue">React</span><span class="tool-red">Angular</span><span class="tool-green">Vue</span><span class="tool-purple">Next.js</span></div>
+        </div>
+        <div class="tech-card cyan">
+          <div class="tech-card-name">API Design &amp; Integration</div>
+          <div class="tech-card-desc">RESTful, GraphQL, and event-driven architectures</div>
+          <div class="tech-card-tools"><span class="tool-slate">REST</span><span class="tool-pink">GraphQL</span><span class="tool-purple">gRPC</span><span class="tool-orange">Kafka</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div><h2>DevOps &amp; Infrastructure</h2><div class="tech-section-desc">Modern DevOps practices for rapid, reliable delivery</div></div>
+      </div>
+      <div class="tech-card-grid">
+        <div class="tech-card indigo">
+          <div class="tech-card-name">CI/CD Automation</div>
+          <div class="tech-card-desc">Streamlined deployment pipelines from code to production</div>
+          <div class="tech-card-tools"><span class="tool-slate">GitHub Actions</span><span class="tool-orange">GitLab CI</span><span class="tool-red">Jenkins</span><span class="tool-blue">Azure DevOps</span></div>
+        </div>
+        <div class="tech-card indigo">
+          <div class="tech-card-name">Containerization &amp; Orchestration</div>
+          <div class="tech-card-desc">Scalable, portable workloads with Docker and Kubernetes</div>
+          <div class="tech-card-tools"><span class="tool-blue">Docker</span><span class="tool-blue">Kubernetes</span><span class="tool-cyan">Helm</span><span class="tool-purple">Istio</span></div>
+        </div>
+        <div class="tech-card indigo">
+          <div class="tech-card-name">Infrastructure as Code</div>
+          <div class="tech-card-desc">Repeatable, version-controlled infrastructure provisioning</div>
+          <div class="tech-card-tools"><span class="tool-purple">Terraform</span><span class="tool-cyan">Pulumi</span><span class="tool-orange">CloudFormation</span><span class="tool-red">Ansible</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h2>Security &amp; Networking</h2><div class="tech-section-desc">Enterprise-grade security and network infrastructure</div></div>
+      </div>
+      <div class="tech-card-grid">
+        <div class="tech-card pink">
+          <div class="tech-card-name">Zero Trust Architecture</div>
+          <div class="tech-card-desc">Modern security models for distributed teams</div>
+          <div class="tech-card-tools"><span class="tool-blue">Okta</span><span class="tool-red">CrowdStrike</span><span class="tool-teal">Zscaler</span></div>
+        </div>
+        <div class="tech-card pink">
+          <div class="tech-card-name">Network Design</div>
+          <div class="tech-card-desc">Secure, scalable infrastructure from edge to cloud</div>
+          <div class="tech-card-tools"><span class="tool-cyan">Cisco</span><span class="tool-orange">Fortinet</span><span class="tool-red">Palo Alto</span></div>
+        </div>
+        <div class="tech-card pink">
+          <div class="tech-card-name">Compliance &amp; Governance</div>
+          <div class="tech-card-desc">SOC2, HIPAA, GDPR, and industry-specific standards</div>
+          <div class="tech-card-tools"><span class="tool-teal">Vanta</span><span class="tool-blue">Drata</span><span class="tool-purple">OneTrust</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-section">
+      <div class="tech-section-header">
+        <div class="tech-section-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><h2>Enterprise Platforms</h2><div class="tech-section-desc">Deep expertise across major enterprise ecosystems</div></div>
+      </div>
+      <div class="tech-card-grid">
+        <div class="tech-card teal">
+          <div class="tech-card-name">SAP Ecosystem</div>
+          <div class="tech-card-desc">Analytics, data warehousing, and cloud transformations</div>
+          <div class="tech-card-tools"><span class="tool-blue">SAP HANA</span><span class="tool-purple">SAP BW/4HANA</span><span class="tool-teal">SAP Datasphere</span><span class="tool-amber">SAC</span></div>
+        </div>
+        <div class="tech-card teal">
+          <div class="tech-card-name">CRM &amp; ERP Integration</div>
+          <div class="tech-card-desc">Connecting enterprise systems for a unified view</div>
+          <div class="tech-card-tools"><span class="tool-blue">Salesforce</span><span class="tool-indigo">Microsoft Dynamics</span><span class="tool-orange">HubSpot</span></div>
+        </div>
+        <div class="tech-card teal">
+          <div class="tech-card-name">Custom Enterprise Apps</div>
+          <div class="tech-card-desc">Tailored solutions for complex business processes</div>
+          <div class="tech-card-tools"><span class="tool-slate">Low-Code</span><span class="tool-slate">Custom APIs</span><span class="tool-slate">Workflow Automation</span></div>
+        </div>
       </div>
     </div>
 
@@ -495,7 +585,7 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
         <h5>Company</h5>
         <a href="/about/">About Us</a>
         <a href="/careers/">Careers</a>
-          <a href="/blog/">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
       </div>
       <div class="footer-col">
