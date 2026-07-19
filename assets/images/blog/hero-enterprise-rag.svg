@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Enterprise RAG architecture — documents embedded, retrieved, and generated into grounded answers</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gp"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+<marker id="arrB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c3aed"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="260" cy="280" rx="400" ry="280" fill="url(#gb)"/>
+<ellipse cx="960" cy="300" rx="420" ry="300" fill="url(#gp)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<rect x="519" y="88" width="162" height="34" rx="17" fill="#111a30" stroke="#2b3a5c"/>
+<text x="600" y="110" text-anchor="middle" font-size="12" letter-spacing="3" fill="#94a3b8">RAG PIPELINE</text>
+<!-- stage 1: documents -->
+<rect x="90" y="190" width="210" height="200" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<rect x="152" y="232" width="70" height="90" rx="8" fill="#16223f" stroke="#3b4d75" stroke-width="2"/>
+<rect x="168" y="248" width="70" height="90" rx="8" fill="#1b2952" stroke="#60a5fa" stroke-width="2"/>
+<line x1="182" y1="270" x2="224" y2="270" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="182" y1="288" x2="224" y2="288" stroke="#3b4d75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="182" y1="306" x2="210" y2="306" stroke="#3b4d75" stroke-width="2.5" stroke-linecap="round"/>
+<text x="195" y="368" text-anchor="middle" font-size="12" letter-spacing="2" fill="#94a3b8">DOCUMENTS</text>
+<!-- stage 2: vector store -->
+<rect x="375" y="190" width="210" height="200" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<path d="M430 244 a50 16 0 0 0 100 0 v72 a50 16 0 0 1 -100 0 z" fill="#16223f" stroke="#3b4d75" stroke-width="2"/>
+<ellipse cx="480" cy="244" rx="50" ry="16" fill="#1b2952" stroke="#60a5fa" stroke-width="2"/>
+<circle cx="458" cy="286" r="5" fill="#60a5fa"/><circle cx="484" cy="298" r="5" fill="#a78bfa"/><circle cx="506" cy="280" r="5" fill="#22d3ee"/>
+<circle cx="468" cy="316" r="5" fill="#7c3aed"/><circle cx="496" cy="322" r="5" fill="#3b82f6"/>
+<text x="480" y="368" text-anchor="middle" font-size="12" letter-spacing="2" fill="#94a3b8">VECTOR STORE</text>
+<!-- stage 3: LLM -->
+<rect x="660" y="190" width="210" height="200" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<rect x="717" y="242" width="96" height="96" rx="16" fill="#131d38" stroke="url(#brand)" stroke-width="2.5"/>
+<path d="M765 262 l7 17 17 7 -17 7 -7 17 -7 -17 -17 -7 17 -7 z" fill="#a78bfa"/>
+<line x1="717" y1="266" x2="697" y2="266" stroke="#3b4d75" stroke-width="2.5"/><line x1="717" y1="290" x2="697" y2="290" stroke="#3b4d75" stroke-width="2.5"/><line x1="717" y1="314" x2="697" y2="314" stroke="#3b4d75" stroke-width="2.5"/>
+<line x1="813" y1="266" x2="833" y2="266" stroke="#3b4d75" stroke-width="2.5"/><line x1="813" y1="290" x2="833" y2="290" stroke="#3b4d75" stroke-width="2.5"/><line x1="813" y1="314" x2="833" y2="314" stroke="#3b4d75" stroke-width="2.5"/>
+<text x="765" y="368" text-anchor="middle" font-size="12" letter-spacing="2" fill="#94a3b8">LLM</text>
+<!-- stage 4: grounded answer -->
+<rect x="945" y="190" width="210" height="200" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<path d="M985 240 h130 a10 10 0 0 1 10 10 v70 a10 10 0 0 1 -10 10 h-96 l-22 20 v-20 h-12 a10 10 0 0 1 -10 -10 v-70 a10 10 0 0 1 10 -10 z" fill="#16223f" stroke="#3b4d75" stroke-width="2"/>
+<line x1="1002" y1="266" x2="1096" y2="266" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1002" y1="286" x2="1082" y2="286" stroke="#3b4d75" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1002" y1="306" x2="1060" y2="306" stroke="#3b4d75" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1078" y="296" width="30" height="18" rx="9" fill="#1b2952" stroke="#60a5fa"/>
+<text x="1093" y="309" text-anchor="middle" font-size="10" fill="#60a5fa">[1]</text>
+<circle cx="1122" cy="238" r="15" fill="#34d399"/>
+<path d="M1115 238 l5 6 l10 -12" fill="none" stroke="#0b1120" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1050" y="368" text-anchor="middle" font-size="12" letter-spacing="2" fill="#94a3b8">GROUNDED ANSWER</text>
+<!-- arrows -->
+<line x1="306" y1="290" x2="368" y2="290" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="337" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#64748b">EMBED</text>
+<line x1="591" y1="290" x2="653" y2="290" stroke="url(#brand)" stroke-width="3" marker-end="url(#arrB)"/>
+<text x="622" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#a78bfa">RETRIEVE</text>
+<line x1="876" y1="290" x2="938" y2="290" stroke="url(#brand)" stroke-width="3" marker-end="url(#arrB)"/>
+<text x="907" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#a78bfa">GENERATE</text>
+<!-- query path -->
+<path d="M600 512 C640 512 700 480 748 424" fill="none" stroke="#3b4d75" stroke-width="2.5" stroke-dasharray="6 7" marker-end="url(#arr)"/>
+<rect x="460" y="492" width="150" height="40" rx="20" fill="#131d38" stroke="#2b3a5c"/>
+<text x="535" y="517" text-anchor="middle" font-size="12" letter-spacing="2" fill="#94a3b8">USER QUERY</text>
+</g>
+</svg>

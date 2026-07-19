@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">What is business intelligence — raw data transformed into insight</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gp"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+<marker id="arrB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c3aed"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="240" cy="320" rx="380" ry="280" fill="url(#gb)"/>
+<ellipse cx="920" cy="280" rx="420" ry="300" fill="url(#gp)"/>
+<!-- raw data scatter -->
+<g>
+<circle cx="140" cy="200" r="9" fill="#475569"/><circle cx="205" cy="168" r="7" fill="#64748b"/><circle cx="262" cy="214" r="10" fill="#475569"/>
+<circle cx="176" cy="268" r="8" fill="#60a5fa" opacity="0.8"/><circle cx="246" cy="286" r="7" fill="#475569"/><circle cx="308" cy="252" r="8" fill="#64748b"/>
+<circle cx="142" cy="336" r="7" fill="#475569"/><circle cx="216" cy="352" r="10" fill="#a78bfa" opacity="0.8"/><circle cx="288" cy="330" r="7" fill="#475569"/>
+<circle cx="170" cy="416" r="9" fill="#64748b"/><circle cx="242" cy="426" r="7" fill="#475569"/><circle cx="306" cy="398" r="9" fill="#60a5fa" opacity="0.7"/>
+<circle cx="350" cy="300" r="6" fill="#475569"/><circle cx="128" cy="382" r="6" fill="#475569"/>
+</g>
+<!-- converging arrows -->
+<path d="M330 230 C360 250 366 268 388 282" fill="none" stroke="#3b4d75" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M356 300 L388 300" fill="none" stroke="#3b4d75" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M330 372 C360 352 366 334 388 318" fill="none" stroke="#3b4d75" stroke-width="2" marker-end="url(#arr)"/>
+<!-- funnel -->
+<path d="M400 172 L570 262 L570 338 L400 428 Z" fill="#131d38" stroke="#2b3a5c" stroke-width="2"/>
+<g fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M432 282 l16 18 l-16 18" stroke="#2563eb"/>
+<path d="M472 282 l16 18 l-16 18" stroke="#60a5fa"/>
+<path d="M512 282 l16 18 l-16 18" stroke="#7c3aed"/>
+</g>
+<!-- big arrow to dashboard -->
+<path d="M576 300 L636 300" fill="none" stroke="url(#brand)" stroke-width="3.5" marker-end="url(#arrB)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<!-- dashboard -->
+<rect x="650" y="140" width="440" height="320" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<circle cx="682" cy="170" r="6" fill="#fb7185"/><circle cx="704" cy="170" r="6" fill="#fbbf24"/><circle cx="726" cy="170" r="6" fill="#34d399"/>
+<line x1="650" y1="194" x2="1090" y2="194" stroke="#2b3a5c"/>
+<circle cx="750" cy="310" r="56" fill="none" stroke="#2563eb" stroke-width="20" stroke-dasharray="211 141" transform="rotate(-90 750 310)"/>
+<circle cx="750" cy="310" r="56" fill="none" stroke="#7c3aed" stroke-width="20" stroke-dasharray="88 264" stroke-dashoffset="-211" transform="rotate(-90 750 310)"/>
+<circle cx="750" cy="310" r="56" fill="none" stroke="#22d3ee" stroke-width="20" stroke-dasharray="53 299" stroke-dashoffset="-299" transform="rotate(-90 750 310)"/>
+<text x="750" y="318" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">BI</text>
+<line x1="850" y1="404" x2="1058" y2="404" stroke="#2b3a5c"/>
+<rect x="862" y="342" width="30" height="62" rx="5" fill="#2563eb"/>
+<rect x="910" y="316" width="30" height="88" rx="5" fill="#3b82f6"/>
+<rect x="958" y="356" width="30" height="48" rx="5" fill="#2563eb"/>
+<rect x="1006" y="292" width="30" height="112" rx="5" fill="#7c3aed"/>
+<rect x="850" y="224" width="208" height="48" rx="10" fill="#16223f" stroke="#2b3a5c"/>
+<text x="866" y="244" font-size="15" font-weight="700" fill="#34d399">&#9650; 24% growth</text>
+<text x="866" y="262" font-size="11" letter-spacing="2" fill="#94a3b8">THIS QUARTER</text>
+<!-- labels -->
+<g font-size="12" letter-spacing="3" fill="#64748b" text-anchor="middle">
+<text x="230" y="490">RAW DATA</text>
+<text x="485" y="490">TRANSFORM</text>
+<text x="870" y="490">INSIGHT</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Data infrastructure bottleneck — pipeline congestion holding the business back</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="ga"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.15"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="280" cy="300" rx="440" ry="300" fill="url(#gb)"/>
+<ellipse cx="680" cy="200" rx="360" ry="240" fill="url(#ga)"/>
+<!-- pipe -->
+<path d="M100 230 L440 230 C520 230 500 274 580 274 L760 274 C840 274 820 230 900 230 L1100 230 L1100 370 L900 370 C820 370 840 326 760 326 L580 326 C500 326 520 370 440 370 L100 370 Z" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<!-- queued dots (jam) -->
+<g fill="#60a5fa">
+<circle cx="150" cy="266" r="10"/><circle cx="186" cy="300" r="10"/><circle cx="152" cy="334" r="10"/>
+<circle cx="224" cy="270" r="10"/><circle cx="228" cy="332" r="10"/><circle cx="264" cy="300" r="10"/>
+<circle cx="300" cy="268" r="10"/><circle cx="304" cy="332" r="10"/><circle cx="340" cy="300" r="10"/>
+<circle cx="376" cy="270" r="10"/><circle cx="380" cy="330" r="10"/><circle cx="414" cy="300" r="10"/>
+<circle cx="448" cy="276" r="10"/><circle cx="452" cy="324" r="10"/><circle cx="488" cy="300" r="10"/>
+<circle cx="522" cy="290" r="10"/><circle cx="540" cy="312" r="10"/>
+</g>
+<!-- single file through bottleneck -->
+<circle cx="620" cy="300" r="9" fill="#93c5fd"/>
+<circle cx="676" cy="300" r="9" fill="#93c5fd"/>
+<circle cx="732" cy="300" r="9" fill="#93c5fd"/>
+<!-- sparse output -->
+<circle cx="950" cy="300" r="9" fill="#3b4d75"/>
+<circle cx="1040" cy="300" r="9" fill="#3b4d75"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<!-- warning -->
+<path d="M670 128 l40 68 h-80 z" fill="#f59e0b" rx="6"/>
+<rect x="666" y="152" width="8" height="24" rx="4" fill="#1a1405"/>
+<circle cx="670" cy="186" r="4.5" fill="#1a1405"/>
+<line x1="670" y1="200" x2="670" y2="266" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 6"/>
+<!-- labels -->
+<text x="150" y="205" font-size="12" letter-spacing="3" fill="#64748b">INGEST</text>
+<rect x="596" y="404" width="150" height="34" rx="17" fill="#111a30" stroke="#f59e0b"/>
+<text x="671" y="426" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="2" fill="#fbbf24">BOTTLENECK</text>
+<text x="1100" y="205" text-anchor="end" font-size="12" letter-spacing="3" fill="#64748b">DELIVERY</text>
+<!-- stat chips -->
+<rect x="140" y="452" width="220" height="60" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="162" y="478" font-size="16" font-weight="700" fill="#fb7185">14 days</text>
+<text x="162" y="498" font-size="11" letter-spacing="2" fill="#94a3b8">REPORT BACKLOG</text>
+<rect x="390" y="452" width="220" height="60" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="412" y="478" font-size="16" font-weight="700" fill="#fbbf24">&#8722;68%</text>
+<text x="412" y="498" font-size="11" letter-spacing="2" fill="#94a3b8">THROUGHPUT</text>
+<rect x="640" y="452" width="220" height="60" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="662" y="478" font-size="16" font-weight="700" fill="#fb7185">6+ tools</text>
+<text x="662" y="498" font-size="11" letter-spacing="2" fill="#94a3b8">DISCONNECTED</text>
+<rect x="890" y="452" width="220" height="60" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="912" y="478" font-size="16" font-weight="700" fill="#94a3b8">?</text>
+<text x="912" y="498" font-size="11" letter-spacing="2" fill="#94a3b8">TRUST IN NUMBERS</text>
+</g>
+</svg>

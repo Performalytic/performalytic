@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Enterprise AI agents — an orchestrator coordinating specialized autonomous agents</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gp"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.25"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="600" cy="300" rx="480" ry="320" fill="url(#gp)"/>
+<ellipse cx="240" cy="160" rx="340" ry="240" fill="url(#gb)"/>
+<!-- connectors -->
+<g stroke="#3b4d75" stroke-width="2" stroke-dasharray="5 7">
+<line x1="600" y1="123" x2="600" y2="195"/>
+<line x1="286" y1="172" x2="518" y2="252"/>
+<line x1="914" y1="172" x2="682" y2="252"/>
+<line x1="253" y1="410" x2="512" y2="330"/>
+<line x1="947" y1="410" x2="688" y2="330"/>
+</g>
+<circle cx="402" cy="212" r="4.5" fill="#22d3ee"/>
+<circle cx="798" cy="212" r="4.5" fill="#a78bfa"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<!-- orchestrator hexagon -->
+<path d="M600 195 L691 247.5 L691 352.5 L600 405 L509 352.5 L509 247.5 Z" fill="#111a30" stroke="url(#brand)" stroke-width="3.5"/>
+<path d="M600 258 l10 24 24 10 -24 10 -10 24 -10 -24 -24 -10 24 -10 z" fill="#a78bfa"/>
+<circle cx="652" cy="262" r="5" fill="#fbbf24"/>
+<text x="600" y="446" text-anchor="middle" font-size="13" letter-spacing="3" fill="#94a3b8">ORCHESTRATOR</text>
+<!-- agent: top (mail) -->
+<circle cx="600" cy="77" r="46" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<rect x="578" y="63" width="44" height="30" rx="5" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
+<path d="M578 68 l22 16 l22 -16" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="634" cy="46" r="7" fill="#34d399" stroke="#0b1120" stroke-width="2.5"/>
+<!-- agent: upper left (doc) -->
+<circle cx="242" cy="158" r="46" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<rect x="226" y="138" width="32" height="40" rx="5" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+<line x1="234" y1="152" x2="250" y2="152" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="234" y1="162" x2="250" y2="162" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="234" y1="172" x2="244" y2="172" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="276" cy="127" r="7" fill="#34d399" stroke="#0b1120" stroke-width="2.5"/>
+<!-- agent: upper right (chart) -->
+<circle cx="958" cy="158" r="46" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<rect x="938" y="158" width="9" height="20" rx="2.5" fill="#a78bfa"/>
+<rect x="952" y="146" width="9" height="32" rx="2.5" fill="#a78bfa"/>
+<rect x="966" y="136" width="9" height="42" rx="2.5" fill="#a78bfa"/>
+<circle cx="992" cy="127" r="7" fill="#34d399" stroke="#0b1120" stroke-width="2.5"/>
+<!-- agent: lower left (gear) -->
+<circle cx="210" cy="424" r="46" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="210" cy="424" r="15" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
+<g stroke="#60a5fa" stroke-width="3" stroke-linecap="round">
+<line x1="210" y1="400" x2="210" y2="407"/><line x1="210" y1="441" x2="210" y2="448"/>
+<line x1="186" y1="424" x2="193" y2="424"/><line x1="227" y1="424" x2="234" y2="424"/>
+<line x1="193" y1="407" x2="198" y2="412"/><line x1="222" y1="436" x2="227" y2="441"/>
+<line x1="227" y1="407" x2="222" y2="412"/><line x1="198" y1="436" x2="193" y2="441"/>
+</g>
+<circle cx="244" cy="393" r="7" fill="#34d399" stroke="#0b1120" stroke-width="2.5"/>
+<!-- agent: lower right (database) -->
+<circle cx="990" cy="424" r="46" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<path d="M968 408 a22 8 0 0 0 44 0 v32 a22 8 0 0 1 -44 0 z" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+<ellipse cx="990" cy="408" rx="22" ry="8" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+<ellipse cx="990" cy="424" rx="22" ry="8" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6"/>
+<circle cx="1024" cy="393" r="7" fill="#34d399" stroke="#0b1120" stroke-width="2.5"/>
+<!-- task chip -->
+<rect x="330" y="196" width="76" height="30" rx="15" fill="#131d38" stroke="#2b3a5c"/>
+<text x="368" y="216" text-anchor="middle" font-size="11" letter-spacing="2" fill="#94a3b8">TASK</text>
+<text x="600" y="548" text-anchor="middle" font-size="13" letter-spacing="4" fill="#64748b">AUTONOMOUS AGENTS &#183; HUMAN OVERSIGHT &#183; ENTERPRISE GUARDRAILS</text>
+</g>
+</svg>

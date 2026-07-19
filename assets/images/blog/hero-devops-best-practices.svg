@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">DevOps continuous delivery loop with CI/CD pipeline stages</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gp"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="330" cy="240" rx="440" ry="300" fill="url(#gb)"/>
+<ellipse cx="880" cy="360" rx="440" ry="300" fill="url(#gp)"/>
+<!-- infinity loop -->
+<circle cx="485" cy="260" r="115" fill="none" stroke="#2563eb" stroke-width="5" opacity="0.95"/>
+<circle cx="715" cy="260" r="115" fill="none" stroke="#7c3aed" stroke-width="5" opacity="0.95"/>
+<path d="M462 138 l26 7 -22 16 z" fill="#2563eb"/>
+<path d="M508 382 l-26 -7 22 -16 z" fill="#2563eb"/>
+<path d="M738 138 l-26 7 22 16 z" fill="#7c3aed"/>
+<path d="M692 382 l26 -7 -22 -16 z" fill="#7c3aed"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<g fill="#0b1120" stroke="#2b3a5c" stroke-width="2">
+<circle cx="485" cy="145" r="20"/><circle cx="370" cy="260" r="20"/><circle cx="485" cy="375" r="20"/>
+<circle cx="715" cy="145" r="20"/><circle cx="860" cy="260" r="20"/><circle cx="715" cy="375" r="20"/>
+</g>
+<circle cx="600" cy="260" r="24" fill="url(#brand)"/>
+<path d="M590 260 l7 8 l14 -16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g font-size="13" letter-spacing="2" fill="#94a3b8" text-anchor="middle">
+<text x="485" y="112">PLAN</text>
+<text x="340" y="230">CODE</text>
+<text x="485" y="416">BUILD</text>
+<text x="600" y="312">TEST</text>
+<text x="715" y="112">RELEASE</text>
+<text x="893" y="230">DEPLOY</text>
+<text x="715" y="416">MONITOR</text>
+</g>
+<!-- pipeline bar -->
+<rect x="300" y="470" width="600" height="56" rx="28" fill="#111a30" stroke="#2b3a5c"/>
+<circle cx="352" cy="498" r="12" fill="#34d399"/><path d="M346 498 l4 5 l9 -10" fill="none" stroke="#0b1120" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="368" y1="498" x2="404" y2="498" stroke="#34d399" stroke-width="2.5"/>
+<circle cx="420" cy="498" r="12" fill="#34d399"/><path d="M414 498 l4 5 l9 -10" fill="none" stroke="#0b1120" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="436" y1="498" x2="472" y2="498" stroke="#34d399" stroke-width="2.5"/>
+<circle cx="488" cy="498" r="12" fill="#34d399"/><path d="M482 498 l4 5 l9 -10" fill="none" stroke="#0b1120" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="504" y1="498" x2="540" y2="498" stroke="#3b4d75" stroke-width="2.5" stroke-dasharray="4 6"/>
+<circle cx="556" cy="498" r="13" fill="none" stroke="url(#brand)" stroke-width="3.5" stroke-dasharray="48 20" stroke-linecap="round"/>
+<line x1="572" y1="498" x2="608" y2="498" stroke="#3b4d75" stroke-width="2.5" stroke-dasharray="4 6"/>
+<circle cx="624" cy="498" r="9" fill="#1e2a47" stroke="#2b3a5c" stroke-width="2"/>
+<text x="864" y="504" text-anchor="end" font-size="12" letter-spacing="3" fill="#64748b">CI/CD PIPELINE</text>
+</g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Building a data-driven culture — teams connected around shared data</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.25"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gp"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="600" cy="290" rx="520" ry="320" fill="url(#gb)"/>
+<ellipse cx="960" cy="480" rx="380" ry="240" fill="url(#gp)"/>
+<!-- connections -->
+<g stroke="#2b3a5c" stroke-width="2">
+<line x1="600" y1="198" x2="600" y2="128"/>
+<line x1="680" y1="244" x2="742" y2="208"/>
+<line x1="680" y1="336" x2="742" y2="372"/>
+<line x1="600" y1="382" x2="600" y2="452"/>
+<line x1="520" y1="336" x2="458" y2="372"/>
+<line x1="520" y1="244" x2="458" y2="208"/>
+</g>
+<circle cx="713" cy="226" r="4.5" fill="#22d3ee"/>
+<circle cx="487" cy="354" r="4.5" fill="#a78bfa"/>
+<!-- hub -->
+<g font-family="Segoe UI, system-ui, sans-serif">
+<circle cx="600" cy="290" r="92" fill="#111a30" stroke="url(#brand)" stroke-width="3"/>
+<line x1="552" y1="332" x2="648" y2="332" stroke="#2b3a5c" stroke-width="2"/>
+<rect x="556" y="296" width="17" height="36" rx="4" fill="#2563eb"/>
+<rect x="581" y="272" width="17" height="60" rx="4" fill="#3b82f6"/>
+<rect x="606" y="308" width="17" height="24" rx="4" fill="#22d3ee"/>
+<rect x="631" y="256" width="17" height="76" rx="4" fill="#7c3aed"/>
+<path d="M556 250 L586 236 L616 244 L648 222" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="648" cy="222" r="4.5" fill="#34d399"/>
+<!-- avatars -->
+<g>
+<circle cx="600" cy="88" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="600" cy="78" r="12" fill="#60a5fa"/><path d="M578 112 a22 16 0 0 1 44 0" fill="#33415e"/>
+<circle cx="778" cy="188" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="778" cy="178" r="12" fill="#a78bfa"/><path d="M756 212 a22 16 0 0 1 44 0" fill="#33415e"/>
+<circle cx="778" cy="392" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="778" cy="382" r="12" fill="#22d3ee"/><path d="M756 416 a22 16 0 0 1 44 0" fill="#33415e"/>
+<circle cx="600" cy="492" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="600" cy="482" r="12" fill="#34d399"/><path d="M578 516 a22 16 0 0 1 44 0" fill="#33415e"/>
+<circle cx="422" cy="392" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="422" cy="382" r="12" fill="#fbbf24"/><path d="M400 416 a22 16 0 0 1 44 0" fill="#33415e"/>
+<circle cx="422" cy="188" r="40" fill="#111a30" stroke="#2b3a5c" stroke-width="2"/>
+<circle cx="422" cy="178" r="12" fill="#fb7185"/><path d="M400 212 a22 16 0 0 1 44 0" fill="#33415e"/>
+</g>
+<!-- chips -->
+<rect x="836" y="160" width="112" height="32" rx="16" fill="#111a30" stroke="#2b3a5c"/>
+<path d="M850 176 l5 6 l9 -11" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="872" y="181" font-size="12" letter-spacing="2" fill="#94a3b8">ALIGNED</text>
+<rect x="252" y="364" width="112" height="32" rx="16" fill="#111a30" stroke="#2b3a5c"/>
+<path d="M264 386 l8 -8 6 5 10 -12" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="296" y="385" font-size="12" letter-spacing="2" fill="#94a3b8">INSIGHT</text>
+<text x="600" y="566" text-anchor="middle" font-size="13" letter-spacing="4" fill="#64748b">ONE TEAM &#183; ONE SOURCE OF TRUTH</text>
+</g>
+</svg>
