@@ -52,9 +52,9 @@
 <!-- arrows -->
 <line x1="306" y1="290" x2="368" y2="290" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
 <text x="337" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#64748b">EMBED</text>
-<line x1="591" y1="290" x2="653" y2="290" stroke="url(#brand)" stroke-width="3" marker-end="url(#arrB)"/>
+<line x1="591" y1="290" x2="653" y2="290" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrB)"/>
 <text x="622" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#a78bfa">RETRIEVE</text>
-<line x1="876" y1="290" x2="938" y2="290" stroke="url(#brand)" stroke-width="3" marker-end="url(#arrB)"/>
+<line x1="876" y1="290" x2="938" y2="290" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrB)"/>
 <text x="907" y="276" text-anchor="middle" font-size="11" letter-spacing="2" fill="#a78bfa">GENERATE</text>
 <!-- query path -->
 <path d="M600 512 C640 512 700 480 748 424" fill="none" stroke="#3b4d75" stroke-width="2.5" stroke-dasharray="6 7" marker-end="url(#arr)"/>

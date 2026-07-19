@@ -38,7 +38,7 @@
 </g>
 <!-- branch arrows -->
 <path d="M596 300 C660 300 676 172 744 170" fill="none" stroke="#3b4d75" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#arr)"/>
-<path d="M596 300 L744 300" fill="none" stroke="url(#brand)" stroke-width="3" marker-end="url(#arrB)"/>
+<path d="M596 300 L744 300" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrB)"/>
 <path d="M596 300 C660 300 676 428 744 430" fill="none" stroke="#3b4d75" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#arr)"/>
 <!-- outcome cards -->
 <g font-family="Segoe UI, system-ui, sans-serif">

@@ -43,7 +43,7 @@
 <circle cx="575" cy="300" r="12" fill="url(#brand)"/>
 <text x="575" y="416" text-anchor="middle" font-size="12" letter-spacing="3" fill="#94a3b8">MATCH ENGINE</text>
 <!-- arrow out -->
-<line x1="659" y1="300" x2="745" y2="300" stroke="url(#brand)" stroke-width="3.5" marker-end="url(#arrB)"/>
+<line x1="659" y1="300" x2="745" y2="300" stroke="#7c3aed" stroke-width="3.5" marker-end="url(#arrB)"/>
 <!-- result card -->
 <rect x="760" y="140" width="330" height="320" rx="18" fill="#111a30" stroke="#2b3a5c"/>
 <text x="786" y="178" font-size="12" letter-spacing="3" fill="#94a3b8">RECONCILED</text>

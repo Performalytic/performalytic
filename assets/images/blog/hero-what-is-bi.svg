@@ -33,7 +33,7 @@
 <path d="M512 282 l16 18 l-16 18" stroke="#7c3aed"/>
 </g>
 <!-- big arrow to dashboard -->
-<path d="M576 300 L636 300" fill="none" stroke="url(#brand)" stroke-width="3.5" marker-end="url(#arrB)"/>
+<path d="M576 300 L636 300" fill="none" stroke="#7c3aed" stroke-width="3.5" marker-end="url(#arrB)"/>
 <g font-family="Segoe UI, system-ui, sans-serif">
 <!-- dashboard -->
 <rect x="650" y="140" width="440" height="320" rx="18" fill="#111a30" stroke="#2b3a5c"/>
