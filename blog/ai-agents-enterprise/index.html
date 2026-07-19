@@ -208,6 +208,17 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .tldr-box li:last-child{border-bottom:none}
 .tldr-box .tldr-icon{flex-shrink:0;width:20px;height:20px;background:rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#60a5fa}
 
+.featured-image-section .featured-image{width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.featured-image-section .featured-image-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:12px;font-style:italic}
+.featured-image-section{padding:0 0 40px}
+
+.agent-loop-diagram{padding:40px 0}
+.agent-loop-diagram .diagram-container{background:#0f172a;border-radius:12px;padding:24px;margin:24px 0;border:1px solid rgba(255,255,255,0.08);overflow-x:auto}
+.agent-loop-diagram .diagram-container svg{width:100%;min-width:600px;height:auto}
+.agent-loop-diagram .diagram-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:16px;font-style:italic}
+
+@media(max-width:768px){.agent-loop-diagram .diagram-container{padding:16px}}
+
 /* Post Nav */
 .post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin:60px 0;padding-top:32px;border-top:1px solid #e2e8f0}
 .post-footer-nav a{flex:1;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;text-decoration:none;transition:all 0.2s}
@@ -327,6 +338,71 @@ section{padding:60px 0}
     </div>
     <h1>AI Agents in the Enterprise: From <span class="gradient-text">Copilots to Autonomous</span> Workflows</h1>
     <p class="hero-description">The shift from reactive AI assistants to autonomous, goal-driven agents is reshaping how enterprises operate. This guide covers architecture patterns, use cases, implementation considerations, and what it takes to deploy AI agents responsibly at scale.</p>
+  </div>
+</section>
+
+<section class="featured-image-section">
+  <div class="container">
+    <img src="/assets/images/blog/ai-agents-hero.jpg" alt="AI agents and automation - concept visualization of autonomous AI systems working together" class="featured-image" width="1200" height="600" loading="eager" decoding="async" />
+    <p class="featured-image-caption">AI agents combine LLM reasoning with tool use and memory to execute multi-step workflows autonomously.</p>
+  </div>
+</section>
+
+<section class="agent-loop-diagram" aria-label="AI agent core loop diagram">
+  <div class="container">
+    <h2>The Agent Core Loop</h2>
+    <p>Every AI agent follows a perception-reasoning-action-memory loop that repeats until the goal is achieved.</p>
+    <div class="diagram-container">
+      <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI agent core loop showing perception, reasoning, action, and memory stages">
+        <rect width="800" height="350" fill="#0f172a" rx="12"/>
+        <!-- Perception -->
+        <rect x="40" y="120" width="150" height="110" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+        <circle cx="115" cy="155" r="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="115" y="160" text-anchor="middle" fill="#3b82f6" font-size="16">&#128065;</text>
+        <text x="115" y="188" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">PERCEPTION</text>
+        <text x="115" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Read APIs, DBs,</text>
+        <text x="115" y="218" text-anchor="middle" fill="#94a3b8" font-size="9">logs, user input</text>
+        <!-- Arrow 1 -->
+        <path d="M195 175 L225 175" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+        <!-- Reasoning -->
+        <rect x="230" y="120" width="150" height="110" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+        <circle cx="305" cy="155" r="20" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="305" y="160" text-anchor="middle" fill="#a78bfa" font-size="16">&#129504;</text>
+        <text x="305" y="188" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700">REASONING</text>
+        <text x="305" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">LLM + CoT planning,</text>
+        <text x="305" y="218" text-anchor="middle" fill="#94a3b8" font-size="9">tool selection</text>
+        <!-- Arrow 2 -->
+        <path d="M385 175 L415 175" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+        <!-- Action -->
+        <rect x="420" y="120" width="150" height="110" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <circle cx="495" cy="155" r="20" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1"/>
+        <text x="495" y="160" text-anchor="middle" fill="#34d399" font-size="16">&#9881;</text>
+        <text x="495" y="188" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="700">ACTION</text>
+        <text x="495" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Call APIs, write code,</text>
+        <text x="495" y="218" text-anchor="middle" fill="#94a3b8" font-size="9">update systems</text>
+        <!-- Arrow 3 -->
+        <path d="M575 175 L605 175" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+        <!-- Memory -->
+        <rect x="610" y="120" width="150" height="110" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+        <circle cx="685" cy="155" r="20" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="685" y="160" text-anchor="middle" fill="#fbbf24" font-size="16">&#128218;</text>
+        <text x="685" y="188" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="700">MEMORY</text>
+        <text x="685" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Short-term context,</text>
+        <text x="685" y="218" text-anchor="middle" fill="#94a3b8" font-size="9">long-term knowledge</text>
+        <!-- Loop arrow back -->
+        <path d="M685 235 L685 280 L115 280 L115 235" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,3" fill="none" marker-end="url(#arryellow)"/>
+        <text x="400" y="300" text-anchor="middle" fill="#fbbf24" font-size="10" font-style="italic">Loop until goal achieved or stopping condition met</text>
+        <!-- Input/Output labels -->
+        <rect x="240" y="40" width="320" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Goal: "Generate Q3 sales report by region"</text>
+        <text x="400" y="78" text-anchor="middle" fill="#94a3b8" font-size="9">Agent decomposes into sub-tasks, selects tools, executes, and verifies</text>
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#475569"/></marker>
+          <marker id="arryellow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#fbbf24"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="diagram-caption">Figure 1: The agent core loop - perception, reasoning, action, and memory work together in a continuous cycle until the objective is achieved.</p>
   </div>
 </section>
 

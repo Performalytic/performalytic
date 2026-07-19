@@ -208,6 +208,17 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .tldr-box li:last-child{border-bottom:none}
 .tldr-box .tldr-icon{flex-shrink:0;width:20px;height:20px;background:rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#60a5fa}
 
+.featured-image-section .featured-image{width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.featured-image-section .featured-image-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:12px;font-style:italic}
+.featured-image-section{padding:0 0 40px}
+
+.nist-framework-diagram{padding:40px 0}
+.nist-framework-diagram .diagram-container{background:#0f172a;border-radius:12px;padding:24px;margin:24px 0;border:1px solid rgba(255,255,255,0.08);overflow-x:auto}
+.nist-framework-diagram .diagram-container svg{width:100%;min-width:600px;height:auto}
+.nist-framework-diagram .diagram-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:16px;font-style:italic}
+
+@media(max-width:768px){.nist-framework-diagram .diagram-container{padding:16px}}
+
 /* Post Nav */
 .post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin:60px 0;padding-top:32px;border-top:1px solid #e2e8f0}
 .post-footer-nav a{flex:1;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;text-decoration:none;transition:all 0.2s}
@@ -327,6 +338,92 @@ section{padding:60px 0}
     </div>
     <h1>Building a <span class="gradient-text">Responsible AI Framework</span>: Governance, Bias, and Compliance in 2026</h1>
     <p class="hero-description">A comprehensive guide to building an enterprise responsible AI framework that addresses governance, bias mitigation, explainability, and regulatory compliance across the full AI lifecycle.</p>
+  </div>
+</section>
+
+<section class="featured-image-section">
+  <div class="container">
+    <img src="/assets/images/blog/responsible-ai-hero.jpg" alt="Responsible AI governance - visual representation of AI ethics, compliance and safety frameworks" class="featured-image" width="1200" height="600" loading="eager" decoding="async" />
+    <p class="featured-image-caption">A responsible AI framework ensures fairness, transparency, and compliance across every stage of the AI lifecycle.</p>
+  </div>
+</section>
+
+<section class="nist-framework-diagram" aria-label="NIST AI RMF framework diagram">
+  <div class="container">
+    <h2>NIST AI Risk Management Framework</h2>
+    <p>The NIST AI RMF provides a structured approach to managing AI risks across four core functions: Govern, Map, Measure, and Manage.</p>
+    <div class="diagram-container">
+      <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIST AI Risk Management Framework with Govern, Map, Measure, and Manage functions">
+        <rect width="800" height="400" fill="#0f172a" rx="12"/>
+        <!-- Title -->
+        <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700">NIST AI Risk Management Framework</text>
+        <!-- GOVERN -->
+        <rect x="40" y="60" width="170" height="280" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect x="40" y="60" width="170" height="40" rx="10" fill="rgba(59,130,246,0.15)"/>
+        <text x="125" y="86" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">GOVERN</text>
+        <text x="125" y="125" text-anchor="middle" fill="#94a3b8" font-size="9">AI risk culture</text>
+        <text x="125" y="142" text-anchor="middle" fill="#94a3b8" font-size="9">Roles &amp; accountability</text>
+        <text x="125" y="159" text-anchor="middle" fill="#94a3b8" font-size="9">Policies &amp; procedures</text>
+        <text x="125" y="176" text-anchor="middle" fill="#94a3b8" font-size="9">Stakeholder engagement</text>
+        <text x="125" y="193" text-anchor="middle" fill="#94a3b8" font-size="9">Risk appetite definition</text>
+        <rect x="55" y="210" width="140" height="24" rx="4" fill="rgba(59,130,246,0.1)"/>
+        <text x="125" y="227" text-anchor="middle" fill="#60a5fa" font-size="8">Foundation Layer</text>
+        <text x="125" y="260" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">Continuous process</text>
+        <text x="125" y="275" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">across AI lifecycle</text>
+        <!-- Arrow 1 -->
+        <path d="M215 200 L240 200" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+        <!-- MAP -->
+        <rect x="245" y="60" width="170" height="280" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+        <rect x="245" y="60" width="170" height="40" rx="10" fill="rgba(167,139,250,0.15)"/>
+        <text x="330" y="86" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="700">MAP</text>
+        <text x="330" y="125" text-anchor="middle" fill="#94a3b8" font-size="9">Context identification</text>
+        <text x="330" y="142" text-anchor="middle" fill="#94a3b8" font-size="9">Impact assessment</text>
+        <text x="330" y="159" text-anchor="middle" fill="#94a3b8" font-size="9">Harm identification</text>
+        <text x="330" y="176" text-anchor="middle" fill="#94a3b8" font-size="9">Risk classification</text>
+        <text x="330" y="193" text-anchor="middle" fill="#94a3b8" font-size="9">Affected populations</text>
+        <rect x="260" y="210" width="140" height="24" rx="4" fill="rgba(167,139,250,0.1)"/>
+        <text x="330" y="227" text-anchor="middle" fill="#c4b5fd" font-size="8">Pre-deployment</text>
+        <text x="330" y="260" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">Risk identification</text>
+        <text x="330" y="275" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">&amp; categorization</text>
+        <!-- Arrow 2 -->
+        <path d="M420 200 L445 200" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+        <!-- MEASURE -->
+        <rect x="450" y="60" width="170" height="280" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <rect x="450" y="60" width="170" height="40" rx="10" fill="rgba(52,211,153,0.15)"/>
+        <text x="535" y="86" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="700">MEASURE</text>
+        <text x="535" y="125" text-anchor="middle" fill="#94a3b8" font-size="9">Fairness metrics</text>
+        <text x="535" y="142" text-anchor="middle" fill="#94a3b8" font-size="9">Accuracy testing</text>
+        <text x="535" y="159" text-anchor="middle" fill="#94a3b8" font-size="9">Bias detection</text>
+        <text x="535" y="176" text-anchor="middle" fill="#94a3b8" font-size="9">Explainability analysis</text>
+        <text x="535" y="193" text-anchor="middle" fill="#94a3b8" font-size="9">Drift monitoring</text>
+        <rect x="465" y="210" width="140" height="24" rx="4" fill="rgba(52,211,153,0.1)"/>
+        <text x="535" y="227" text-anchor="middle" fill="#6ee7b7" font-size="8">Quantitative assessment</text>
+        <text x="535" y="260" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">Evidence-based risk</text>
+        <text x="535" y="275" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">measurement</text>
+        <!-- Arrow 3 -->
+        <path d="M625 200 L650 200" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+        <!-- MANAGE -->
+        <rect x="655" y="60" width="130" height="280" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+        <rect x="655" y="60" width="130" height="40" rx="10" fill="rgba(251,191,36,0.15)"/>
+        <text x="720" y="86" text-anchor="middle" fill="#fcd34d" font-size="13" font-weight="700">MANAGE</text>
+        <text x="720" y="125" text-anchor="middle" fill="#94a3b8" font-size="9">Risk response</text>
+        <text x="720" y="142" text-anchor="middle" fill="#94a3b8" font-size="9">Incident response</text>
+        <text x="720" y="159" text-anchor="middle" fill="#94a3b8" font-size="9">Ongoing monitoring</text>
+        <text x="720" y="176" text-anchor="middle" fill="#94a3b8" font-size="9">Model retraining</text>
+        <text x="720" y="193" text-anchor="middle" fill="#94a3b8" font-size="9">Stakeholder comms</text>
+        <rect x="665" y="210" width="110" height="24" rx="4" fill="rgba(251,191,36,0.1)"/>
+        <text x="720" y="227" text-anchor="middle" fill="#fcd34d" font-size="8">Active response</text>
+        <text x="720" y="260" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">Continuous risk</text>
+        <text x="720" y="275" text-anchor="middle" fill="#64748b" font-size="8" font-style="italic">management</text>
+        <!-- Bottom: AI Act Risk Classes -->
+        <rect x="40" y="360" width="745" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="400" y="380" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="600">EU AI Act Risk Classification: Unacceptable &#8594; High &#8594; Limited &#8594; Minimal</text>
+        <defs>
+          <marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#475569"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="diagram-caption">Figure 1: NIST AI RMF four core functions - Govern establishes the foundation, Map identifies risks, Measure quantifies them, and Manage responds to them. This framework aligns with EU AI Act compliance requirements.</p>
   </div>
 </section>
 

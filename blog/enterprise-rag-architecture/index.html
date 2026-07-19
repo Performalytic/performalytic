@@ -208,6 +208,17 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .tldr-box li:last-child{border-bottom:none}
 .tldr-box .tldr-icon{flex-shrink:0;width:20px;height:20px;background:rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#60a5fa}
 
+.featured-image-section .featured-image{width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.featured-image-section .featured-image-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:12px;font-style:italic}
+.featured-image-section{padding:0 0 40px}
+
+.rag-pipeline-diagram{padding:40px 0}
+.rag-pipeline-diagram .diagram-container{background:#0f172a;border-radius:12px;padding:24px;margin:24px 0;border:1px solid rgba(255,255,255,0.08);overflow-x:auto}
+.rag-pipeline-diagram .diagram-container svg{width:100%;min-width:700px;height:auto}
+.rag-pipeline-diagram .diagram-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:16px;font-style:italic}
+
+@media(max-width:768px){.rag-pipeline-diagram .diagram-container{padding:16px}}
+
 /* Post Nav */
 .post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin:60px 0;padding-top:32px;border-top:1px solid #e2e8f0}
 .post-footer-nav a{flex:1;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;text-decoration:none;transition:all 0.2s}
@@ -327,6 +338,118 @@ section{padding:60px 0}
     </div>
     <h1>Enterprise RAG Architecture: A <span class="gradient-text">Practical Guide</span> for 2026</h1>
     <p class="hero-description">From naive RAG to production-grade systems - a comprehensive guide covering architecture patterns, design decisions, evaluation metrics, and common pitfalls for enterprise retrieval augmented generation.</p>
+  </div>
+</section>
+
+<section class="featured-image-section">
+  <div class="container">
+    <img src="/assets/images/blog/rag-architecture-hero.jpg" alt="Enterprise RAG architecture - neural network visualization showing document retrieval and AI generation" class="featured-image" width="1200" height="600" loading="eager" decoding="async" />
+    <p class="featured-image-caption">RAG systems combine document retrieval with LLM generation to produce accurate, grounded AI responses from enterprise data.</p>
+  </div>
+</section>
+
+<section class="rag-pipeline-diagram" aria-label="RAG pipeline architecture diagram">
+  <div class="container">
+    <h2>How RAG Works: The Complete Pipeline</h2>
+    <p>This diagram shows the end-to-end flow of a production RAG system, from document ingestion through retrieval to answer generation.</p>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RAG pipeline architecture diagram showing document ingestion, embedding, vector storage, retrieval, and generation">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#d97706;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <!-- Background -->
+        <rect width="1000" height="400" fill="#0f172a" rx="12"/>
+        <!-- Step 1: Documents -->
+        <rect x="20" y="140" width="140" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="90" y="185" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700">DOCUMENTS</text>
+        <text x="90" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">PDF, HTML, Docs</text>
+        <text x="90" y="220" text-anchor="middle" fill="#94a3b8" font-size="9">Databases, APIs</text>
+        <rect x="40" y="235" width="100" height="16" rx="4" fill="#1e40af" opacity="0.3"/>
+        <text x="90" y="247" text-anchor="middle" fill="#60a5fa" font-size="8">Raw Data</text>
+        <!-- Arrow 1 -->
+        <path d="M165 200 L195 200" stroke="#334155" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="180" y="190" text-anchor="middle" fill="#64748b" font-size="8">Ingest</text>
+        <!-- Step 2: Chunking -->
+        <rect x="200" y="140" width="140" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="270" y="185" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="700">CHUNKING</text>
+        <text x="270" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Fixed-size</text>
+        <text x="270" y="220" text-anchor="middle" fill="#94a3b8" font-size="9">Semantic / Recursive</text>
+        <rect x="220" y="235" width="100" height="16" rx="4" fill="#7c3aed" opacity="0.2"/>
+        <text x="270" y="247" text-anchor="middle" fill="#a78bfa" font-size="8">512 tokens</text>
+        <!-- Arrow 2 -->
+        <path d="M345 200 L375 200" stroke="#334155" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="360" y="190" text-anchor="middle" fill="#64748b" font-size="8">Embed</text>
+        <!-- Step 3: Embedding -->
+        <rect x="380" y="140" width="140" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="450" y="185" text-anchor="middle" fill="#34d399" font-size="11" font-weight="700">EMBEDDING</text>
+        <text x="450" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">OpenAI ada-002</text>
+        <text x="450" y="220" text-anchor="middle" fill="#94a3b8" font-size="9">Cohere / BGE</text>
+        <rect x="400" y="235" width="100" height="16" rx="4" fill="#059669" opacity="0.2"/>
+        <text x="450" y="247" text-anchor="middle" fill="#34d399" font-size="8">1536-d vectors</text>
+        <!-- Arrow 3 -->
+        <path d="M525 200 L555 200" stroke="#334155" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="540" y="190" text-anchor="middle" fill="#64748b" font-size="8">Store</text>
+        <!-- Step 4: Vector DB -->
+        <rect x="560" y="140" width="140" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="630" y="185" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">VECTOR DB</text>
+        <text x="630" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Pinecone / Weaviate</text>
+        <text x="630" y="220" text-anchor="middle" fill="#94a3b8" font-size="9">Qdrant / pgvector</text>
+        <rect x="580" y="235" width="100" height="16" rx="4" fill="#d97706" opacity="0.2"/>
+        <text x="630" y="247" text-anchor="middle" fill="#fbbf24" font-size="8">Indexed vectors</text>
+        <!-- Arrow 4 -->
+        <path d="M705 200 L735 200" stroke="#334155" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="720" y="190" text-anchor="middle" fill="#64748b" font-size="8">Query</text>
+        <!-- Step 5: Retrieval -->
+        <rect x="740" y="140" width="120" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="800" y="185" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="700">RETRIEVE</text>
+        <text x="800" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">Hybrid Search</text>
+        <text x="800" y="220" text-anchor="middle" fill="#94a3b8" font-size="9">+ Re-ranking</text>
+        <rect x="760" y="235" width="80" height="16" rx="4" fill="#be185d" opacity="0.2"/>
+        <text x="800" y="247" text-anchor="middle" fill="#f472b6" font-size="8">Top-K docs</text>
+        <!-- Arrow 5 -->
+        <path d="M865 200 L895 200" stroke="#334155" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="880" y="190" text-anchor="middle" fill="#64748b" font-size="8">Generate</text>
+        <!-- Step 6: LLM -->
+        <rect x="900" y="140" width="80" height="120" rx="8" fill="url(#grad1)"/>
+        <text x="940" y="195" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">LLM</text>
+        <text x="940" y="215" text-anchor="middle" fill="#e2e8f0" font-size="8">GPT-4</text>
+        <text x="940" y="228" text-anchor="middle" fill="#e2e8f0" font-size="8">Claude</text>
+        <!-- User Query -->
+        <rect x="740" y="40" width="140" height="50" rx="8" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+        <text x="810" y="62" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="600">User Query</text>
+        <text x="810" y="78" text-anchor="middle" fill="#94a3b8" font-size="8">"What is our Q3 revenue?"</text>
+        <path d="M810 90 L810 135" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowblue)"/>
+        <!-- Output -->
+        <rect x="740" y="300" width="220" height="70" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <text x="850" y="325" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">Grounded Answer</text>
+        <text x="850" y="345" text-anchor="middle" fill="#94a3b8" font-size="8">"Q3 revenue was $4.2M (Source: Q3 Report)"</text>
+        <path d="M940 265 L940 295" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowgreen)"/>
+        <!-- Arrow markers -->
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+          </marker>
+          <marker id="arrowblue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+          </marker>
+          <marker id="arrowgreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="diagram-caption">Figure 1: Production RAG pipeline - documents are chunked, embedded, and stored in a vector database. User queries trigger retrieval, re-ranking, and LLM generation with source attribution.</p>
   </div>
 </section>
 
