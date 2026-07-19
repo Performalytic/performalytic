@@ -3,7 +3,7 @@
 
 ---
 
-## Part 1: Data Engineering & Analytics (15 Topics)
+## Part 1: Data Engineering & Analytics (25 Topics)
 
 ### 1. Agentic Data Engineering: How AI Agents Are Building Pipelines in 2026
 **Why it's hot:** 82% of data pros use AI daily; Gartner calls agentic AI the #1 trend for 2026. AI agents now autonomously build, optimize, and maintain data pipelines.
@@ -79,6 +79,96 @@
 **Why it's hot:** The 40-year separation between transactional and analytical systems is softening. Real-time engines appearing inside analytical platforms.
 **Key angles:** What Lakehouse//RT enables, HTAP patterns, when to converge vs keep separate, impact on data modeling
 **Target:** Data architects, platform engineers, CTOs
+
+### 16. Automated Data Reconciliation: Eliminating the "Garbage In, garbage Out" Problem
+**Why it's hot:** Data inconsistencies between source systems and analytics databases cost enterprises millions. Automated reconciliation is now table stakes for trustworthy analytics.
+**Key angles:** Source-to-target reconciliation patterns, cross-system consistency checks, real-time vs batch reconciliation, tooling (Great Expectations, dbt tests, custom solutions), reconciliation across cloud and on-prem
+**Target:** Data engineers, analytics engineers, data quality leads
+
+### 17. Data Profiling at Scale: Understanding Your Data Before You Trust It
+**Why it's hot:** You can't govern what you don't understand. Automated data profiling reveals schema drift, anomalies, and hidden relationships across modern data estates.
+**Key angles:** Statistical profiling techniques, schema inference, column-level profiling, relationship discovery, profiling for AI readiness (completeness, uniqueness, consistency)
+**Target:** Data engineers, data stewards, analytics engineers
+
+### 18. Data Quality Frameworks That Actually Work in 2026
+**Why it's hot:** 34% of teams spend significant time on reliability. Moving from ad-hoc checks to systematic quality frameworks is the difference between trusted and distrusted data.
+**Key angles:** Data quality dimensions (completeness, accuracy, consistency, timeliness, validity, uniqueness), automated testing patterns, quality SLAs, monitoring and alerting, integrating quality into pipelines
+**Target:** Data engineers, data quality leads, analytics engineers
+
+### 19. Master Data Management (MDM) in the AI Era: Customer 360, Product 360, and Beyond
+**Why it's hot:** AI systems need clean, deduplicated, golden records. MDM has evolved from batch batch processes to real-time, AI-powered entity resolution.
+**Key angles:** MDM architecture patterns (registry, consolidation, coexistence), golden record creation, AI-powered matching and merging, MDM for AI/ML use cases, MDM vs data mesh
+**Target:** Data architects, MDM leads, data stewards
+
+### 20. Entity Resolution: The Science of Knowing Who's Who Across Systems
+**Why it's hot:** The same customer appears as "John Smith", "J. Smith", and "john.smith@email.com" across 10 systems. Entity resolution unifies these identities without losing fidelity.
+**Key angles:** Probabilistic vs deterministic matching, fuzzy matching algorithms, blocking strategies, graph-based resolution, identity graphs, resolution confidence scoring
+**Target:** Data engineers, MDM specialists, analytics engineers
+
+### 21. Data Lineage and Cataloging: The Foundation of Data Governance
+**Why it's hot:** With AI agents consuming data, knowing where data comes from and how it's transformed is non-negotiable for trust and compliance.
+**Key angles:** Automated lineage capture (column-level, row-level), data catalogs (Apache Atlas, DataHub, Amundsen), metadata management, lineage for AI governance, impact analysis
+**Target:** Data architects, data governance teams, compliance officers
+
+### 22. The Modern Data Quality Stack: Tools, Patterns, and Best Practices
+**Why it's hot:** The tooling landscape has matured dramatically. Teams now have production-grade options for every quality dimension.
+**Key angles:** Great Expectations vs Soda vs Monte Carlo vs Bigeye, data contracts as quality guardrails, shift-left quality, quality-as-code, integrating quality into CI/CD
+**Target:** Data engineers, platform engineers, data quality leads
+
+### 23. Data Reconciliation Across Cloud Platforms: Multi-Cloud and Hybrid Challenges
+**Why it's hot:** Enterprises run data across AWS, Azure, GCP, and on-prem. Reconciling data across these environments is one of the hardest unsolved problems.
+**Key angles:** Cross-cloud reconciliation patterns, schema drift detection, data drift monitoring, reconciliation at the lakehouse layer, handling eventual consistency
+**Target:** Data architects, cloud engineers, data engineers
+
+### 24. AI-Powered Data Profiling: Letting Machines Understand Your Data
+**Why it's hot:** Manual profiling doesn't scale. AI can automatically detect patterns, anomalies, relationships, and data types across thousands of tables.
+**Key angles:** LLM-based schema understanding, automated anomaly detection, semantic profiling, profiling for RAG readiness, cost-benefit of AI vs manual profiling
+**Target:** Data engineers, analytics engineers, AI teams
+
+### 25. Data Quality for AI/ML: Why Your Models Fail Before They Ship
+**Why it's hot:** AI models trained on poor data produce poor results. Data quality for ML has different requirements than quality for BI.
+**Key angles:** Training data quality validation, feature store quality, label quality, distribution shift detection, data quality metrics for ML, monitoring model-data alignment
+**Target:** ML engineers, data scientists, data engineers
+
+### 26. MDM Implementation Patterns: Registry, Consolidation, and Coexistence
+**Why it's hot:** Choosing the wrong MDM pattern wastes months of effort. Each pattern has distinct tradeoffs for governance, performance, and organizational fit.
+**Key angles:** When to use each pattern, hybrid approaches, MDM on cloud platforms (Databricks, Snowflake), MDM as a service, integration patterns with downstream systems
+**Target:** Data architects, MDM leads, enterprise architects
+
+### 27. Data Contracts in Practice: From Theory to Production-Grade Data Quality
+**Why it's hot:** Data contracts are emerging as the bridge between data producers and consumers, encoding quality expectations as code.
+**Key angles:** Defining data contracts, schema validation, SLA enforcement, contract testing, integrating contracts into pipelines, tooling (Soda, dbt tests, Great Expectations)
+**Target:** Data engineers, analytics engineers, platform teams
+
+### 28. Entity Resolution at Scale: Matching Millions of Records in Real-Time
+**Why it's hot:** Batch entity resolution doesn't work for real-time personalization, fraud detection, or customer 360. Streaming entity resolution is the new frontier.
+**Key angles:** Real-time matching architectures, incremental resolution, graph databases for identity, matching at scale (blocking, indexing), performance vs accuracy tradeoffs
+**Target:** Data engineers, ML engineers, platform engineers
+
+### 29. The Data Quality Maturity Model: Where Are You on the Journey?
+**Why it's hot:** Most teams are stuck at "reactive" quality. The maturity model helps organizations plan their quality journey systematically.
+**Key angles:** Five maturity levels (ad-hoc, reactive, proactive, predictive, self-healing), assessment frameworks, investment priorities at each level, organizational change management
+**Target:** Data leaders, data quality leads, CTOs
+
+### 30. Data Reconciliation for Financial Services: Accuracy, Compliance, and Audit Trails
+**Why it's hot:** Financial data reconciliation is non-negotiable for regulatory compliance. Automated reconciliation reduces audit risk and operational cost.
+**Key angles:** Regulatory requirements (SOX, Basel III, MiFID II), reconciliation patterns for financial data, exception handling, audit trail generation, real-time reconciliation for trading
+**Target:** Financial data teams, compliance officers, data engineers
+
+### 31. Knowledge Graphs for Entity Resolution: Graph-Based Identity Management
+**Why it's hot:** Graph databases excel at relationship discovery and entity resolution. Neo4j and TigerGraph are becoming standard for Customer 360 and fraud detection.
+**Key angles:** Graph modeling for entities and relationships, graph algorithms for matching, knowledge graph construction, integrating graphs with lakehouses, performance at scale
+**Target:** Data architects, ML engineers, data engineers
+
+### 32. Data Quality Monitoring: From Static Tests to Dynamic Observability
+**Why it's hot:** Static tests catch known issues. Dynamic observability catches unknown issues. The shift from testing to monitoring is critical for production data systems.
+**Key angles:** Anomaly detection for data, freshness monitoring, volume monitoring, schema drift detection, alerting strategies, integrating monitoring into incident response
+**Target:** Data engineers, SREs, platform engineers
+
+### 33. MDM and Data Mesh: Coexistence Patterns for Decentralized Organizations
+**Why it's hot:** Data mesh says domains own their data. MDM says there should be golden records. These tensions need resolution.
+**Key angles:** Federated MDM, domain-level golden records, shared entities across domains, governance without centralization, practical coexistence patterns
+**Target:** Data architects, data leaders, platform engineers
 
 ---
 
@@ -323,7 +413,7 @@
 
 ---
 
-## Priority Ranking (Top 10 to Publish First)
+## Priority Ranking (Top 15 to Publish First)
 
 | # | Topic | Category | Est. Word Count | SEO Potential |
 |---|-------|----------|-----------------|---------------|
@@ -335,8 +425,13 @@
 | 6 | AI Pair Programming Guide | Development | 3,000 | High |
 | 7 | Building Internal Developer Platforms | DevOps | 4,500 | High |
 | 8 | AI Agents in the Enterprise | AI | 4,000 | High |
-| 9 | FinOps for Data Platforms | Data | 3,500 | Medium |
-| 10 | PostgreSQL as Universal Database | Development | 3,000 | Medium |
+| 9 | Automated Data Reconciliation | Data Quality | 4,000 | High |
+| 10 | MDM in the AI Era: Customer 360 | Data Quality | 4,500 | High |
+| 11 | Data Quality Frameworks 2026 | Data Quality | 4,000 | High |
+| 12 | Entity Resolution at Scale | Data Quality | 4,500 | High |
+| 13 | FinOps for Data Platforms | Data | 3,500 | Medium |
+| 14 | PostgreSQL as Universal Database | Development | 3,000 | Medium |
+| 15 | Data Profiling at Scale | Data Quality | 3,500 | Medium |
 
 ---
 
@@ -349,3 +444,16 @@
 - **Target featured snippets** with clear TL;DR boxes
 - **Include practical examples** and code snippets where applicable
 - **Update quarterly** as the field moves fast
+
+---
+
+## Total: 70 Blog Topics
+
+| Category | Topics |
+|----------|--------|
+| Data Engineering & Analytics | 25 |
+| Full Stack Development | 15 |
+| DevOps, SRE & Platform Engineering | 15 |
+| AI & Machine Learning | 10 |
+| Cross-Cutting & Career | 5 |
+| **Total** | **70** |
