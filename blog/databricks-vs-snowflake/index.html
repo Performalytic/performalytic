@@ -208,6 +208,35 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .tldr-box li:last-child{border-bottom:none}
 .tldr-box .tldr-icon{flex-shrink:0;width:20px;height:20px;background:rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#60a5fa}
 
+.featured-image-section .featured-image{width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.featured-image-section .featured-image-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:12px;font-style:italic}
+.featured-image-section{padding:0 0 40px}
+
+.architecture-diagram{padding:40px 0}
+.architecture-diagram .diagram-container{background:#0f172a;border-radius:12px;padding:24px;margin:24px 0;border:1px solid rgba(255,255,255,0.08);overflow-x:auto}
+.architecture-diagram .diagram-container svg{width:100%;min-width:700px;height:auto}
+.architecture-diagram .diagram-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:16px;font-style:italic}
+
+.pricing-comparison{padding:40px 0}
+.pricing-comparison .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0}
+.pricing-comparison .pricing-card{background:#1e293b;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px}
+.pricing-comparison .pricing-card h3{font-size:1.1rem;margin-bottom:16px}
+.pricing-comparison .pricing-card.databricks{border-color:rgba(59,130,246,0.3)}
+.pricing-comparison .pricing-card.databricks h3{color:#60a5fa}
+.pricing-comparison .pricing-card.snowflake{border-color:rgba(52,211,153,0.3)}
+.pricing-comparison .pricing-card.snowflake h3{color:#6ee7b7}
+.pricing-comparison .pricing-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.9rem}
+.pricing-comparison .pricing-item:last-child{border-bottom:none}
+.pricing-comparison .pricing-label{color:#94a3b8}
+.pricing-comparison .pricing-value{color:#e2e8f0;font-weight:600}
+
+.use-case-diagram{padding:40px 0}
+.use-case-diagram .diagram-container{background:#0f172a;border-radius:12px;padding:24px;margin:24px 0;border:1px solid rgba(255,255,255,0.08);overflow-x:auto}
+.use-case-diagram .diagram-container svg{width:100%;min-width:600px;height:auto}
+.use-case-diagram .diagram-caption{text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:16px;font-style:italic}
+
+@media(max-width:768px){.architecture-diagram .diagram-container,.use-case-diagram .diagram-container{padding:16px}.pricing-comparison .pricing-grid{grid-template-columns:1fr}}
+
 /* Post Nav */
 .post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin:60px 0;padding-top:32px;border-top:1px solid #e2e8f0}
 .post-footer-nav a{flex:1;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;text-decoration:none;transition:all 0.2s}
@@ -323,10 +352,116 @@ section{padding:60px 0}
     <div class="post-meta">
       <span class="post-meta-category">Data Analytics</span>
       <span>&#128197; July 19, 2026</span>
-      <span>&#128196; 12 min read</span>
+      <span>&#128196; 15 min read</span>
     </div>
     <h1>Databricks vs Snowflake: The <span class="gradient-text">Complete Comparison</span> Guide for 2026</h1>
     <p class="hero-description">Two platforms, two philosophies, one decision. This vendor-agnostic guide breaks down architecture, performance, pricing, and real-world use cases to help you choose the right data platform.</p>
+  </div>
+</section>
+
+<section class="featured-image-section">
+  <div class="container">
+    <img src="/assets/images/blog/databricks-snowflake-hero.jpg" alt="Cloud data platform comparison - server room representing enterprise data infrastructure" class="featured-image" width="1200" height="600" loading="eager" decoding="async" />
+    <p class="featured-image-caption">Databricks and Snowflake represent two distinct approaches to cloud data platforms - lakehouse vs managed warehouse.</p>
+  </div>
+</section>
+
+<section class="architecture-diagram" aria-label="Architecture comparison diagram">
+  <div class="container">
+    <h2>Architecture Comparison</h2>
+    <p>The fundamental difference between these platforms isn't features - it's philosophy. Databricks builds on open formats you control; Snowflake provides a fully managed service.</p>
+    <div class="diagram-container">
+      <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Databricks lakehouse vs Snowflake data cloud architecture comparison">
+        <rect width="900" height="420" fill="#0f172a" rx="12"/>
+        <!-- Title -->
+        <text x="450" y="30" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">Architecture Comparison</text>
+        <!-- DATABRICKS Side -->
+        <rect x="30" y="50" width="400" height="350" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect x="30" y="50" width="400" height="36" rx="10" fill="rgba(59,130,246,0.15)"/>
+        <text x="230" y="74" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">DATABRICKS LAKEHOUSE</text>
+        <!-- Data Sources -->
+        <rect x="50" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="105" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">DATA SOURCES</text>
+        <text x="105" y="138" text-anchor="middle" fill="#64748b" font-size="8">IoT, Apps, Streams</text>
+        <rect x="175" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="230" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">RAW DATA</text>
+        <text x="230" y="138" text-anchor="middle" fill="#64748b" font-size="8">Files, Databases</text>
+        <rect x="300" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="355" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">EXTERNAL</text>
+        <text x="355" y="138" text-anchor="middle" fill="#64748b" font-size="8">APIs, SaaS</text>
+        <!-- Arrows down -->
+        <path d="M105 152 L105 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <path d="M230 152 L230 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <path d="M355 152 L355 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <!-- Ingest Layer -->
+        <rect x="50" y="175" width="360" height="35" rx="6" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,2"/>
+        <text x="230" y="197" text-anchor="middle" fill="#60a5fa" font-size="9" font-weight="600">INGEST: Spark Structured Streaming + Auto Loader</text>
+        <!-- Storage Layer -->
+        <rect x="50" y="225" width="360" height="50" rx="8" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="230" y="247" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="700">DELTA LAKE / ICEBERG (Open Formats)</text>
+        <text x="230" y="263" text-anchor="middle" fill="#94a3b8" font-size="8">Parquet on S3/ADLS/GCS - You own the data</text>
+        <!-- Processing Layer -->
+        <rect x="50" y="290" width="170" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+        <text x="135" y="310" text-anchor="middle" fill="#60a5fa" font-size="9" font-weight="600">PROCESS</text>
+        <text x="135" y="325" text-anchor="middle" fill="#94a3b8" font-size="8">Spark, SQL, Python, R</text>
+        <rect x="240" y="290" width="170" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+        <text x="325" y="310" text-anchor="middle" fill="#60a5fa" font-size="9" font-weight="600">ML / AI</text>
+        <text x="325" y="325" text-anchor="middle" fill="#94a3b8" font-size="8">MLflow, Mosaic, GPUs</text>
+        <!-- Output -->
+        <rect x="50" y="350" width="110" height="40" rx="6" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="105" y="375" text-anchor="middle" fill="#60a5fa" font-size="8" font-weight="600">BI Dashboards</text>
+        <rect x="175" y="350" width="110" height="40" rx="6" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="230" y="375" text-anchor="middle" fill="#60a5fa" font-size="8" font-weight="600">ML Models</text>
+        <rect x="300" y="350" width="110" height="40" rx="6" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="355" y="375" text-anchor="middle" fill="#60a5fa" font-size="8" font-weight="600">Data Sharing</text>
+        <!-- SNOWFLAKE Side -->
+        <rect x="470" y="50" width="400" height="350" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <rect x="470" y="50" width="400" height="36" rx="10" fill="rgba(52,211,153,0.15)"/>
+        <text x="670" y="74" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="700">SNOWFLAKE DATA CLOUD</text>
+        <!-- Data Sources -->
+        <rect x="490" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="545" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">DATA SOURCES</text>
+        <text x="545" y="138" text-anchor="middle" fill="#64748b" font-size="8">Files, Feeds</text>
+        <rect x="615" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="670" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">DATABASES</text>
+        <text x="670" y="138" text-anchor="middle" fill="#64748b" font-size="8">MySQL, PostgreSQL</text>
+        <rect x="740" y="100" width="110" height="50" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="795" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">SaaS APPS</text>
+        <text x="795" y="138" text-anchor="middle" fill="#64748b" font-size="8">Salesforce, HubSpot</text>
+        <!-- Arrows down -->
+        <path d="M545 152 L545 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <path d="M670 152 L670 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <path d="M795 152 L795 170" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+        <!-- Ingest Layer -->
+        <rect x="490" y="175" width="360" height="35" rx="6" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1" stroke-dasharray="4,2"/>
+        <text x="670" y="197" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">INGEST: Snowpipe, Streams, COPY INTO</text>
+        <!-- Storage Layer -->
+        <rect x="490" y="225" width="360" height="50" rx="8" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="670" y="247" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="700">MICRO-PARTITIONS (Managed Storage)</text>
+        <text x="670" y="263" text-anchor="middle" fill="#94a3b8" font-size="8">Proprietary format + Iceberg support - Snowflake manages</text>
+        <!-- Processing Layer -->
+        <rect x="490" y="290" width="170" height="45" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+        <text x="575" y="310" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">SQL ANALYTICS</text>
+        <text x="575" y="325" text-anchor="middle" fill="#94a3b8" font-size="8">Optimized query engine</text>
+        <rect x="680" y="290" width="170" height="45" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+        <text x="765" y="310" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">ML / AI (New)</text>
+        <text x="765" y="325" text-anchor="middle" fill="#94a3b8" font-size="8">Snowpark, Cortex AI</text>
+        <!-- Output -->
+        <rect x="490" y="350" width="110" height="40" rx="6" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1"/>
+        <text x="545" y="375" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="600">BI Tools</text>
+        <rect x="615" y="350" width="110" height="40" rx="6" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1"/>
+        <text x="670" y="375" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="600">Data Sharing</text>
+        <rect x="740" y="350" width="110" height="40" rx="6" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1"/>
+        <text x="795" y="375" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="600">Marketplace</text>
+        <!-- Center divider -->
+        <line x1="450" y1="60" x2="450" y2="390" stroke="#334155" stroke-width="1" stroke-dasharray="6,4"/>
+        <text x="450" y="408" text-anchor="middle" fill="#64748b" font-size="9" font-style="italic">Open vs Managed</text>
+        <defs>
+          <marker id="ar" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#475569"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="diagram-caption">Figure 1: Databricks stores data in open formats (Delta Lake/Iceberg) on your cloud storage; Snowflake manages everything as a SaaS service.</p>
   </div>
 </section>
 
@@ -472,32 +607,95 @@ section{padding:60px 0}
     </ul>
 
     <h2>Pricing: The Real Cost Comparison</h2>
-    <p>Pricing is the most confusing aspect of this comparison because the models are fundamentally different.</p>
+    <p>Pricing is the most confusing aspect of this comparison because the models are fundamentally different. Here's a side-by-side breakdown of what you actually pay for.</p>
 
-    <h3>Snowflake Pricing</h3>
-    <p>Snowflake uses a credit-based model:</p>
-    <ul>
-      <li><strong>Compute:</strong> Virtual warehouses consume credits per hour (suspended warehouses cost nothing)</li>
-      <li><strong>Storage:</strong> Fixed monthly rate per TB</li>
-      <li><strong>Transfers:</strong> Data transfer costs between regions/clouds</li>
-    </ul>
-    <p><strong>Advantage:</strong> Predictable. You know exactly what you're paying for. Snowflake credits have a fixed price.</p>
+    <div class="pricing-comparison">
+      <div class="pricing-grid">
+        <div class="pricing-card databricks">
+          <h3>Databricks Pricing</h3>
+          <div class="pricing-item"><span class="pricing-label">Compute Unit</span><span class="pricing-value">DBU (Databricks Unit)</span></div>
+          <div class="pricing-item"><span class="pricing-label">Billing</span><span class="pricing-value">Per second of cluster runtime</span></div>
+          <div class="pricing-item"><span class="pricing-label">Storage</span><span class="pricing-value">Your cloud costs (S3/ADLS/GCS)</span></div>
+          <div class="pricing-item"><span class="pricing-label">DBU Rate (SQL)</span><span class="pricing-value">$0.07 - $0.13 per DBU</span></div>
+          <div class="pricing-item"><span class="pricing-label">DBU Rate (Jobs)</span><span class="pricing-value">$0.05 - $0.10 per DBU</span></div>
+          <div class="pricing-item"><span class="pricing-label">Spot Instances</span><span class="pricing-value">Up to 60-70% savings</span></div>
+          <div class="pricing-item"><span class="pricing-label">Best For</span><span class="pricing-value">Heavy ETL, ML, streaming</span></div>
+        </div>
+        <div class="pricing-card snowflake">
+          <h3>Snowflake Pricing</h3>
+          <div class="pricing-item"><span class="pricing-label">Compute Unit</span><span class="pricing-value">Credit</span></div>
+          <div class="pricing-item"><span class="pricing-label">Billing</span><span class="pricing-value">Per hour of warehouse runtime</span></div>
+          <div class="pricing-item"><span class="pricing-label">Storage</span><span class="pricing-value">$23/TB/month (standard)</span></div>
+          <div class="pricing-item"><span class="pricing-label">Credit Cost</span><span class="pricing-value">$2 - $4 per credit</span></div>
+          <div class="pricing-item"><span class="pricing-label">Serverless</span><span class="pricing-value">$0.04 - $0.08 per credit</span></div>
+          <div class="pricing-item"><span class="pricing-label">Suspend Policy</span><span class="pricing-value">Zero cost when suspended</span></div>
+          <div class="pricing-item"><span class="pricing-label">Best For</span><span class="pricing-value">SQL analytics, BI queries</span></div>
+        </div>
+      </div>
+    </div>
 
-    <h3>Databricks Pricing</h3>
-    <p>Databricks uses DBUs (Databricks Units) based on cloud provider and instance type:</p>
+    <h3>Real-World Cost Scenarios</h3>
+    <p>Here's how costs typically compare for common workload patterns:</p>
     <ul>
-      <li><strong>Compute:</strong> DBUs consumed per second of cluster runtime (different rates for different workload types)</li>
-      <li><strong>Storage:</strong> Your cloud provider's storage costs (S3, ADLS, GCS)</li>
-      <li><strong>Cloud markup:</strong> Cloud provider charges on top of DBU costs</li>
+      <li><strong>Pure SQL analytics (100TB, 50 concurrent users):</strong> Snowflake costs 20-40% more but delivers faster query performance with less tuning</li>
+      <li><strong>Heavy ETL pipeline (500GB/day processing):</strong> Databricks costs 15-30% less using spot instances and auto-scaling clusters</li>
+      <li><strong>Mixed workload (ETL + BI + ML):</strong> Databricks is typically 10-20% cheaper for the full pipeline; Snowflake wins on pure BI query speed</li>
+      <li><strong>AI/ML development:</strong> Databricks is significantly cheaper with native GPU clusters and no data movement</li>
     </ul>
-    <p><strong>Advantage:</strong> Can be cheaper for heavy engineering workloads because you control cluster sizing and can use spot instances.</p>
 
     <blockquote>
-      <p>In our experience, Snowflake costs 20-40% more for pure SQL analytics workloads but can be 15-30% cheaper for mixed engineering + analytics workloads. The key is right-sizing your compute for each workload type.</p>
+      <p><strong>Key insight:</strong> The cheapest platform depends entirely on your workload mix. Right-sizing compute for each workload type is more important than the base pricing model. We recommend running a 30-day proof-of-concept with your actual workloads before committing.</p>
     </blockquote>
 
     <h2>Use Case Decision Framework</h2>
-    <p>Stop asking "which is better?" and start asking "which is better <em>for what</em>?"</p>
+    <p>Stop asking "which is better?" and start asking "which is better <em>for what</em>?" This decision tree helps you identify the right platform based on your primary workloads.</p>
+
+    <div class="use-case-diagram">
+      <div class="diagram-container">
+        <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Databricks vs Snowflake decision tree showing which platform to choose based on workloads">
+          <rect width="800" height="350" fill="#0f172a" rx="12"/>
+          <text x="400" y="30" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">Decision Framework: Which Platform Fits Your Workload?</text>
+          <!-- Start -->
+          <rect x="310" y="50" width="180" height="40" rx="8" fill="#334155"/>
+          <text x="400" y="75" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="600">What's your primary workload?</text>
+          <!-- Branch 1: Data Engineering -->
+          <path d="M350 92 L150 140" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ab)"/>
+          <text x="240" y="120" text-anchor="middle" fill="#60a5fa" font-size="9">Data Engineering</text>
+          <rect x="70" y="145" width="160" height="35" rx="6" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1"/>
+          <text x="150" y="167" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="600">DATABRICKS</text>
+          <text x="150" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">Spark, ETL, Streaming</text>
+          <text x="150" y="213" text-anchor="middle" fill="#94a3b8" font-size="8">Python/Scala pipelines</text>
+          <!-- Branch 2: SQL Analytics -->
+          <path d="M400 92 L400 140" stroke="#34d399" stroke-width="1.5" marker-end="url(#ag)"/>
+          <text x="400" y="120" text-anchor="middle" fill="#6ee7b7" font-size="9">SQL Analytics &amp; BI</text>
+          <rect x="320" y="145" width="160" height="35" rx="6" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1"/>
+          <text x="400" y="167" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600">SNOWFLAKE</text>
+          <text x="400" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">Dashboards, reports</text>
+          <text x="400" y="213" text-anchor="middle" fill="#94a3b8" font-size="8">Self-serve analytics</text>
+          <!-- Branch 3: ML/AI -->
+          <path d="M450 92 L650 140" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ap)"/>
+          <text x="560" y="120" text-anchor="middle" fill="#c4b5fd" font-size="9">Machine Learning &amp; AI</text>
+          <rect x="570" y="145" width="160" height="35" rx="6" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1"/>
+          <text x="650" y="167" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">DATABRICKS</text>
+          <text x="650" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">MLflow, GPUs, Feature Store</text>
+          <text x="650" y="213" text-anchor="middle" fill="#94a3b8" font-size="8">Model serving, training</text>
+          <!-- Branch 4: Hybrid -->
+          <path d="M400 92 L400 260" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ay)"/>
+          <text x="460" y="250" text-anchor="middle" fill="#fcd34d" font-size="9">Multiple workloads</text>
+          <rect x="280" y="265" width="240" height="60" rx="8" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1"/>
+          <text x="400" y="288" text-anchor="middle" fill="#fcd34d" font-size="10" font-weight="600">HYBRID: USE BOTH</text>
+          <text x="400" y="305" text-anchor="middle" fill="#94a3b8" font-size="8">Databricks for engineering + ML</text>
+          <text x="400" y="318" text-anchor="middle" fill="#94a3b8" font-size="8">Snowflake for BI + data sharing</text>
+          <defs>
+            <marker id="ab" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#3b82f6"/></marker>
+            <marker id="ag" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#34d399"/></marker>
+            <marker id="ap" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#a78bfa"/></marker>
+            <marker id="ay" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#fbbf24"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <p class="diagram-caption">Figure 2: Decision framework - match your primary workload to the platform that excels at it. For mixed workloads, consider the hybrid approach.</p>
+    </div>
 
     <h3>Choose Databricks When:</h3>
     <ul>
