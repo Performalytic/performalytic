@@ -28,6 +28,10 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.hero-stat {
+  display: none;
+}
 .reveal-scale {
   opacity: 0;
   transform: scale(0.92);
