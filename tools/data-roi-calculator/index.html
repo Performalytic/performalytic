@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="Performalytic" />
+<meta name="format-detection" content="telephone=no, address=no" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' https://fonts.googleapis.com 'nonce-P3rf0rm4lyt1c'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+
+<title>Data ROI Calculator: Calculate the Cost of Bad Data | Performalytic</title>
+<meta name="keywords" content="data ROI calculator, cost of bad data, data quality ROI, data management savings, enterprise data cost, performalytic" />
+<meta name="description" content="Calculate the true cost of bad data and the ROI of investing in data quality. Free interactive tool for enterprise leaders to quantify data management savings." />
+<link rel="canonical" href="https://performalytic.com/tools/data-roi-calculator/" />
+<link rel="alternate" hreflang="en" href="https://performalytic.com/tools/data-roi-calculator/" />
+<link rel="alternate" hreflang="x-default" href="https://performalytic.com/tools/data-roi-calculator/" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Data ROI Calculator: Calculate the Cost of Bad Data | Performalytic" />
+<meta property="og:description" content="Calculate the true cost of bad data and the ROI of investing in data quality. Free interactive tool for enterprise leaders." />
+<meta property="og:url" content="https://performalytic.com/tools/data-roi-calculator/" />
+<meta property="og:site_name" content="Performalytic" />
+<meta property="og:image" content="https://performalytic.com/assets/images/GettyImages-618762080-1.jpg" />
+<meta property="og:image:width" content="1498" />
+<meta property="og:image:height" content="950" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Data ROI Calculator - Calculate the Cost of Bad Data" />
+<meta property="article:published_time" content="2026-07-19T10:00:00+00:00" />
+<meta property="article:modified_time" content="2026-07-19T10:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Data ROI Calculator: Calculate the Cost of Bad Data | Performalytic" />
+<meta name="twitter:description" content="Calculate the true cost of bad data and the ROI of investing in data quality. Free interactive tool for enterprise leaders." />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/GettyImages-618762080-1.jpg" />
+
+<link rel="dns-prefetch" href="//performalytic.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="/assets/images/fav-1-e1651044714367.png" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/images/fav-1-e1651044714367.png" />
+<link rel="preload" href="/assets/css/styles.css" as="style" id="deferred-styles" nonce="P3rf0rm4lyt1c" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV09CSCD2C" nonce="P3rf0rm4lyt1c"></script>
+<script nonce="P3rf0rm4lyt1c">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV09CSCD2C');
+</script>
+
+<script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Performalytic",
+  "url":"https://performalytic.com/",
+  "logo":"/assets/images/performalytic-logo.png",
+  "image":"/assets/images/GettyImages-618762080-1.jpg"
+},{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[{
+    "@type":"ListItem","position":1,"name":"Home","item":"https://performalytic.com/"
+  },{
+    "@type":"ListItem","position":2,"name":"Tools","item":"https://performalytic.com/tools/"
+  },{
+    "@type":"ListItem","position":3,"name":"Data ROI Calculator","item":"https://performalytic.com/tools/data-roi-calculator/"
+  }]
+},{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Data ROI Calculator",
+  "url":"https://performalytic.com/tools/data-roi-calculator/",
+  "description":"Calculate the true cost of bad data and the ROI of investing in data quality improvements.",
+  "applicationCategory":"BusinessApplication",
+  "operatingSystem":"Web Browser",
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  }
+},{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[{
+    "@type":"Question",
+    "name":"How is the cost of bad data calculated?",
+    "acceptedAnswer":{"@type":"Answer","text":"The calculator uses industry research from IBM, Gartner, and Harvard Business Review showing that poor data quality costs enterprises 15-25% of revenue. It factors in employee count, revenue, industry, and specific data challenges to estimate annual losses."}
+  },{
+    "@type":"Question",
+    "name":"What ROI can I expect from data quality improvements?",
+    "acceptedAnswer":{"@type":"Answer","text":"Based on industry benchmarks, enterprises typically see 3-5x ROI within the first year of implementing data quality solutions. This includes reduced labor costs, fewer errors, faster decision-making, and improved compliance."}
+  }]
+}]</script>
+
+<style nonce="P3rf0rm4lyt1c">
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+img{max-width:100%;height:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.25rem;color:#0f172a;letter-spacing:-0.5px}
+.nav-logo img{height:36px;width:240px;object-fit:cover;object-position:center;display:block}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{text-decoration:none;color:#475569;font-size:0.9rem;font-weight:500;padding:8px 0;display:inline-flex;align-items:center;gap:4px;cursor:pointer}
+.nav-links>li>a:hover{color:#2563eb}
+.nav-links>li>a .arrow{font-size:0.6rem;transition:transform 0.2s}
+.nav-links>li:hover>a .arrow{transform:rotate(180deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:220px;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,0.1);border:1px solid #e2e8f0;padding:8px;z-index:100}
+.nav-links>li:hover .nav-dropdown{display:block}
+.nav-dropdown a{display:block;padding:10px 16px;color:#475569;text-decoration:none;font-size:0.85rem;font-weight:500;border-radius:8px;transition:all 0.15s}
+.nav-dropdown a:hover{background:#f8fafc;color:#2563eb}
+.nav-cta{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff!important;padding:10px 32px;border-radius:100px;font-weight:600;font-size:0.88rem;letter-spacing:0.01em;transition:all 0.25s}
+.nav-cta:hover{background:linear-gradient(135deg,#1d4ed8,#6d28d9)!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.35)}
+.nav-cta:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+.menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.menu-toggle span{display:block;width:24px;height:2px;background:#0f172a;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,0.1);flex-direction:column;gap:8px;z-index:999;max-height:calc(100vh - 72px);overflow-y:auto}
+.mobile-menu.active{display:flex}
+.mobile-menu .mm-group{margin-bottom:12px}
+.mobile-menu .mm-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#94a3b8;padding:8px 0 4px}
+.mobile-menu a{text-decoration:none;color:#0f172a;font-size:0.95rem;font-weight:500;padding:10px 0;border-bottom:1px solid #f1f5f9;display:block}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px;display:block}
+section{padding:100px 0}
+.section-label{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,0.08);padding:6px 14px;border-radius:100px;font-size:0.8rem;font-weight:600;color:#2563eb;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.section-title{font-size:clamp(2rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.5px;margin-bottom:16px;color:#0f172a}
+.section-subtitle{font-size:1.1rem;color:#475569;max-width:640px;line-height:1.7;margin-bottom:48px}
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,99,235,0.3)}
+.btn-primary:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1e293b;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid #e2e8f0;transition:all 0.2s}
+.btn-secondary:hover{background:#f8fafc;border-color:#cbd5e1}
+footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-logo{height:64px;max-width:160px;display:block;margin-bottom:16px}
+.footer-brand p{font-size:0.85rem;color:#94a3b8;line-height:1.7;max-width:320px}
+.footer-social{display:flex;gap:12px;margin-top:24px}
+.footer-social a{width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#cbd5e1;text-decoration:none;transition:all 0.2s;font-size:0.9rem;font-weight:700}
+.footer-social a:hover{border-color:#2563eb;color:#2563eb;background:rgba(37,99,235,0.1)}
+.footer-col h5{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#e2e8f0;margin-bottom:20px}
+.footer-col a{display:block;font-size:0.85rem;color:#94a3b8;text-decoration:none;padding:5px 0;transition:color 0.2s}
+.footer-col a:hover{color:#e2e8f0}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);font-size:0.82rem;color:#94a3b8}
+.footer-bottom a{color:#94a3b8;text-decoration:none}
+.footer-bottom a:hover{color:#cbd5e1}
+.footer-bottom-links{display:flex;gap:24px}
+
+/* Calculator Styles */
+.calc-hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);color:#fff;padding:140px 0 80px}
+.calc-hero .section-label{background:rgba(37,99,235,0.2);color:#93c5fd}
+.calc-hero .section-title{color:#fff}
+.calc-hero .section-subtitle{color:#cbd5e1}
+
+.calc-section{background:#f8fafc}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+.calc-form{background:#fff;border-radius:20px;padding:40px;border:1px solid #e2e8f0;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.calc-results{background:#0f172a;border-radius:20px;padding:40px;color:#fff;position:sticky;top:100px}
+
+.form-group{margin-bottom:24px}
+.form-group label{display:block;font-size:0.9rem;font-weight:600;margin-bottom:8px;color:#0f172a}
+.form-group .hint{font-size:0.8rem;color:#94a3b8;margin-bottom:8px;display:block}
+.form-group input[type="range"]{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:#e2e8f0;outline:none;margin:12px 0}
+.form-group input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);cursor:pointer;box-shadow:0 2px 8px rgba(37,99,235,0.3)}
+.form-group input[type="range"]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);cursor:pointer;border:none;box-shadow:0 2px 8px rgba(37,99,235,0.3)}
+.range-labels{display:flex;justify-content:space-between;font-size:0.8rem;color:#64748b}
+.range-value{text-align:center;font-size:1.5rem;font-weight:800;color:#2563eb;margin-bottom:4px}
+.range-value span{font-size:0.9rem;font-weight:600;color:#64748b}
+
+.form-group select{width:100%;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;background:#fff;color:#0f172a;font-size:0.9rem;font-family:inherit;transition:border-color 0.2s;cursor:pointer}
+.form-group select:focus{outline:none;border-color:#2563eb}
+
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checkbox-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:10px;border:1px solid #e2e8f0;background:#fff;cursor:pointer;transition:all 0.2s}
+.checkbox-item:hover{border-color:#2563eb;background:#f8fafc}
+.checkbox-item.checked{border-color:#2563eb;background:#eff6ff}
+.checkbox-item input{margin-top:2px;accent-color:#2563eb;flex-shrink:0}
+.checkbox-item label{font-size:0.85rem;font-weight:500;color:#0f172a;cursor:pointer;line-height:1.4}
+
+.result-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;margin-bottom:20px}
+.result-card h4{font-size:0.85rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.result-card .big-number{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.result-card .sub-text{font-size:0.85rem;color:#cbd5e1;margin-top:4px}
+.result-card .positive{color:#34d399;-webkit-text-fill-color:#34d399}
+.result-card .negative{color:#f87171;-webkit-text-fill-color:#f87171}
+
+.results-summary{margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)}
+.results-summary h3{font-size:1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px}
+
+.roi-timeline{display:grid;gap:12px}
+.roi-item{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(255,255,255,0.04);border-radius:10px}
+.roi-item .year{font-weight:600;color:#e2e8f0;font-size:0.9rem}
+.roi-item .savings{font-weight:700;color:#34d399;font-size:1rem}
+
+.calc-cta{text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)}
+.calc-cta p{font-size:0.9rem;color:#94a3b8;margin-bottom:16px}
+.calc-cta .btn-primary{width:100%;justify-content:center}
+
+.benefits{background:#fff}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.benefit-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:all 0.3s}
+.benefit-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.06);border-color:#2563eb}
+.benefit-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem}
+.benefit-card h3{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:8px}
+.benefit-card p{font-size:0.88rem;color:#475569;line-height:1.7}
+
+.methodology{background:#f8fafc}
+.methodology-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+.method-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px}
+.method-card h4{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:12px}
+.method-card p{font-size:0.88rem;color:#475569;line-height:1.7;margin-bottom:12px}
+.method-card ul{padding-left:20px}
+.method-card li{font-size:0.88rem;color:#475569;line-height:1.8;margin-bottom:4px}
+
+.blog-cta{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:80px 0}
+.blog-cta .section-title{color:#fff}
+.blog-cta .section-subtitle{color:#cbd5e1}
+.gradient-text{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.blog-cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-secondary-light{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#e2e8f0;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
+.btn-secondary-light:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.3)}
+
+@media(max-width:768px){
+.nav-links,.nav-cta{display:none}
+.menu-toggle{display:flex}
+.mobile-menu.active{display:flex}
+.calc-grid{grid-template-columns:1fr}
+.calc-results{position:static}
+.checkbox-grid{grid-template-columns:1fr}
+.benefits-grid{grid-template-columns:1fr}
+.methodology-content{grid-template-columns:1fr}
+footer .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+section{padding:60px 0}
+}
+@media(max-width:480px){
+.footer-grid{grid-template-columns:1fr}
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}
+.calc-form,.calc-results{padding:24px}
+.result-card .big-number{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo" aria-label="Performalytic home">
+      <img src="/assets/images/performalytic-logo-blue-2.png" alt="Performalytic" width="411" height="78" fetchpriority="high" decoding="async" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="#" aria-haspopup="true">Our Services <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/enterprise-solution-development/" role="menuitem">Enterprise Solution Development</a>
+          <a href="/advanced-analytics-ai/" role="menuitem">Advanced Analytics &amp; AI</a>
+          <a href="/bi-integration/" role="menuitem">BI Integration</a>
+          <a href="/application-development-and-system-integration/" role="menuitem">Application Development &amp; Integration</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" aria-haspopup="true">Company <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/about/" role="menuitem">About</a>
+          <a href="/contact/" role="menuitem">Contact</a>
+          <a href="/careers/" role="menuitem">Careers</a>
+          <a href="/industries/" role="menuitem">Industries</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" aria-haspopup="true">Resources <span class="arrow" aria-hidden="true">&#9662;</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="/products/" role="menuitem">Products</a>
+          <a href="/technologies/" role="menuitem">Technologies</a>
+          <a href="/faq/" role="menuitem">FAQ</a>
+          <a href="/blog/" role="menuitem">Blog</a>
+          <a href="/tools/data-roi-calculator/" role="menuitem">Data ROI Calculator</a>
+          <a href="/contact/" role="menuitem">Schedule a Consultation</a>
+        </div>
+      </li>
+      <li><a href="/contact/" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <div class="mm-group">
+    <div class="mm-label">Our Services</div>
+    <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+    <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+    <a href="/bi-integration/">BI Integration</a>
+    <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Company</div>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/careers/">Careers</a>
+    <a href="/industries/">Industries</a>
+  </div>
+  <div class="mm-group">
+    <div class="mm-label">Resources</div>
+    <a href="/products/">Products</a>
+    <a href="/technologies/">Technologies</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tools/data-roi-calculator/">Data ROI Calculator</a>
+    <a href="/contact/">Schedule a Consultation</a>
+  </div>
+  <a href="/contact/" class="nav-cta">Contact Us</a>
+</nav>
+</header>
+
+<main>
+
+<section class="calc-hero" aria-label="Calculator hero">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Free Interactive Tool</span>
+      <h1 class="section-title">Data ROI Calculator</h1>
+      <p class="section-subtitle mx-auto">Quantify the true cost of bad data and discover how much your organization can save by investing in data quality and management improvements.</p>
+    </div>
+  </div>
+</section>
+
+<section class="calc-section" aria-label="Calculator">
+  <div class="container">
+    <div class="calc-grid">
+
+      <div class="calc-form">
+        <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:24px;color:#0f172a">Tell us about your organization</h2>
+
+        <div class="form-group">
+          <label for="revenue">Annual Revenue</label>
+          <span class="hint">Select the range closest to your company's annual revenue</span>
+          <div class="range-value" id="revenueDisplay">$50M</div>
+          <input type="range" id="revenue" min="1" max="8" value="3" step="1" oninput="updateRevenue()">
+          <div class="range-labels"><span>$10M</span><span>$1B+</span></div>
+        </div>
+
+        <div class="form-group">
+          <label for="employees">Number of Employees</label>
+          <span class="hint">Total headcount across the organization</span>
+          <div class="range-value" id="employeesDisplay">500</div>
+          <input type="range" id="employees" min="1" max="8" value="3" step="1" oninput="updateEmployees()">
+          <div class="range-labels"><span>50</span><span>10,000+</span></div>
+        </div>
+
+        <div class="form-group">
+          <label for="industry">Industry</label>
+          <span class="hint">Different industries have varying data complexity levels</span>
+          <select id="industry" onchange="calculate()">
+            <option value="1.0">Select your industry</option>
+            <option value="1.25" selected>Technology / Software</option>
+            <option value="1.4">Financial Services / Banking</option>
+            <option value="1.35">Healthcare</option>
+            <option value="1.2">Manufacturing</option>
+            <option value="1.15">Retail / E-commerce</option>
+            <option value="1.1">Professional Services</option>
+            <option value="1.0">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Current Data Challenges (select all that apply)</label>
+          <span class="hint">These factors increase the cost of poor data quality</span>
+          <div class="checkbox-grid">
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch1" value="0.08" onchange="calculate()">
+              <label for="ch1">Duplicate/inconsistent data across systems</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch2" value="0.07" onchange="calculate()">
+              <label for="ch2">Manual data entry errors</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch3" value="0.06" onchange="calculate()">
+              <label for="ch3">Delayed or inaccurate reporting</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch4" value="0.05" onchange="calculate()">
+              <label for="ch4">Lack of single source of truth</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch5" value="0.06" onchange="calculate()">
+              <label for="ch5">Non-compliant data handling</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch6" value="0.05" onchange="calculate()">
+              <label for="ch6">Siloed data across departments</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch7" value="0.04" onchange="calculate()">
+              <label for="ch7">Poor data governance policies</label>
+            </div>
+            <div class="checkbox-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="ch8" value="0.04" onchange="calculate()">
+              <label for="ch8">Outdated or stale data</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dataSpend">Estimated Annual Data Management Spend</label>
+          <span class="hint">Including staff, tools, and infrastructure costs</span>
+          <div class="range-value" id="spendDisplay">$500K</div>
+          <input type="range" id="dataSpend" min="1" max="8" value="3" step="1" oninput="updateSpend()">
+          <div class="range-labels"><span>$50K</span><span>$5M+</span></div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:24px;color:#e2e8f0;text-transform:uppercase;letter-spacing:0.5px">Your Data ROI Analysis</h3>
+
+        <div class="result-card">
+          <h4>Annual Cost of Bad Data</h4>
+          <div class="big-number negative" id="badDataCost">$2.8M</div>
+          <div class="sub-text">Lost revenue, wasted labor, and error correction costs</div>
+        </div>
+
+        <div class="result-card">
+          <h4>Potential Annual Savings</h4>
+          <div class="big-number positive" id="annualSavings">$1.4M</div>
+          <div class="sub-text">Recoverable through data quality improvements</div>
+        </div>
+
+        <div class="result-card">
+          <h4>ROI on Data Investment</h4>
+          <div class="big-number" id="roiPercent">312%</div>
+          <div class="sub-text">Return within first 12 months</div>
+        </div>
+
+        <div class="results-summary">
+          <h3>Projected Savings Over Time</h3>
+          <div class="roi-timeline">
+            <div class="roi-item">
+              <span class="year">Year 1</span>
+              <span class="savings" id="year1">$1.4M</span>
+            </div>
+            <div class="roi-item">
+              <span class="year">Year 3</span>
+              <span class="savings" id="year3">$5.2M</span>
+            </div>
+            <div class="roi-item">
+              <span class="year">Year 5</span>
+              <span class="savings" id="year5">$10.8M</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-cta">
+          <p>Want a detailed analysis for your specific organization?</p>
+          <a href="/contact/" class="btn-primary">Get a Free Data Assessment &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="benefits" aria-label="Benefits">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Why It Matters</span>
+      <h2 class="section-title">The real impact of data quality</h2>
+      <p class="section-subtitle mx-auto">Poor data quality doesn't just cause inconvenience — it directly impacts your bottom line, decision-making speed, and competitive position.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:#eff6ff;color:#2563eb">&#128176;</div>
+        <h3>Reduce Wasted Labor</h3>
+        <p>Knowledge workers spend 50% of their time on data-related activities. Poor data means more time cleaning, correcting, and reconciling.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:#ecfdf5;color:#059669">&#9889;</div>
+        <h3>Faster Decisions</h3>
+        <p>When data is trustworthy, leaders make decisions in hours instead of weeks. No more waiting for "validated" reports.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:#fef2f2;color:#dc2626">&#128737;</div>
+        <h3>Compliance Confidence</h3>
+        <p>Regulated industries face fines of 2-4% of global revenue for data governance failures. Good data = lower compliance risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="methodology" aria-label="Methodology">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Research-Backed</span>
+      <h2 class="section-title">How we calculate your ROI</h2>
+      <p class="section-subtitle mx-auto">Our methodology is based on peer-reviewed research and industry benchmarks from leading analyst firms.</p>
+    </div>
+    <div class="methodology-content">
+      <div class="method-card">
+        <h4>Cost of Poor Data Quality</h4>
+        <p>IBM research estimates that poor data quality costs US organizations $3.1 trillion annually. Harvard Business Review reports that 25% of revenue is lost due to bad data.</p>
+        <p>We apply these benchmarks to your organization's specific revenue, headcount, and industry to calculate your personalized cost estimate.</p>
+        <ul>
+          <li><strong>IBM:</strong> Poor data quality costs $2.5-3.5 trillion annually in the US</li>
+          <li><strong>Gartner:</strong> Average organization loses $12.9M per year from bad data</li>
+          <li><strong>HBR:</strong> 25% of revenue lost to poor data quality</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h4>Data Quality Improvement ROI</h3>
+        <p>Research from Stanford University and MIT shows that data quality improvements deliver 3-5x ROI within the first year. We factor in implementation costs and ongoing savings.</p>
+        <ul>
+          <li><strong>Stanford/MIT:</strong> 3-5x ROI on data quality investments</li>
+          <li><strong>McKinsey:</strong> 15-25% cost reduction with proper data governance</li>
+          <li><strong>Forrester:</strong> 20% increase in revenue from data-driven decisions</li>
+        </ul>
+        <p style="margin-top:12px;font-size:0.85rem;color:#64748b"><em>Note: This calculator provides estimates based on industry averages. Actual results depend on your specific data challenges and implementation quality.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-cta" aria-label="CTA">
+  <div class="container text-center">
+    <span class="section-label">Ready to Transform Your Data?</span>
+    <h2 class="section-title">Turn your data from a <span class="gradient-text">liability into an asset</span></h2>
+    <p class="section-subtitle">Our data quality experts will analyze your specific challenges and deliver a tailored roadmap to measurable ROI.</p>
+    <div class="blog-cta-actions">
+      <a href="/contact/" class="btn-primary">Schedule a Free Consultation &rarr;</a>
+      <a href="/advanced-analytics-ai/" class="btn-secondary-light">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="Performalytic home"><img src="/assets/images/performalytic-logo-original.png" alt="Performalytic" class="footer-brand-logo" width="397" height="69" loading="lazy" decoding="async" /></a>
+        <p>We help enterprises turn data into a competitive advantage. From strategy and analytics to AI and application development - we deliver solutions that drive growth.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/performalytic-corp/" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://twitter.com/performalytic-corp" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on X"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.facebook.com/performalytic-corp" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/performalytic-corp" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg></a>
+          <a href="https://www.youtube.com/@performalytic-corp" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <a href="/enterprise-solution-development/">Enterprise Solution Development</a>
+        <a href="/advanced-analytics-ai/">Advanced Analytics &amp; AI</a>
+        <a href="/bi-integration/">BI Integration</a>
+        <a href="/application-development-and-system-integration/">Application Development &amp; Integration</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/about/">About Us</a>
+        <a href="/careers/">Careers</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="/tools/data-roi-calculator/">Data ROI Calculator</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/products/">Products</a>
+        <a href="/technologies/">Technologies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Performalytic. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="/terms-conditions/" rel="noopener noreferrer">Terms &amp; Conditions</a>
+        <a href="/privacy-policy/" rel="noopener noreferrer">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script nonce="P3rf0rm4lyt1c">document.getElementById('deferred-styles').rel='stylesheet';</script>
+<script nonce="P3rf0rm4lyt1c">
+(function(){'use strict';
+var mm=document.getElementById('mobileMenu'),mt=document.getElementById('menuToggle');
+function cm(){if(mm)mm.classList.remove('active');if(mt)mt.setAttribute('aria-expanded','false')}
+function tm(e){if(mm){var a=mm.classList.toggle('active');if(mt)mt.setAttribute('aria-expanded',a+'')}e.stopPropagation()}
+if(mt)mt.addEventListener('click',tm);
+if(mm){var q=mm.querySelectorAll('a');for(var i=0;i<q.length;i++)q[i].addEventListener('click',cm)}
+var tk=false;window.addEventListener('scroll',function(){if(!tk){window.requestAnimationFrame(function(){cm();tk=false});tk=true}},{passive:true});
+})();
+
+/* Calculator Logic */
+var revenueMap = [10, 25, 50, 100, 250, 500, 750, 1000];
+var employeesMap = [50, 100, 250, 500, 1000, 2500, 5000, 10000];
+var spendMap = [50, 100, 250, 500, 1000, 2000, 3500, 5000];
+
+function formatCurrency(val) {
+  if (val >= 1000) return '$' + (val / 1000).toFixed(1) + 'B';
+  return '$' + val + 'M';
+}
+
+function formatShort(val) {
+  if (val >= 1000) return '$' + (val / 1000).toFixed(1) + 'B';
+  if (val >= 1) return '$' + val.toFixed(1) + 'M';
+  return '$' + (val * 1000).toFixed(0) + 'K';
+}
+
+function updateRevenue() {
+  var v = document.getElementById('revenue').value;
+  var val = revenueMap[v - 1];
+  document.getElementById('revenueDisplay').textContent = formatCurrency(val);
+  calculate();
+}
+
+function updateEmployees() {
+  var v = document.getElementById('employees').value;
+  var val = employeesMap[v - 1];
+  document.getElementById('employeesDisplay').textContent = val.toLocaleString();
+  calculate();
+}
+
+function updateSpend() {
+  var v = document.getElementById('dataSpend').value;
+  var val = spendMap[v - 1];
+  document.getElementById('spendDisplay').textContent = formatShort(val);
+  calculate();
+}
+
+function toggleCheck(el) {
+  var cb = el.querySelector('input[type="checkbox"]');
+  cb.checked = !cb.checked;
+  el.classList.toggle('checked', cb.checked);
+  calculate();
+}
+
+function calculate() {
+  var revIdx = document.getElementById('revenue').value;
+  var revenue = revenueMap[revIdx - 1];
+
+  var empIdx = document.getElementById('employees').value;
+  var employees = employeesMap[empIdx - 1];
+
+  var industry = parseFloat(document.getElementById('industry').value);
+
+  var spendIdx = document.getElementById('dataSpend').value;
+  var dataSpend = spendMap[spendIdx - 1];
+
+  var challengeMultiplier = 1;
+  for (var i = 1; i <= 8; i++) {
+    var cb = document.getElementById('ch' + i);
+    if (cb && cb.checked) {
+      challengeMultiplier += parseFloat(cb.value);
+    }
+  }
+
+  var baseCostRate = 0.15;
+  var employeeFactor = Math.min(employees / 1000, 2) * 0.02;
+  var baseCost = revenue * baseCostRate * industry * challengeMultiplier + employeeFactor * revenue;
+  var annualSavings = baseCost * 0.5;
+  var implementationCost = dataSpend * 0.3;
+  var roi = ((annualSavings - implementationCost) / implementationCost * 100);
+
+  var year1 = annualSavings;
+  var year3 = annualSavings * 3.7;
+  var year5 = annualSavings * 7.7;
+
+  document.getElementById('badDataCost').textContent = '$' + baseCost.toFixed(1) + 'M';
+  document.getElementById('annualSavings').textContent = '$' + annualSavings.toFixed(1) + 'M';
+  document.getElementById('roiPercent').textContent = Math.round(roi) + '%';
+  document.getElementById('year1').textContent = '$' + year1.toFixed(1) + 'M';
+  document.getElementById('year3').textContent = '$' + year3.toFixed(1) + 'M';
+  document.getElementById('year5').textContent = '$' + year5.toFixed(1) + 'M';
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'calculator_use', {
+      revenue_range: document.getElementById('revenue').value,
+      industry: document.getElementById('industry').value,
+      challenges_selected: document.querySelectorAll('.checkbox-item input:checked').length
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  calculate();
+});
+</script>
+<script src="/assets/js/main.js" nonce="P3rf0rm4lyt1c" defer></script>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a5a1b507150471d4bbcfcd2/1jtnvldd3';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</body>
+</html>
