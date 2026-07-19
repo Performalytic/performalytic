@@ -271,6 +271,8 @@ section {
 .post-content {
   max-width: 800px;
   margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .post-content h2 {
   font-size: 1.6rem;
@@ -559,6 +561,9 @@ section {
   .newsletter-form {
     flex-direction: column;
   }
+  .newsletter-box {
+    padding: 32px 20px;
+  }
   .post-footer-nav {
     flex-direction: column;
   }
@@ -567,6 +572,9 @@ section {
   }
   .post-footer-nav .next {
     text-align: left;
+  }
+  .blog-filter {
+    padding: 12px 20px;
   }
 }
 @media(max-width:480px){
@@ -578,6 +586,9 @@ section {
   }
   .featured-post-body {
     padding: 16px;
+  }
+  .newsletter-box {
+    padding: 24px 16px;
   }
 }
 
