@@ -2,147 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://performalytic.com/</loc>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/enterprise-solution-development/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/advanced-analytics-ai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/bi-integration/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/application-development-and-system-integration/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://performalytic.com/about/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/products/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/technologies/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/careers/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/industries/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/faq/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/contact/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/data-driven-decision-making/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://performalytic.com/enterprise-solution-development/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/ai-business-intelligence/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://performalytic.com/advanced-analytics-ai/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/devops-best-practices/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://performalytic.com/bi-integration/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/build-data-driven-culture/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://performalytic.com/application-development-and-system-integration/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/choose-right-analytics-platform/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://performalytic.com/careers/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/signs-data-infrastructure-holding-back/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://performalytic.com/industries/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/real-cost-of-bad-data/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://performalytic.com/faq/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/what-is-business-intelligence/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://performalytic.com/products/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/blog/databricks-vs-snowflake/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/enterprise-rag-architecture/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/ai-agents-enterprise/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/responsible-ai-framework/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/automated-data-reconciliation/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/tools/data-roi-calculator/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://performalytic.com/technologies/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://performalytic.com/privacy-policy/</loc>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://performalytic.com/terms-conditions/</loc>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/cookie-policy/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/sitemap/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/case-studies/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/testimonials/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/tools/data-roi-calculator/</loc>
+    <priority>0.5</priority>
   </url>
 </urlset>
