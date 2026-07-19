@@ -107,8 +107,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1e29
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 a{color:inherit}
 img{max-width:100%;height:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06)}
-nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+header nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06)}
+header nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.25rem;color:#0f172a;letter-spacing:-0.5px}
 .nav-logo img{height:36px;width:240px;object-fit:cover;object-position:center;display:block}
 .nav-links{display:flex;align-items:center;gap:24px;list-style:none}
@@ -219,14 +219,6 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 
 @media(max-width:768px){.rag-pipeline-diagram .diagram-container{padding:16px}}
 
-/* Post Nav */
-.post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin:60px 0;padding-top:32px;border-top:1px solid #e2e8f0}
-.post-footer-nav a{flex:1;padding:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;text-decoration:none;transition:all 0.2s}
-.post-footer-nav a:hover{border-color:#2563eb;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
-.post-footer-nav .next{text-align:right}
-.post-footer-nav .nav-label{font-size:0.8rem;color:#94a3b8;display:block;margin-bottom:4px}
-.post-footer-nav .nav-title{font-size:0.95rem;font-weight:700;color:#0f172a}
-
 /* Blog CTA */
 .blog-cta{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:80px 0}
 .blog-cta .section-title{color:#fff}
@@ -237,7 +229,6 @@ footer{background:#0f172a;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .nav-links,.nav-cta{display:none}
 .menu-toggle{display:flex}
 .mobile-menu.active{display:flex}
-.post-footer-nav{flex-direction:column}
 .verdict-grid{grid-template-columns:1fr}
 .tldr-box{padding:24px 16px}
 .comparison-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px -24px;padding:0 24px}
@@ -879,9 +870,6 @@ section{padding:60px 0}
 
     <p>Whether you're building a customer support chatbot, an internal knowledge assistant, or a complex decision-support system, we'll help you get it right. <a href="/contact/">Schedule a free consultation</a> and we'll assess your readiness and design a RAG architecture that fits your enterprise.</p>
 
-  </div>
-
-  <div class="container">
     <nav class="post-footer-nav" aria-label="Post navigation">
       <a href="/blog/databricks-vs-snowflake/">
         <span class="nav-label">&larr; Previous Article</span>

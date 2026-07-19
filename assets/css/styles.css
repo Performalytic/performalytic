@@ -393,31 +393,31 @@ section {
   border-top: 1px solid #e2e8f0;
 }
 .post-footer-nav a {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex: 1;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   text-decoration: none;
-  color: #0f172a;
-  max-width: 50%;
+  transition: all 0.2s;
 }
-.post-footer-nav a .nav-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.post-footer-nav a .nav-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #2563eb;
-  transition: color 0.2s;
-}
-.post-footer-nav a:hover .nav-title {
-  color: #1d4ed8;
+.post-footer-nav a:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
 .post-footer-nav .next {
   text-align: right;
+}
+.post-footer-nav .nav-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 4px;
+}
+.post-footer-nav .nav-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 /* Newsletter section */
@@ -566,9 +566,6 @@ section {
   }
   .post-footer-nav {
     flex-direction: column;
-  }
-  .post-footer-nav a {
-    max-width: 100%;
   }
   .post-footer-nav .next {
     text-align: left;
