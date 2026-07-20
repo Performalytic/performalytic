@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Security Policy — Performalytic</title>
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;color:#1e293b;background:#f8fafc;line-height:1.7;padding:40px 24px}
+  .container{max-width:900px;margin:0 auto;background:#fff;border-radius:16px;padding:48px 56px;box-shadow:0 1px 3px rgba(0,0,0,.06);border:1px solid #e2e8f0}
+  h1{font-size:1.75rem;font-weight:800;color:#0f172a;margin-bottom:4px;letter-spacing:-.5px}
+  h2{font-size:1.2rem;font-weight:700;color:#0f172a;margin-top:36px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #2563eb}
+  h3{font-size:1rem;font-weight:700;color:#0f172a;margin-top:28px;margin-bottom:8px}
+  p{margin-bottom:12px;color:#475569}
+  .meta{color:#64748b;font-size:.9rem;margin-bottom:24px}
+  .meta strong{color:#1e293b}
+  .divider{border:none;border-top:1px solid #e2e8f0;margin:32px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:.9rem}
+  th,td{text-align:left;padding:10px 14px;border:1px solid #e2e8f0;vertical-align:top}
+  th{background:#f1f5f9;font-weight:700;color:#0f172a;font-size:.85rem}
+  td{color:#475569;font-family:Consolas,'Courier New',monospace;font-size:.82rem;word-break:break-all}
+  td.desc{font-family:inherit;color:#475569;font-size:.88rem;word-break:normal}
+  .policy-box{background:#0f172a;color:#e2e8f0;padding:20px 24px;border-radius:10px;font-family:Consolas,'Courier New',monospace;font-size:.82rem;line-height:1.8;overflow-x:auto;white-space:pre-wrap;margin:12px 0 8px}
+  .policy-label{font-size:.85rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}
+  .tag{display:inline-block;padding:2px 10px;border-radius:100px;font-size:.78rem;font-weight:600;font-family:inherit}
+  .tag-strict{background:#fef2f2;color:#dc2626}
+  .tag-standard{background:#fffbeb;color:#d97706}
+  .tag-permissive{background:#f0fdf4;color:#16a34a}
+  code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:.85rem;color:#0f172a;font-family:Consolas,'Courier New',monospace}
+  ul{margin:8px 0 16px 20px}
+  ul li{margin-bottom:6px;color:#475569;font-size:.9rem}
+  .flow-num{display:inline-block;width:24px;height:24px;border-radius:50%;background:#2563eb;color:#fff;text-align:center;line-height:24px;font-size:.78rem;font-weight:700;margin-right:8px;font-family:inherit}
+  @media(max-width:640px){.container{padding:24px 20px}h1{font-size:1.4rem}table{font-size:.82rem}th,td{padding:8px 10px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Content Security Policy</h1>
+<p class="meta">
+  <strong>Site:</strong> <a href="https://performalytic.com">https://performalytic.com</a> &middot;
+  <strong>Last updated:</strong> July 2026<br>
+  All CSP policies are set via <code>&lt;meta http-equiv="Content-Security-Policy"&gt;</code> in the <code>&lt;head&gt;</code> of each page.
+</p>
+
+<hr class="divider">
+
+<h2>1. Main Pages <span class="tag tag-standard">11 pages + Blog index</span></h2>
+<p><strong>Files:</strong> <code>/index.html</code>, <code>/about/</code>, <code>/contact/</code>, <code>/careers/</code>, <code>/advanced-analytics-ai/</code>, <code>/bi-integration/</code>, <code>/enterprise-solution-development/</code>, <code>/application-development-and-system-integration/</code>, <code>/terms-conditions/</code>, <code>/privacy-policy/</code>, <code>/blog/index.html</code></p>
+
+<div class="policy-label">Policy</div>
+<div class="policy-box">default-src 'self';
+script-src 'self'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com
+    https://embed.tawk.to
+    'nonce-P3rf0rm4lyt1c'
+    'strict-dynamic';
+style-src 'self'
+    'unsafe-inline'
+    https://fonts.googleapis.com
+    https://embed.tawk.to;
+font-src 'self'
+    https://fonts.gstatic.com
+    https://embed.tawk.to
+    data:;
+img-src 'self'
+    https://www.google-analytics.com
+    https://*.tawk.to
+    https://cdn.jsdelivr.net
+    data:;
+connect-src 'self'
+    https://www.google-analytics.com
+    https://analytics.google.com
+    https://docs.google.com
+    https://*.tawk.to
+    wss://*.tawk.to;
+frame-src 'self'
+    https://*.tawk.to;
+form-action 'self'
+    https://docs.google.com;
+base-uri 'self';
+object-src 'none';
+upgrade-insecure-requests</div>
+
+<h2>2. Blog Articles <span class="tag tag-strict">3 pages — stricter, no chat</span></h2>
+<p><strong>Files:</strong> <code>/blog/devops-best-practices/</code>, <code>/blog/ai-business-intelligence/</code>, <code>/blog/data-driven-decision-making/</code></p>
+
+<div class="policy-label">Policy</div>
+<div class="policy-box">default-src 'self';
+script-src 'self'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com
+    'nonce-P3rf0rm4lyt1c'
+    'strict-dynamic';
+style-src 'self'
+    https://fonts.googleapis.com
+    'nonce-P3rf0rm4lyt1c';
+font-src 'self'
+    https://fonts.gstatic.com
+    data:;
+img-src 'self'
+    https://www.google-analytics.com
+    data:;
+connect-src 'self'
+    https://www.google-analytics.com
+    https://analytics.google.com;
+frame-src 'self';
+base-uri 'self';
+object-src 'none';
+upgrade-insecure-requests</div>
+
+<h2>3. 404 Page <span class="tag tag-strict">Restricted — no scripts</span></h2>
+<p><strong>File:</strong> <code>/404.html</code></p>
+
+<div class="policy-label">Policy</div>
+<div class="policy-box">default-src 'self';
+style-src 'self'
+    https://fonts.googleapis.com;
+font-src 'self'
+    https://fonts.gstatic.com;
+img-src 'self';
+base-uri 'self';
+object-src 'none';
+upgrade-insecure-requests</div>
+
+<hr class="divider">
+
+<h2>Source-to-Service Map</h2>
+<table>
+  <tr><th>Directive</th><th>Allowed Source</th><th>Purpose</th></tr>
+  <tr><td><code>script-src</code></td><td><code>https://www.googletagmanager.com</code></td><td class="desc">Google Tag Manager</td></tr>
+  <tr><td><code>script-src</code></td><td><code>https://www.google-analytics.com</code></td><td class="desc">Google Analytics 4</td></tr>
+  <tr><td><code>script-src</code></td><td><code>https://embed.tawk.to</code></td><td class="desc">Tawk.to live chat widget</td></tr>
+  <tr><td><code>script-src</code></td><td><code>'nonce-P3rf0rm4lyt1c'</code></td><td class="desc">Inline scripts on the page</td></tr>
+  <tr><td><code>style-src</code></td><td><code>'unsafe-inline'</code></td><td class="desc">Inline CSS (main pages only)</td></tr>
+  <tr><td><code>style-src</code></td><td><code>https://fonts.googleapis.com</code></td><td class="desc">Google Fonts stylesheets</td></tr>
+  <tr><td><code>style-src</code></td><td><code>https://embed.tawk.to</code></td><td class="desc">Tawk.to chat bubble styles</td></tr>
+  <tr><td><code>font-src</code></td><td><code>https://fonts.gstatic.com</code></td><td class="desc">Google Fonts font files</td></tr>
+  <tr><td><code>font-src</code></td><td><code>data:</code></td><td class="desc">Embedded fonts</td></tr>
+  <tr><td><code>img-src</code></td><td><code>https://www.google-analytics.com</code></td><td class="desc">Analytics tracking pixels</td></tr>
+  <tr><td><code>img-src</code></td><td><code>https://*.tawk.to</code></td><td class="desc">Tawk.to avatar/media</td></tr>
+  <tr><td><code>img-src</code></td><td><code>https://cdn.jsdelivr.net</code></td><td class="desc">CDN images</td></tr>
+  <tr><td><code>img-src</code></td><td><code>data:</code></td><td class="desc">Inline images</td></tr>
+  <tr><td><code>connect-src</code></td><td><code>https://www.google-analytics.com</code></td><td class="desc">GA4 data collection</td></tr>
+  <tr><td><code>connect-src</code></td><td><code>https://analytics.google.com</code></td><td class="desc">GA4 data collection</td></tr>
+  <tr><td><code>connect-src</code></td><td><code>https://docs.google.com</code></td><td class="desc">Contact form submission (fetch to Google Forms)</td></tr>
+  <tr><td><code>connect-src</code></td><td><code>https://*.tawk.to</code></td><td class="desc">Tawk.to API calls</td></tr>
+  <tr><td><code>connect-src</code></td><td><code>wss://*.tawk.to</code></td><td class="desc">Tawk.to WebSocket (live chat)</td></tr>
+  <tr><td><code>frame-src</code></td><td><code>https://*.tawk.to</code></td><td class="desc">Tawk.to iframe</td></tr>
+  <tr><td><code>form-action</code></td><td><code>https://docs.google.com</code></td><td class="desc">Contact form posts to Google Forms (no-JS fallback)</td></tr>
+</table>
+
+<hr class="divider">
+
+<h2>Policy Notes</h2>
+<ul>
+  <li><code>'strict-dynamic'</code> in <code>script-src</code> allows trusted scripts to load additional scripts dynamically — maintaining security while enabling legitimate CDN-loaded dependencies</li>
+  <li>The nonce <code>P3rf0rm4lyt1c</code> is applied to all inline <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> blocks, preventing injection of unauthorized inline code</li>
+  <li><code>'unsafe-inline'</code> in <code>style-src</code> on main pages is a fallback for browsers that don't support <code>strict-dynamic</code> in style directives</li>
+  <li><code>upgrade-insecure-requests</code> forces all HTTP requests to HTTPS across the entire page</li>
+  <li>Blog article pages and the 404 page have a <strong>more restrictive CSP</strong> — no Tawk.to, no <code>unsafe-inline</code></li>
+  <li>The 404 page has no <code>script-src</code> directive — scripts are blocked entirely</li>
+  <li><code>form-action</code> is restricted to <code>'self'</code> and <code>https://docs.google.com</code>, preventing form data exfiltration to unknown endpoints</li>
+  <li><code>object-src 'none'</code> blocks all plugin content (Flash, Java, etc.)</li>
+</ul>
+
+</div>
+</body>
+</html>
