@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Data modeling crisis — three teams reporting different numbers from the same metric name</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gr"><stop offset="0" stop-color="#f43f5e" stop-opacity="0.14"/><stop offset="1" stop-color="#f43f5e" stop-opacity="0"/></radialGradient>
+<radialGradient id="ga"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.12"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="200" cy="240" rx="320" ry="300" fill="url(#gr)"/>
+<ellipse cx="600" cy="300" rx="360" ry="280" fill="url(#gb)"/>
+<ellipse cx="1000" cy="240" rx="320" ry="300" fill="url(#ga)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<!-- team cards: same label, different numbers -->
+<g>
+<rect x="40" y="80" width="280" height="140" rx="16" fill="#111a30" stroke="#fb7185" stroke-opacity="0.4"/>
+<text x="180" y="116" text-anchor="middle" font-size="12" letter-spacing="3" fill="#64748b">MARKETING</text>
+<text x="180" y="148" text-anchor="middle" font-size="28" font-weight="800" fill="#e2e8f0">$12.4M</text>
+<text x="180" y="174" text-anchor="middle" font-size="13" fill="#94a3b8">Revenue (booked)</text>
+<text x="180" y="196" text-anchor="middle" font-size="11" fill="#fb7185">&#8226; includes deferred</text>
+</g>
+<g>
+<rect x="460" y="80" width="280" height="140" rx="16" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.4"/>
+<text x="600" y="116" text-anchor="middle" font-size="12" letter-spacing="3" fill="#64748b">FINANCE</text>
+<text x="600" y="148" text-anchor="middle" font-size="28" font-weight="800" fill="#e2e8f0">$11.1M</text>
+<text x="600" y="174" text-anchor="middle" font-size="13" fill="#94a3b8">Revenue (recognized)</text>
+<text x="600" y="196" text-anchor="middle" font-size="11" fill="#60a5fa">&#8226; GAAP basis</text>
+</g>
+<g>
+<rect x="880" y="80" width="280" height="140" rx="16" fill="#111a30" stroke="#fbbf24" stroke-opacity="0.4"/>
+<text x="1020" y="116" text-anchor="middle" font-size="12" letter-spacing="3" fill="#64748b">PRODUCT</text>
+<text x="1020" y="148" text-anchor="middle" font-size="28" font-weight="800" fill="#e2e8f0">$14.8M</text>
+<text x="1020" y="174" text-anchor="middle" font-size="13" fill="#94a3b8">Revenue (collected)</text>
+<text x="1020" y="196" text-anchor="middle" font-size="11" fill="#fbbf24">&#8226; cash received</text>
+</g>
+
+<!-- conflict arrows between them -->
+<path d="M325 150 L454 150" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M745 150 L874 150" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="390" y="140" text-anchor="middle" font-size="20" fill="#fb7185">&#10007;</text>
+<text x="810" y="140" text-anchor="middle" font-size="20" fill="#fb7185">&#10007;</text>
+
+<!-- semantic layer bridge -->
+<rect x="120" y="290" width="960" height="100" rx="18" fill="#0f172a" stroke="url(#brand)" stroke-width="2"/>
+<text x="600" y="324" text-anchor="middle" font-size="14" letter-spacing="4" fill="#64748b">SEMANTIC LAYER</text>
+<text x="600" y="352" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">REVENUE</text>
+<text x="600" y="374" text-anchor="middle" font-size="12" fill="#94a3b8">Single authoritative definition consumed by every tool</text>
+
+<!-- connection lines: teams down to semantic layer -->
+<path d="M180 220 L180 260 Q180 270 190 270 L340 270 Q350 270 360 278 L440 318" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.5"/>
+<path d="M600 220 L600 284" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.5"/>
+<path d="M1020 220 L1020 260 Q1020 270 1010 270 L860 270 Q850 270 840 278 L760 318" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.5"/>
+
+<!-- unified output -->
+<rect x="200" y="440" width="200" height="70" rx="14" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+<text x="300" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">SINGLE TRUTH</text>
+<text x="300" y="494" text-anchor="middle" font-size="11" fill="#94a3b8">All teams align</text>
+
+<!-- AI agents circling -->
+<path d="M500 440 Q550 380 600 440 Q650 500 700 440 Q750 380 800 440" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 6" stroke-opacity="0.4"/>
+
+<g>
+<rect x="760" y="440" width="240" height="70" rx="14" fill="#111a30" stroke="#f59e0b" stroke-opacity="0.5"/>
+<text x="880" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">AI AMPLIFIES DRIFT</text>
+<text x="880" y="494" text-anchor="middle" font-size="11" fill="#94a3b8">Without semantic governance</text>
+</g>
+
+<!-- bottom stat chips -->
+<rect x="140" y="550" width="220" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="160" y="576" font-size="13" font-weight="700" fill="#fb7185">89%</text>
+<text x="206" y="576" font-size="10" letter-spacing="2" fill="#94a3b8">STRUGGLE WITH SEMANTICS</text>
+
+<rect x="380" y="550" width="220" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="400" y="576" font-size="13" font-weight="700" fill="#fbbf24">3-7</text>
+<text x="444" y="576" font-size="10" letter-spacing="2" fill="#94a3b8">DEFINITIONS PER METRIC</text>
+
+<rect x="620" y="550" width="220" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="640" y="576" font-size="13" font-weight="700" fill="#60a5fa">&#8722;40%</text>
+<text x="694" y="576" font-size="10" letter-spacing="2" fill="#94a3b8">TRUST IN ANALYTICS</text>
+
+<rect x="860" y="550" width="200" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="880" y="576" font-size="13" font-weight="700" fill="#34d399">2x</text>
+<text x="914" y="576" font-size="10" letter-spacing="2" fill="#94a3b8">DECISION TIME</text>
+</g>
+</svg>
