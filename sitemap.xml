@@ -136,4 +136,8 @@
     <loc>https://performalytic.com/blog/data-modeling-crisis/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://performalytic.com/blog/ai-changing-data-quality/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
