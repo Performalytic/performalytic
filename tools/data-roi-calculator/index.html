@@ -606,17 +606,24 @@ var tk=false;window.addEventListener('scroll',function(){if(!tk){window.requestA
 /* Calculator Logic */
 var revenueMap = [10, 25, 50, 100, 250, 500, 750, 1000];
 var employeesMap = [50, 100, 250, 500, 1000, 2500, 5000, 10000];
-var spendMap = [50, 100, 250, 500, 1000, 2000, 3500, 5000];
+var spendMap = [0.05, 0.1, 0.25, 0.5, 1, 2, 3.5, 5];
 
 function formatCurrency(val) {
   if (val >= 1000) return '$' + (val / 1000).toFixed(1) + 'B';
-  return '$' + val + 'M';
+  if (val >= 1) return '$' + val.toFixed(1) + 'M';
+  return '$' + (val * 1000).toFixed(0) + 'K';
 }
 
 function formatShort(val) {
   if (val >= 1000) return '$' + (val / 1000).toFixed(1) + 'B';
   if (val >= 1) return '$' + val.toFixed(1) + 'M';
   return '$' + (val * 1000).toFixed(0) + 'K';
+}
+
+function fmt(num) {
+  if (num >= 1000) return '$' + (num / 1000).toFixed(1) + 'B';
+  if (num >= 1) return '$' + num.toFixed(1) + 'M';
+  return '$' + (num * 1000).toFixed(0) + 'K';
 }
 
 function updateRevenue() {
@@ -648,42 +655,40 @@ function toggleCheck(el) {
 }
 
 function calculate() {
-  var revIdx = document.getElementById('revenue').value;
+  var revIdx = parseInt(document.getElementById('revenue').value);
   var revenue = revenueMap[revIdx - 1];
 
-  var empIdx = document.getElementById('employees').value;
+  var empIdx = parseInt(document.getElementById('employees').value);
   var employees = employeesMap[empIdx - 1];
 
-  var industry = parseFloat(document.getElementById('industry').value);
+  var industry = parseFloat(document.getElementById('industry').value) || 1.0;
 
-  var spendIdx = document.getElementById('dataSpend').value;
+  var spendIdx = parseInt(document.getElementById('dataSpend').value);
   var dataSpend = spendMap[spendIdx - 1];
 
   var challengeMultiplier = 1;
-  for (var i = 1; i <= 8; i++) {
-    var cb = document.getElementById('ch' + i);
-    if (cb && cb.checked) {
-      challengeMultiplier += parseFloat(cb.value);
-    }
+  var checkedInputs = document.querySelectorAll('.checkbox-item input:checked');
+  for (var i = 0; i < checkedInputs.length; i++) {
+    challengeMultiplier += parseFloat(checkedInputs[i].value);
   }
 
   var baseCostRate = 0.15;
   var employeeFactor = Math.min(employees / 1000, 2) * 0.02;
   var baseCost = revenue * baseCostRate * industry * challengeMultiplier + employeeFactor * revenue;
   var annualSavings = baseCost * 0.5;
-  var implementationCost = dataSpend * 0.3;
-  var roi = ((annualSavings - implementationCost) / implementationCost * 100);
+  var implementationCost = dataSpend * 1.5;
+  var roi = implementationCost > 0 ? ((annualSavings - implementationCost) / implementationCost * 100) : 0;
 
   var year1 = annualSavings;
   var year3 = annualSavings * 3.7;
   var year5 = annualSavings * 7.7;
 
-  document.getElementById('badDataCost').textContent = '$' + baseCost.toFixed(1) + 'M';
-  document.getElementById('annualSavings').textContent = '$' + annualSavings.toFixed(1) + 'M';
+  document.getElementById('badDataCost').textContent = fmt(baseCost);
+  document.getElementById('annualSavings').textContent = fmt(annualSavings);
   document.getElementById('roiPercent').textContent = Math.round(roi) + '%';
-  document.getElementById('year1').textContent = '$' + year1.toFixed(1) + 'M';
-  document.getElementById('year3').textContent = '$' + year3.toFixed(1) + 'M';
-  document.getElementById('year5').textContent = '$' + year5.toFixed(1) + 'M';
+  document.getElementById('year1').textContent = fmt(year1);
+  document.getElementById('year3').textContent = fmt(year3);
+  document.getElementById('year5').textContent = fmt(year5);
 
   if (typeof gtag === 'function') {
     gtag('event', 'calculator_use', {
