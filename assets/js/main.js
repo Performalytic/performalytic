@@ -106,11 +106,11 @@
             var progress = Math.min((timestamp - startTime) / duration, 1);
             var eased = 1 - Math.pow(1 - progress, 3);
             var current = Math.floor(eased * target);
-            el.innerHTML = current + suffix;
+            el.textContent = current + suffix;
             if (progress < 1) {
               window.requestAnimationFrame(animate);
             } else {
-              el.innerHTML = target + suffix;
+              el.textContent = target + suffix;
             }
           }
 
