@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t">
+<title id="t">Master Data Management in the AI era — golden record creation from source systems powering customer 360 and product 360</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="gb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gg"><stop offset="0" stop-color="#34d399" stop-opacity="0.18"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient>
+<radialGradient id="ga"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.15"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="600" cy="300" rx="520" ry="280" fill="url(#gb)"/>
+<ellipse cx="360" cy="150" rx="300" ry="180" fill="url(#ga)"/>
+<ellipse cx="840" cy="420" rx="320" ry="180" fill="url(#gg)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+<!-- source systems (left) -->
+<text x="120" y="60" font-size="14" font-weight="700" letter-spacing="3" fill="#64748b">SOURCE SYSTEMS</text>
+<g>
+<rect x="40" y="90" width="190" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="135" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">CRM</text>
+<text x="135" y="138" text-anchor="middle" font-size="10" fill="#64748b">Salesforce, HubSpot</text>
+</g>
+<g>
+<rect x="40" y="168" width="190" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="135" y="197" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">ERP</text>
+<text x="135" y="216" text-anchor="middle" font-size="10" fill="#64748b">SAP, Oracle</text>
+</g>
+<g>
+<rect x="40" y="246" width="190" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="135" y="275" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">POS</text>
+<text x="135" y="294" text-anchor="middle" font-size="10" fill="#64748b">Point of Sale</text>
+</g>
+<g>
+<rect x="40" y="324" width="190" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="135" y="353" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Marketing</text>
+<text x="135" y="372" text-anchor="middle" font-size="10" fill="#64748b">HubSpot, Marketo</text>
+</g>
+<g>
+<rect x="40" y="402" width="190" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="135" y="431" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Support</text>
+<text x="135" y="450" text-anchor="middle" font-size="10" fill="#64748b">Zendesk, Jira</text>
+</g>
+
+<!-- connection lines from sources to center -->
+<path d="M230 120 L400 175" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M230 198 L400 210" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M230 276 L400 245" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M230 354 L400 280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M230 432 L400 315" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+
+<!-- golden record hub (center) -->
+<rect x="350" y="140" width="360" height="320" rx="24" fill="#0f172a" stroke="url(#brand)" stroke-width="2.5" stroke-opacity="0.8"/>
+<text x="530" y="176" text-anchor="middle" font-size="14" letter-spacing="4" fill="#64748b">MDM HUB</text>
+<text x="530" y="200" text-anchor="middle" font-size="18" font-weight="800" fill="#e2e8f0">GOLDEN RECORDS</text>
+
+<!-- AI matching engine badge -->
+<rect x="380" y="224" width="300" height="40" rx="20" fill="#111a30" stroke="#2563eb" stroke-opacity="0.5"/>
+<text x="530" y="250" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#60a5fa">AI-POWERED ENTITY RESOLUTION</text>
+
+<!-- matching/merging visualization inside hub -->
+<g>
+<circle cx="440" cy="300" r="18" fill="#16223f" stroke="#f59e0b" stroke-width="2"/>
+<text x="440" y="306" text-anchor="middle" font-size="8" font-weight="600" fill="#f59e0b">CRM</text>
+<circle cx="530" cy="280" r="18" fill="#16223f" stroke="#fb7185" stroke-width="2"/>
+<text x="530" y="286" text-anchor="middle" font-size="8" font-weight="600" fill="#fb7185">ERP</text>
+<circle cx="620" cy="300" r="18" fill="#16223f" stroke="#60a5fa" stroke-width="2"/>
+<text x="620" y="306" text-anchor="middle" font-size="8" font-weight="600" fill="#60a5fa">POS</text>
+<circle cx="530" cy="350" r="22" fill="#0f172a" stroke="#34d399" stroke-width="2.5"/>
+<text x="530" y="356" text-anchor="middle" font-size="9" font-weight="700" fill="#34d399">#1</text>
+<path d="M452 310 L518 350" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.5"/>
+<path d="M542 296 L518 348" stroke="#fb7185" stroke-width="1.5" stroke-opacity="0.5"/>
+<path d="M612 310 L542 350" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5"/>
+</g>
+
+<!-- dedup badges -->
+<rect x="400" y="390" width="100" height="24" rx="12" fill="#111a30" stroke="#34d399" stroke-opacity="0.3"/>
+<text x="450" y="407" text-anchor="middle" font-size="9" font-weight="600" fill="#34d399">DEDUP</text>
+<rect x="520" y="390" width="100" height="24" rx="12" fill="#111a30" stroke="#34d399" stroke-opacity="0.3"/>
+<text x="570" y="407" text-anchor="middle" font-size="9" font-weight="600" fill="#34d399">MERGE</text>
+<rect x="640" y="390" width="100" height="24" rx="12" fill="#111a30" stroke="#34d399" stroke-opacity="0.3"/>
+<text x="690" y="407" text-anchor="middle" font-size="9" font-weight="600" fill="#34d399">SURVIVORSHIP</text>
+
+<!-- consumption (right) -->
+<text x="1040" y="60" font-size="14" font-weight="700" letter-spacing="3" fill="#64748b">CONSUMPTION</text>
+<g>
+<rect x="900" y="140" width="260" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1030" y="169" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">AI/ML Models</text>
+<text x="1030" y="188" text-anchor="middle" font-size="10" fill="#64748b">Recommendation, Fraud</text>
+</g>
+<g>
+<rect x="900" y="218" width="260" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1030" y="247" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Customer 360</text>
+<text x="1030" y="266" text-anchor="middle" font-size="10" fill="#64748b">Unified customer view</text>
+</g>
+<g>
+<rect x="900" y="296" width="260" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1030" y="325" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Product 360</text>
+<text x="1030" y="344" text-anchor="middle" font-size="10" fill="#64748b">Unified product catalog</text>
+</g>
+<g>
+<rect x="900" y="374" width="260" height="60" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1030" y="403" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">BI &amp; Analytics</text>
+<text x="1030" y="422" text-anchor="middle" font-size="10" fill="#64748b">Dashboards, Reporting</text>
+</g>
+
+<path d="M710 250 L890 170" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M710 270 L890 248" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M710 290 L890 326" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+<path d="M710 310 L890 404" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.4"/>
+
+<!-- bottom stat chips -->
+<rect x="80" y="510" width="220" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="100" y="536" font-size="13" font-weight="700" fill="#fbbf24">3-5x</text>
+<text x="152" y="536" font-size="10" letter-spacing="2" fill="#94a3b8">DUPLICATE RECORDS</text>
+
+<rect x="320" y="510" width="220" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="340" y="536" font-size="13" font-weight="700" fill="#60a5fa">87%</text>
+<text x="392" y="536" font-size="10" letter-spacing="2" fill="#94a3b8">AI SUCCESS &#8593; WITH MDM</text>
+
+<rect x="660" y="510" width="250" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="680" y="536" font-size="13" font-weight="700" fill="#34d399">REAL-TIME</text>
+<text x="750" y="536" font-size="10" letter-spacing="2" fill="#94a3b8">ENTITY RESOLUTION</text>
+
+<rect x="930" y="510" width="190" height="40" rx="10" fill="#111a30" stroke="#2b3a5c"/>
+<text x="950" y="536" font-size="13" font-weight="700" fill="#fb7185">360&deg;</text>
+<text x="988" y="536" font-size="10" letter-spacing="2" fill="#94a3b8">UNIFIED VIEW</text>
+</g>
+</svg>
